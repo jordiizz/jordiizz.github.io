@@ -4,8 +4,10 @@ title: "Métodos Multipasos para Ecuaciones Diferenciales"
 date:   2025-04-21 
 categories: blog
 ---
-
+¡Bienvenidos al Método Multipasos!
 {% include mathjax.html %}
+
+
 
 ## Método Multipasos
 

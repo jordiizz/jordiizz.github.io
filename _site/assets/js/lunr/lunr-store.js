@@ -6,7 +6,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Métodos Multipasos para Ecuaciones Diferenciales",
-        "excerpt":"Método Multipasos Los métodos de un paso como Runge-Kutta calculan cada punto de la solución de una E.D.O. a una distancia \\(h\\) utilizando la información del punto anterior. Los métodos de pasos múltiples son fórmulas que utilizan varios puntos calculados y disponibles para calcular la solución en un nuevo punto....","categories": ["blog"],
+        "excerpt":"¡Bienvenidos al Método Multipasos! Método Multipasos Los métodos de un paso como Runge-Kutta calculan cada punto de la solución de una E.D.O. a una distancia \\(h\\) utilizando la información del punto anterior. Los métodos de pasos múltiples son fórmulas que utilizan varios puntos calculados y disponibles para calcular la solución...","categories": ["blog"],
         "tags": [],
         "url": "/blog/2025/04/21/metodos_multipasos.html",
         "teaser": null
