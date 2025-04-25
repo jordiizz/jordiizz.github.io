@@ -1,3 +1,10 @@
+---
+layout: single
+title: "Método Runge-Kutta para Ecuaciones diferenciales"
+date: 2025-04-21
+categories: blog
+---
+
 # Runge-Kutta para Ecuaciones Diferenciales con valor inicial
 !Bienvenido al Método de Runge-Kutta!
 
