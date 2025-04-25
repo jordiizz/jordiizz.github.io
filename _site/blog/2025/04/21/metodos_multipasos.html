@@ -1,0 +1,327 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Métodos Multipasos para Ecuaciones Diferenciales - Your awesone title</title>
+<meta name="description" content="">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Your awesone title">
+<meta property="og:title" content="Métodos Multipasos para Ecuaciones Diferenciales">
+<meta property="og:url" content="http://localhost:4000/blog/2025/04/21/metodos_multipasos.html">
+
+
+  <meta property="og:description" content="">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-04-21T00:00:00-06:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/blog/2025/04/21/metodos_multipasos.html">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Your awesone title Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Your awesone title
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Métodos Multipasos para Ecuaciones Diferenciales">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2025-04-21T00:00:00-06:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/blog/2025/04/21/metodos_multipasos.html" itemprop="url">Métodos Multipasos para Ecuaciones Diferenciales
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <!-- _includes/mathjax.html -->
+<script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<h2 id="método-multipasos">Método Multipasos</h2>
+
+<p>Los métodos de un paso como Runge-Kutta calculan cada punto de la solución de una E.D.O. a una distancia \(h\) utilizando la información del punto anterior. Los métodos de pasos múltiples son fórmulas que utilizan varios puntos calculados y disponibles para calcular la solución en un nuevo punto.</p>
+
+<h3 id="fórmulas-de-pasos-múltiples-de-predicción">Fórmulas de pasos múltiples de predicción</h3>
+
+<p>Estas fórmulas se usan para calcular la solución en un punto mediante un polinomio de interpolación colocado en varios puntos anteriores conocidos espaciados a una distancia \(h\).</p>
+
+<p>En el siguiente gráfico se supondrán conocidos los puntos \(y_{i-k}, \dots, y_{i-3}, y_{i-2}, y_{i-1}, y_i\) mientras que se desea calcular el punto \(y_{i+1}\).</p>
+
+<p><img src="/images/multipasos_1.png" alt="Gráfico" /></p>
+
+<p><strong>Obtención de la fórmula de pasos múltiples:</strong></p>
+
+<p>Dada la E.D.O.</p>
+
+\[y'(x) = \frac{dy}{dx} = f(x,y), \quad y(x_0) = y_0\]
+
+<p>Reescribir como</p>
+
+\[dy = f(x,y)\,dx = y'(x)\,dx\]
+
+<p>Integrando desde un punto conocido \(y(x_{i-k})\) hasta un nuevo punto \(y(x_{i+1})\):</p>
+
+<p>Para obtener una fórmula aproximada se usa el polinomio de diferencias finitas regresivas incluyendo al punto \(i\) y los puntos anteriores.</p>
+
+<p>Sustituyendo el polinomio y cambiando los límites y el diferencial:</p>
+
+<p>Se obtiene la siguiente expresión con la que se pueden generar fórmulas de pasos múltiples denominadas <strong>fórmulas de predicción</strong>.</p>
+
+<blockquote>
+  <p>La fórmula tiene dos parámetros para elegir: \(n\), \(k\)</p>
+</blockquote>
+
+<p><strong>Observaciones importantes:</strong></p>
+
+<ul>
+  <li>Las fórmulas de predicción requieren tener puntos disponibles antes de su aplicación. Estos puntos deben ser calculados con mucha precisión. El método adecuado para esto es el método de Runge-Kutta.</li>
+  <li>La integración extiende el polinomio de interpolación hasta el punto \(i+1\) que no pertenece al dominio del polinomio. Por lo tanto, se ha realizado una extrapolación, que en general no produce resultados confiables.</li>
+  <li>La ventaja de estas fórmulas es que requieren menos cálculos en cada paso pues usan puntos ya calculados. Esto fue importante en la época en la que no se disponía de dispositivos computacionales automatizados. Una aplicación de interés es usar el método para proyectar el valor de una función y su derivada fuera del intervalo que contiene a los puntos conocidos.</li>
+</ul>
+
+<h3 id="fórmulas-de-pasos-múltiples-de-corrección">Fórmulas de pasos múltiples de corrección</h3>
+
+<p>Estas fórmulas son el complemento a las fórmulas de predicción. En las fórmulas de pasos múltiples de corrección se coloca el polinomio de interpolación incluyendo el punto \(i+1\) calculado como una primera estimación con la fórmula de predicción. El nuevo resultado corrige el resultado anterior y produce una mejor aproximación.</p>
+
+<p>Dada la ecuación diferencial ordinaria de primer orden:</p>
+
+\[y'(x) = \frac{dy}{dx} = f(x,y)\]
+
+<p>Reescribirla como</p>
+
+\[dy = f(x,y)\,dx = y'(x)\,dx\]
+
+<p>Integrando desde un punto arbitrario \(y(x_{i-k})\) hasta el punto desconocido \(y(x_{i+1})\):</p>
+
+<p>Para obtener una fórmula aproximada de corrección se usa el polinomio de diferencias finitas regresivas incluyendo al punto \(i+1\) y puntos anteriores.</p>
+
+<p>Sustituyendo \(y'(x)\) por el polinomio y cambiando los límites y el diferencial:</p>
+
+<p>Esta expresión se usa para generar fórmulas de pasos múltiples de corrección.</p>
+
+<blockquote>
+  <p>La fórmula tiene dos parámetros para elegir: \(n\), \(k\)</p>
+</blockquote>
+
+<h3 id="métodos-de-predicción--corrección">Métodos de Predicción – Corrección</h3>
+
+<p>La combinación de una fórmula de pasos múltiples de predicción con una fórmula de pasos múltiples de corrección constituye un método de <strong>Predicción – Corrección</strong>. Uno de estos métodos que ha sido estudiado se denomina <strong>fórmula de Adams – Moulton</strong>. Se la obtiene con los parámetros \(n = 3, k = 0\) en las fórmulas establecidas anteriormente. El desarrollo detallado permite también conocer el error de truncamiento correspondiente.</p>
+
+<p><strong>Fórmula de Predicción de Adams-Moulton:</strong></p>
+
+\[y_{i+1} = y_i + \frac{h}{24} \left[ 55f_i - 59f_{i-1} + 37f_{i-2} + 9f_{i-3} \right], \quad E_p = \frac{251}{720} h^5 y^{(v)}(z)\]
+
+<p><strong>Fórmula de Corrección de Adams-Moulton:</strong></p>
+
+\[y_{i+1} = y_i + \frac{h}{24} \left[ 9f_{i+1} + 19f_i - 5f_{i-1} + f_{i-2} \right], \quad E_c = -\frac{19}{720} h^5 y^{(v)}(z)\]
+
+<p>Esta combinación de fórmulas permite establecer un esquema de exactitud para el error de truncamiento con el planteamiento siguiente:</p>
+
+<p>Sean:</p>
+
+<ul>
+  <li>\(y_{i+1}\): valor exacto, desconocido</li>
+  <li>\(y_{i+1,p}\): valor calculado con la fórmula de predicción de Adams-Moulton</li>
+  <li>\(y_{i+1,c}\): valor calculado con la fórmula de corrección de Adams-Moulton</li>
+</ul>
+
+<p>Suponer que los valores de las derivadas en el error son aproximadamente iguales.</p>
+
+<p>Considerando la siguiente disposición de los valores calculados y el valor exacto:</p>
+
+<p><img src="/images/multipasos_2.png" alt="Disposición Pasos Múltiples de Predicción" /></p>
+
+\[| y_{i+1,c} - y_{i+1,p} | \approx 14\,E_c\]
+
+<p>Para aplicar este criterio, suponer que se desea que el error en el resultado final de \(y_{i+1}\) calculado con la fórmula de corrección no exceda a \(E_c &lt; 10^{-m}\), entonces deberá cumplirse:</p>
+
+\[| y_{i+1,c} - y_{i+1,p} | &lt; 14 \times 10^{-m}\]
+
+<p>Si no se cumple, debe entenderse que el valor de \(h\) tendría que reducirse para reducir el error.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-04-21T00:00:00-06:00">April 21, 2025</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/2025/04/21/metodo-de-taylor-edo.html" class="pagination--pager" title="Método de Taylor para ecuaciones diferenciales
+">Previous</a>
+    
+    
+      <a href="/blog/2025/04/21/runge-kutta.html" class="pagination--pager" title="Método Runge-Kutta para Ecuaciones diferenciales
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">Your awesone title</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
