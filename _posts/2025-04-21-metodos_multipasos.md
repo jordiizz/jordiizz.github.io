@@ -2,8 +2,13 @@
 layout: single
 title: "Métodos Multipasos para Ecuaciones Diferenciales"
 date:   2025-04-21 
-categories: blog
+toc: true
+toc_sticky: true
+sidebar:
+  nav: "docs"
+permalink: /docs/metodo-de-multipasos
 ---
+
 ¡Bienvenidos al Método Multipasos!
 {% include mathjax.html %}
 
@@ -84,15 +89,15 @@ La combinación de una fórmula de pasos múltiples de predicción con una fórm
 
 **Fórmula de Predicción de Adams-Moulton:**
 
-$$
-y_{i+1} = y_i + \frac{h}{24} \left[ 55f_i - 59f_{i-1} + 37f_{i-2} + 9f_{i-3} \right], \quad E_p = \frac{251}{720} h^5 y^{(v)}(z)
-$$
+$$y_{i+1} = y_i + \frac{h}{24} \left[ 55f_i - 59f_{i-1} + 37f_{i-2} + 9f_{i-3} \right],$$ 
+
+$$\quad E_p = \frac{251}{720} h^5 y^{(v)}(z)$$
 
 **Fórmula de Corrección de Adams-Moulton:**
 
-$$
-y_{i+1} = y_i + \frac{h}{24} \left[ 9f_{i+1} + 19f_i - 5f_{i-1} + f_{i-2} \right], \quad E_c = -\frac{19}{720} h^5 y^{(v)}(z)
-$$
+$$y_{i+1} = y_i + \frac{h}{24} \left[ 9f_{i+1} + 19f_i - 5f_{i-1} + f_{i-2} \right],$$ 
+
+$$\quad E_c = -\frac{19}{720} h^5 y^{(v)}(z)$$
 
 Esta combinación de fórmulas permite establecer un esquema de exactitud para el error de truncamiento con el planteamiento siguiente:
 

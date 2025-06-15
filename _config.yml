@@ -31,12 +31,34 @@ github_username:  jekyll
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+minimal_mistakes_skin: "dark"
 
 toc: true
 
 plugins:
   - jekyll-feed
   - jekyll-include-cache
+
+author:
+  name             : "Analisis Numerico"
+  avatar           : "/images/icon.png"
+  bio              : "Unidad 5: Ecuaciones diferenciales"
+
+collections:
+  docs:
+    output: true
+    permalink: /docs/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: docs
+    values:
+      layout: single
+      author_profile: false
+      sidebar:
+        nav: "docs_sidebar"
+  
 
 # Exclude from processing.
 # The following items will not be processed, by default.

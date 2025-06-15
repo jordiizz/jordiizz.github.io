@@ -10,16 +10,21 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Método Runge-Kutta para Ecuaciones diferenciales - Your awesone title</title>
+<!-- begin _includes/seo.html --><title>Método Runge-Kutta para Ecuaciones diferenciales - UNIDAD 5</title>
 <meta name="description" content="Runge-Kutta para Ecuaciones Diferenciales con valor inicial !Bienvenido al Método de Runge-Kutta!">
 
+
+  <meta name="author" content="Analisis Numerico">
+  
+  <meta property="article:author" content="Analisis Numerico">
+  
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="Your awesone title">
+<meta property="og:site_name" content="UNIDAD 5">
 <meta property="og:title" content="Método Runge-Kutta para Ecuaciones diferenciales">
-<meta property="og:url" content="http://localhost:4000/blog/2025/04/21/runge-kutta.html">
+<meta property="og:url" content="http://localhost:4000/docs/metodo-de-runge-kutta">
 
 
   <meta property="og:description" content="Runge-Kutta para Ecuaciones Diferenciales con valor inicial !Bienvenido al Método de Runge-Kutta!">
@@ -37,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/blog/2025/04/21/runge-kutta.html">
+<link rel="canonical" href="http://localhost:4000/docs/metodo-de-runge-kutta">
 
 
 
@@ -54,7 +59,7 @@
 
 
 
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Your awesone title Feed">
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="UNIDAD 5 Feed">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script type="text/javascript">
@@ -94,7 +99,7 @@
       <nav id="site-nav" class="greedy-nav">
         
         <a class="site-title" href="/">
-          Your awesone title
+          UNIDAD 5
           
         </a>
         <ul class="visible-links"></ul>
@@ -119,6 +124,112 @@
 
 <div id="main" role="main">
   
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">Teoría</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/docs/metodo-de-euler/">Metodo de Euler</a></li>
+            
+              <li><a href="/docs/metodo-de-taylor/">Metodo de Taylor</a></li>
+            
+              <li><a href="/docs/metodo-de-runge-kutta/">Metodo de Runge-Kutta</a></li>
+            
+              <li><a href="/docs/metodo-de-multipasos/">Metodo de Multipasos</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">CCódigo de Python</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/docs/quick-start-guide/">Código de Euler</a></li>
+            
+              <li><a href="/docs/structure/">Código de Taylor</a></li>
+            
+              <li><a href="/docs/installation/">Código de Runge-Kutta</a></li>
+            
+              <li><a href="/docs/upgrading/">Código de Multipasos</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">Vídeos</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/docs/quick-start-guide/">Vídeos sobre Euler</a></li>
+            
+              <li><a href="/docs/structure/">Vídeos sobre Taylor</a></li>
+            
+              <li><a href="/docs/installation/">Vídeos sobre Runge-Kutta</a></li>
+            
+              <li><a href="/docs/upgrading/">Videos sobre Multipasos</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">Ejercicios</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/docs/quick-start-guide/">Ejercicios usando Euler</a></li>
+            
+              <li><a href="/docs/structure/">Ejercicios usando Taylor</a></li>
+            
+              <li><a href="/docs/installation/">Ejercicios usando Runge-Kutta</a></li>
+            
+              <li><a href="/docs/upgrading/">Ejercicios usando Multipasos</a></li>
+            
+          </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
@@ -131,7 +242,7 @@
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/blog/2025/04/21/runge-kutta.html" itemprop="url">Método Runge-Kutta para Ecuaciones diferenciales
+            <a href="http://localhost:4000/docs/metodo-de-runge-kutta" itemprop="url">Método Runge-Kutta para Ecuaciones diferenciales
 </a>
           </h1>
           
@@ -141,6 +252,13 @@
       
 
       <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#runge-kutta-para-ecuaciones-diferenciales-con-valor-inicial">Runge-Kutta para Ecuaciones Diferenciales con valor inicial</a><ul><li><a href="#qué-es-el-método-de-runge-kutta">Qué es el método de Runge-Kutta</a><ul><li><a href="#por-qué-usar-rk">¿Por qué usar RK?</a></li></ul></li><li><a href="#qué-es-el-paso-h">¿Qué es el paso h?</a></li><li><a href="#historia-de-runge-kutta">Historia de Runge-Kutta</a></li><li><a href="#runge-kutta-de-orden-cuatro">Runge-Kutta de orden cuatro</a></li><li><a href="#ejemplo">Ejemplo:</a></li></ul></li></ul>
+            </nav>
+          </aside>
         
         <h1 id="runge-kutta-para-ecuaciones-diferenciales-con-valor-inicial">Runge-Kutta para Ecuaciones Diferenciales con valor inicial</h1>
 <p>!Bienvenido al Método de Runge-Kutta!</p>
@@ -224,11 +342,11 @@ Primera iteración
       
   <nav class="pagination">
     
-      <a href="/blog/2025/04/21/metodos_multipasos.html" class="pagination--pager" title="Métodos Multipasos para Ecuaciones Diferenciales
+      <a href="/docs/metodo-de-multipasos" class="pagination--pager" title="Métodos Multipasos para Ecuaciones Diferenciales
 ">Previous</a>
     
     
-      <a href="/jekyll/update/2025/04/21/welcome-to-jekyll.html" class="pagination--pager" title="Exemplo!
+      <a href="/docs/metodo-de-euler" class="pagination--pager" title="Método de Euler para ecuaciones diferenciales.
 ">Next</a>
     
   </nav>
@@ -264,7 +382,7 @@ Primera iteración
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">Your awesone title</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">UNIDAD 5</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

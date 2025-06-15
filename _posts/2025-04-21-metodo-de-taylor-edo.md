@@ -2,7 +2,12 @@
 layout: single
 title: "Método de Taylor para ecuaciones diferenciales."
 date: 2025-04-21
-categories: blog
+toc: true
+toc_sticky: true
+sidebar:
+  nav: "docs"
+permalink: /docs/metodo-de-taylor
+
 ---
 
 ¡Bienvenidos al Método de Taylor!
@@ -13,15 +18,15 @@ Consiste en calcular las derivadas sucesivas de la ecuación diferencial dada, e
 
 La solución por el método de Taylor viene dada por:
 
-$$
-y(x) = y(x_0) + (x - x_0)y^{(1)}(x_0) + \frac{(x - x_0)^2}{2!}y^{(2)}(x_0) + \frac{(x - x_0)^3}{3!}y^{(3)}(x_0) + \dots + \frac{(x - x_0)^n}{n!}y^{(n)}(x_0)
-$$
+$$y(x) = y(x_0) + (x - x_0)y^{(1)}(x_0) + \frac{(x - x_0)^2}{2!}y^{(2)}(x_0)$$
+
+$$+ \frac{(x - x_0)^3}{3!}y^{(3)}(x_0) + \dots + \frac{(x - x_0)^n}{n!}y^{(n)}(x_0)$$
 
 En forma práctica, si queremos calcular la solución en pasos $$ h $$ (pasos de integración), usamos:
 
-$$
-y(x_0 + h) = y(x_0) + h y'(x_0) + \frac{h^2}{2!}y''(x_0) + \frac{h^3}{3!}y'''(x_0) + \dots + \frac{h^n}{n!}y^{(n)}(x_0)
-$$
+$$y(x_0 + h) = y(x_0) + h y'(x_0) + \frac{h^2}{2!}y''(x_0) + \frac{h^3}{3!}y'''(x_0)$$
+
+$$+ \dots + \frac{h^n}{n!}y^{(n)}(x_0)$$
 
 Donde:
 
@@ -138,9 +143,9 @@ $$
 - $$ y'' = 2 $$
 - $$ y''' = 2 $$
 
-$$
-y_1 = 1 + 0.1(1) + \frac{0.1^2}{2}(2) + \frac{0.1^3}{6}(2) = 1 + 0.1 + 0.01 + 0.000333 \approx 1.11033
-$$
+$$y_1 = 1 + 0.1(1) + \frac{0.1^2}{2}(2) + \frac{0.1^3}{6}(2)$$ 
+
+$$= 1 + 0.1 + 0.01 + 0.000333 \approx 1.11033$$
 
 ---
 
@@ -151,9 +156,9 @@ $$
 - $$ y'' = 1 + 0.1 + 1.11033 = 2.21033 $$
 - $$ y''' = 2.21033 $$
 
-$$
-y_2 = 1.11033 + 0.1(1.21033) + \frac{0.1^2}{2}(2.21033) + \frac{0.1^3}{6}(2.21033) \approx 1.24278
-$$
+$$y_2 = 1.11033 + 0.1(1.21033) + \frac{0.1^2}{2}(2.21033)$$ 
+
+$$+ \frac{0.1^3}{6}(2.21033) \approx 1.24278$$
 
 ---
 
@@ -164,7 +169,7 @@ $$
 - $$ y'' = 1 + 0.2 + 1.24278 = 2.44278 $$
 - $$ y''' = 2.44278 $$
 
-$$
-y_3 = 1.24278 + 0.1(1.44278) + \frac{0.1^2}{2}(2.44278) + \frac{0.1^3}{6}(2.44278) \approx 1.39968
-$$
+$$y_3 = 1.24278 + 0.1(1.44278) + \frac{0.1^2}{2}(2.44278)$$ 
+
+$$+ \frac{0.1^3}{6}(2.44278) \approx 1.39968$$
 

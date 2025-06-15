@@ -2,7 +2,11 @@
 layout: single
 title: "Método de Euler para ecuaciones diferenciales."
 date: 2025-04-28
-categories: blog
+toc: true
+toc_sticky: true
+sidebar:
+  nav: "docs"
+permalink: /docs/metodo-de-euler
 ---
 
 ¡Bienvenidos al Método de Euler!
@@ -47,12 +51,15 @@ Aplicar la fórmula de Euler
 1. Primera iteración (n=0):
 
 $$f(t_0,y_0)=t_0−y_0=0−1=−1$$
+
 $$y_1=y_0+h⋅f(t_0,y_0)=1+0.5⋅(−1)=0.5$$
 
 2. Segunda iteración (n=1):
 
 $$f(t_1,y_1)=t_1−y_1=0.5−0.5=0$$
+
 $$y_2=y_1+h⋅f(t_1,y_1)=0.5+0.5⋅0=0.5$$
+
 
 | $$t_n$$ | $$y_n$$(Aprox.)| 
 |---------|----------------|
@@ -89,22 +96,38 @@ En el intervalo $$t∈[0,1]$$ con $$h=0.5$$.
  - $$h=0.5$$, entonces los puntos son $$t_1=0.5, t_2=1.0$$.
 
 Iteración 1 (n=0):
+
 Predictor:
+
 $$f(t_0, y_0)= 0 - 1 = -1$$
+
 $$y'_1= y_0+h.f(t_0, y_0) = 1 + 0.5 . (-1) = 0.5$$
 
 Corrector:
+
 $$f(t_1, y_1) = 0.5 - 0.5 = 0$$
-$$y_1= y_0 + \frac{h}{2}.[f(t_0, y_0) + f(t_1, y'_1)] = 1 + \frac{0.5}{2}[-1+0] = 1 - 0.25 = 0.75$$
+
+$$y_1= y_0 + \frac{h}{2}.[f(t_0, y_0) + f(t_1, y'_1)]$$ 
+
+$$= 1 + \frac{0.5}{2}[-1+0] = 1 - 0.25 = 0.75$$
 
 Iteración 2 (n=1):
+
 Predictor:
+
 $$f(t_1,y_1) = 0.5 - 0.75 = 0.25$$
-$$y'_2= y_1 + h .f(t_1, y_1) = 0.75 + 0.5 . (-0.25) = 0.625$$
+
+$$y'_2= y_1 + h .f(t_1, y_1)$$ 
+
+$$= 0.75 + 0.5 . (-0.25) = 0.625$$
 
 Corrector:
+
 $$f(t_2, y'_2) = 1.0 - 0.625 = 0.375$$
-$$y_2= y_1+ \frac{h}{2}[f(t_1,y_1) + f(t_2, y_2)] = 0.75 +\frac{0.5}{2}[-0.25 + 0.375] = 0.75 + 0.03125 = 0.78$$
+
+$$y_2= y_1+ \frac{h}{2}[f(t_1,y_1) + f(t_2, y_2)]$$
+
+$$= 0.75 +\frac{0.5}{2}[-0.25 + 0.375] = 0.75 + 0.03125 = 0.78$$
 
 | $$t_n$$ | $$y_n$$(Aprox.)| 
 |---------|----------------|

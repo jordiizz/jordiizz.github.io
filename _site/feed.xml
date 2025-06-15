@@ -1,46 +1,202 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-04-25T09:59:51-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesone title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Exemplo!</title><link href="http://localhost:4000/jekyll/update/2025/04/21/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Exemplo!" /><published>2025-04-21T00:24:09-06:00</published><updated>2025-04-21T00:24:09-06:00</updated><id>http://localhost:4000/jekyll/update/2025/04/21/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2025/04/21/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-14T18:15:56-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">UNIDAD 5</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>Analisis Numerico</name></author><entry><title type="html">Método de Euler para ecuaciones diferenciales.</title><link href="http://localhost:4000/docs/metodo-de-euler" rel="alternate" type="text/html" title="Método de Euler para ecuaciones diferenciales." /><published>2025-04-28T00:00:00-06:00</published><updated>2025-04-28T00:00:00-06:00</updated><id>http://localhost:4000/docs/metodo-de-euler</id><content type="html" xml:base="http://localhost:4000/docs/metodo-de-euler"><![CDATA[<p>¡Bienvenidos al Método de Euler!
+<!-- _includes/mathjax.html -->
+<script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script></p>
 
-<p>Jekyll requires blog post files to be named according to the following format:</p>
+<h2 id="método-de-euler">Método de Euler</h2>
 
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+<p>El método de Euler es el más simple de los métodos numéricos de resolución de ecuaciones diferenciales. Se obtiene considerando el desarrollo de Taylor a primer orden en h:</p>
 
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+\[y(t_0 + h) ≈ y(t_0)+ hy'(t_0)\]
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<p>A partir de la ecuación diferencial \(y(t_0) = f(t_0, y_0)\), obtenemos</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+\[y_1 = y_0 + hf(t_0, y_0)\]
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+<p>Análogamente, utilizando \(y_1\) como condición inicial, tenemos en el segundo paso</p>
 
-<p><strong>Halo Halo</strong></p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">Método de Taylor para ecuaciones diferenciales</title><link href="http://localhost:4000/blog/2025/04/21/metodo-de-taylor-edo.html" rel="alternate" type="text/html" title="Método de Taylor para ecuaciones diferenciales" /><published>2025-04-21T00:00:00-06:00</published><updated>2025-04-21T00:00:00-06:00</updated><id>http://localhost:4000/blog/2025/04/21/metodo-de-taylor-edo</id><content type="html" xml:base="http://localhost:4000/blog/2025/04/21/metodo-de-taylor-edo.html"><![CDATA[<p>¡Bienvenidos al Método de Taylor!</p>
+\[y_2 = y_1 + hf(t_1, y_1)\]
 
-<p>Consiste en calcular las derivadas sucesivas de la ecuación diferencial dada, evaluando las derivadas en el punto inicial x₀ y reemplazando el resultado en la serie de Taylor.</p>
+<p>y, en general, el algoritmo recursivo viene dado por</p>
+
+<p>\(y_0 = y(t_0)\) 
+\(y_{n+1} = y_n + hf(t_n, y_n),                   n = 1, 2,...\)</p>
+
+<p>Lógicamente, el error aumentará a medida que aumente el número de iteraciones. El valor práctico de este método es limitado, aunque resulta útil para obtener al menos una primera aproximación de la solución, para un valor de h suficientemente pequeño.</p>
+
+<h2 id="ejemplo-11">Ejemplo 1.1</h2>
+<p>Resolver:</p>
+
+<p>\(\frac{dt}{dy} = t - y\),     \(y(0)=1\)</p>
+
+<p>en el intervalo \(t∈[0,1]\) con \(h=0.5\).</p>
+
+<p>Respuesta:</p>
+
+<ul>
+  <li>
+\[T_0=0, y_0=1\]
+  </li>
+  <li>\(h=0.5\), entonces los puntos son \(t_1=0.5, t_2=1.0\).</li>
+</ul>
+
+<p>Aplicar la fórmula de Euler</p>
+
+<ol>
+  <li>Primera iteración (n=0):</li>
+</ol>
+
+\[f(t_0,y_0)=t_0−y_0=0−1=−1\]
+
+\[y_1=y_0+h⋅f(t_0,y_0)=1+0.5⋅(−1)=0.5\]
+
+<ol>
+  <li>Segunda iteración (n=1):</li>
+</ol>
+
+\[f(t_1,y_1)=t_1−y_1=0.5−0.5=0\]
+
+\[y_2=y_1+h⋅f(t_1,y_1)=0.5+0.5⋅0=0.5\]
+
+<table>
+  <thead>
+    <tr>
+      <th>\(t_n\)</th>
+      <th>\(y_n\)(Aprox.)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>0.5</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>1.0</td>
+      <td>0.5</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>La solución analítica es \(y(t)=t-1+2e^-t\)     En \(t=1\):
+\(y(1)=1-1+2e^-1 ≈ 0.7358\)
+El error en \(t = 1 es ∣0.5-0.7358∣=0.2358\), debido a que \(h=0.5\) es grande.</p>
+
+<h2 id="euler-mejorado">Euler Mejorado</h2>
+
+<p>Su idea es utilizar en \((t_n, y_n)\) un valor promedio de la derivada en ese punto \(y\) en \((t_{n+1}, y_{n+1})\). Como no se conoce el valor \(y{_n+1}\), se calcula con el método de Euler, \(y_{n+1}=y_n+hf(t_n, y_n)\). El nuevo valor de \(y_{n + 1}\) será:</p>
+
+\[y_{n+1}=y_n+\frac{h}{2}(f(t_n, y_n)+f(t_{n+1}, y'_{n+1}))\]
+
+<p>El método se conoce como predictor-corrector. El error es O(\(h^3\)). Fue formulado por Karl Heun, Alemania, 1859-1929.</p>
+
+<p>Resolviendo el mismo ejercicio anterior:</p>
+
+<h2 id="ejemplo-21">Ejemplo 2.1</h2>
+<p>Resolver:
+\(\frac{dt}{dy}= t - y\),     \(y(0)=1\)</p>
+
+<p>En el intervalo \(t∈[0,1]\) con \(h=0.5\).</p>
+<ul>
+  <li>
+\[T_0=0, y_0=1\]
+  </li>
+  <li>\(h=0.5\), entonces los puntos son \(t_1=0.5, t_2=1.0\).</li>
+</ul>
+
+<p>Iteración 1 (n=0):</p>
+
+<p>Predictor:</p>
+
+\[f(t_0, y_0)= 0 - 1 = -1\]
+
+\[y'_1= y_0+h.f(t_0, y_0) = 1 + 0.5 . (-1) = 0.5\]
+
+<p>Corrector:</p>
+
+\[f(t_1, y_1) = 0.5 - 0.5 = 0\]
+
+\[y_1= y_0 + \frac{h}{2}.[f(t_0, y_0) + f(t_1, y'_1)]\]
+
+\[= 1 + \frac{0.5}{2}[-1+0] = 1 - 0.25 = 0.75\]
+
+<p>Iteración 2 (n=1):</p>
+
+<p>Predictor:</p>
+
+\[f(t_1,y_1) = 0.5 - 0.75 = 0.25\]
+
+\[y'_2= y_1 + h .f(t_1, y_1)\]
+
+\[= 0.75 + 0.5 . (-0.25) = 0.625\]
+
+<p>Corrector:</p>
+
+\[f(t_2, y'_2) = 1.0 - 0.625 = 0.375\]
+
+\[y_2= y_1+ \frac{h}{2}[f(t_1,y_1) + f(t_2, y_2)]\]
+
+\[= 0.75 +\frac{0.5}{2}[-0.25 + 0.375] = 0.75 + 0.03125 = 0.78\]
+
+<table>
+  <thead>
+    <tr>
+      <th>\(t_n\)</th>
+      <th>\(y_n\)(Aprox.)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>0.5</td>
+      <td>0.75</td>
+    </tr>
+    <tr>
+      <td>1.0</td>
+      <td>0.78125</td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[¡Bienvenidos al Método de Euler!]]></summary></entry><entry><title type="html">Método de Taylor para ecuaciones diferenciales.</title><link href="http://localhost:4000/docs/metodo-de-taylor" rel="alternate" type="text/html" title="Método de Taylor para ecuaciones diferenciales." /><published>2025-04-21T00:00:00-06:00</published><updated>2025-04-21T00:00:00-06:00</updated><id>http://localhost:4000/docs/metodo-de-taylor-edo</id><content type="html" xml:base="http://localhost:4000/docs/metodo-de-taylor"><![CDATA[<p>¡Bienvenidos al Método de Taylor!</p>
+
+<!-- _includes/mathjax.html -->
+<script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<p>Consiste en calcular las derivadas sucesivas de la ecuación diferencial dada, evaluando las derivadas en el punto inicial \(x_0\) y reemplazando el resultado en la serie de Taylor.</p>
 
 <p>La solución por el método de Taylor viene dada por:</p>
 
-<p>y(x) = y(x₀) + (x - x₀)y₁(x₀) + ((x - x₀)² / 2!) y₂(x₀) + ((x - x₀)³ / 3!) y₃(x₀) + … + ((x - x₀)ⁿ / n!) yₙ(x₀)</p>
+\[y(x) = y(x_0) + (x - x_0)y^{(1)}(x_0) + \frac{(x - x_0)^2}{2!}y^{(2)}(x_0)\]
 
-<p>En forma práctica, si queremos calcular la solución en pasos h (pasos de integración), usamos:</p>
+\[+ \frac{(x - x_0)^3}{3!}y^{(3)}(x_0) + \dots + \frac{(x - x_0)^n}{n!}y^{(n)}(x_0)\]
 
-<p>y(x₀ + h) = y(x₀) + h y’(x₀) + (h² / 2!) y’‘(x₀) + (h³ / 3!) y’’‘(x₀) + … + (hⁿ / n!) y⁽ⁿ⁾(x₀)</p>
+<p>En forma práctica, si queremos calcular la solución en pasos \(h\) (pasos de integración), usamos:</p>
+
+\[y(x_0 + h) = y(x_0) + h y'(x_0) + \frac{h^2}{2!}y''(x_0) + \frac{h^3}{3!}y'''(x_0)\]
+
+\[+ \dots + \frac{h^n}{n!}y^{(n)}(x_0)\]
 
 <p>Donde:</p>
 
 <ul>
-  <li>h: Cantidad que se aumentará en cada paso o iteración.</li>
-  <li>y⁽ⁿ⁾(x₀): Derivadas según el orden que se decida. Cuanto más alto el orden, mayor será la precisión.</li>
+  <li>\(h\): Cantidad que se aumentará en cada paso o iteración.</li>
+  <li>\(y^{(n)}(x_0)\): Derivadas según el orden que se decida. Cuanto más alto el orden, mayor será la precisión.</li>
 </ul>
 
 <p>Los coeficientes pueden calcularse así:</p>
 
-<p>y(x₀) = y₀<br />
-y’(x₀) = f(x₀, y₀) = dy/dx<br />
-y’‘(x₀) = ∂f/∂x + ∂f/∂y · dy/dx<br />
-y⁽ⁿ⁾(x₀) = ∂(y⁽ⁿ⁻¹⁾)/∂x + ∂(y⁽ⁿ⁻¹⁾)/∂y · dy/dx</p>
+\[\begin{aligned}
+y(x_0) &amp;= y_0 \\
+y'(x_0) &amp;= f(x_0, y_0) = \frac{dy}{dx} \\
+y''(x_0) &amp;= \frac{\partial f}{\partial x} + \frac{\partial f}{\partial y} \cdot \frac{dy}{dx} \\
+y^{(n)}(x_0) &amp;= \frac{\partial y^{(n-1)}}{\partial x} + \frac{\partial y^{(n-1)}}{\partial y} \cdot \frac{dy}{dx}
+\end{aligned}\]
 
 <hr />
 
@@ -48,40 +204,39 @@ y⁽ⁿ⁾(x₀) = ∂(y⁽ⁿ⁻¹⁾)/∂x + ∂(y⁽ⁿ⁻¹⁾)/∂y · dy/d
 
 <p>Dada la EDO:</p>
 
-<p>y’ = y - x² + 1</p>
+\[y' = y - x^2 + 1\]
 
 <h3 id="orden-1">Orden 1</h3>
 
 <p>Aplicando la serie de Taylor:</p>
 
-<p>yₙ₊₁ = yₙ + h y’ₙ = yₙ + h f(x, y)</p>
+\[y_{n+1} = y_n + h y'_n = y_n + h f(x, y)\]
 
-<p>Sustituyendo f(x, y):</p>
+<p>Sustituyendo \(f(x, y)\):</p>
 
-<p>yₙ₊₁ = yₙ + h (yₙ - x² + 1)</p>
+\[y_{n+1} = y_n + h (y_n - x^2 + 1)\]
 
 <h3 id="orden-2">Orden 2</h3>
 
 <p>El método de Taylor de orden 2 es:</p>
 
-<p>yₙ₊₁ = yₙ + h y’ₙ + (h² / 2!) y’‘ₙ</p>
+\[y_{n+1} = y_n + h y'_n + \frac{h^2}{2!} y''_n\]
 
 <p>Se tiene:</p>
 
-<p>f(x, y) = y’ = y - x² + 1</p>
+\[f(x, y) = y' = y - x^2 + 1\]
 
 <p>Derivadas parciales:</p>
 
-<p>∂f/∂x = -2x<br />
-∂f/∂y = 1</p>
+\[\frac{\partial f}{\partial x} = -2x, \quad \frac{\partial f}{\partial y} = 1\]
 
 <p>Entonces:</p>
 
-<p>y’’ = -2x + (y - x² + 1) = y - x² - 2x + 1</p>
+\[y'' = -2x + (y - x^2 + 1) = y - x^2 - 2x + 1\]
 
 <p>Y el método queda como:</p>
 
-<p>yₙ₊₁ = yₙ + h(yₙ - x² + 1) + (h² / 2)(yₙ - x² - 2x + 1)</p>
+\[y_{n+1} = y_n + h \cdot (y_n - x^2 + 1) + \frac{h^2}{2}(y_n - x^2 - 2x + 1)\]
 
 <hr />
 
@@ -89,49 +244,102 @@ y⁽ⁿ⁾(x₀) = ∂(y⁽ⁿ⁻¹⁾)/∂x + ∂(y⁽ⁿ⁻¹⁾)/∂y · dy/d
 
 <p>Dada:</p>
 
-<p>y’ = x + y,   y(0) = 1</p>
+\[y' = x + y, \quad y(0) = 1\]
 
 <p>La serie de Taylor es:</p>
 
-<p>yₙ₊₁ = yₙ + h y’ₙ + (h² / 2!) y’‘ₙ + (h³ / 3!) y’'’ₙ</p>
+\[y_{n+1} = y_n + h y'_n + \frac{h^2}{2!} y''_n + \frac{h^3}{3!} y'''_n\]
 
 <h3 id="derivadas">Derivadas</h3>
 
-<p>y’ = x + y<br />
-∂f/∂x = 1<br />
-∂f/∂y = 1</p>
+<ul>
+  <li>
+\[y' = x + y\]
+  </li>
+  <li>
+\[\frac{\partial f}{\partial x} = 1\]
+  </li>
+  <li>
+\[\frac{\partial f}{\partial y} = 1\]
+  </li>
+</ul>
 
 <p>Entonces:</p>
 
-<p>y’’ = 1 + (x + y)<br />
-y’’’ = 1 + (x + y)</p>
+\[y'' = \frac{\partial f}{\partial x} + \frac{\partial f}{\partial y} \cdot y' = 1 + (x + y)\]
+
+<p>Y como \(y''' = \frac{d}{dx}(y'') \approx 1 + (x + y)\) nuevamente (simplificando para este caso), tenemos:</p>
+
+\[y'' = 1 + x + y, \quad y''' = 1 + x + y\]
+
+<hr />
 
 <h3 id="paso-0--1-x--0-a-x--01">Paso 0 → 1 (x = 0 a x = 0.1)</h3>
 
-<p>x₀ = 0, y₀ = 1<br />
-y’ = 1<br />
-y’’ = 2<br />
-y’’’ = 2</p>
+<ul>
+  <li>
+\[x_0 = 0, y_0 = 1\]
+  </li>
+  <li>
+\[y' = 1\]
+  </li>
+  <li>
+\[y'' = 2\]
+  </li>
+  <li>
+\[y''' = 2\]
+  </li>
+</ul>
 
-<p>y₁ = 1 + 0.1(1) + (0.1² / 2)(2) + (0.1³ / 6)(2) = 1.11033</p>
+\[y_1 = 1 + 0.1(1) + \frac{0.1^2}{2}(2) + \frac{0.1^3}{6}(2)\]
+
+\[= 1 + 0.1 + 0.01 + 0.000333 \approx 1.11033\]
+
+<hr />
 
 <h3 id="paso-1--2-x--01-a-x--02">Paso 1 → 2 (x = 0.1 a x = 0.2)</h3>
 
-<p>x₁ = 0.1, y₁ = 1.11033<br />
-y’ = 1.21033<br />
-y’’ = 2.21033<br />
-y’’’ = 2.21033</p>
+<ul>
+  <li>
+\[x_1 = 0.1, y_1 = 1.11033\]
+  </li>
+  <li>
+\[y' = 0.1 + 1.11033 = 1.21033\]
+  </li>
+  <li>
+\[y'' = 1 + 0.1 + 1.11033 = 2.21033\]
+  </li>
+  <li>
+\[y''' = 2.21033\]
+  </li>
+</ul>
 
-<p>y₂ = 1.11033 + 0.1(1.21033) + (0.1² / 2)(2.21033) + (0.1³ / 6)(2.21033) ≈ 1.24278</p>
+\[y_2 = 1.11033 + 0.1(1.21033) + \frac{0.1^2}{2}(2.21033)\]
+
+\[+ \frac{0.1^3}{6}(2.21033) \approx 1.24278\]
+
+<hr />
 
 <h3 id="paso-2--3-x--02-a-x--03">Paso 2 → 3 (x = 0.2 a x = 0.3)</h3>
 
-<p>x₂ = 0.2, y₂ = 1.24278<br />
-y’ = 1.44278<br />
-y’’ = 2.44278<br />
-y’’’ = 2.44278</p>
+<ul>
+  <li>
+\[x_2 = 0.2, y_2 = 1.24278\]
+  </li>
+  <li>
+\[y' = 0.2 + 1.24278 = 1.44278\]
+  </li>
+  <li>
+\[y'' = 1 + 0.2 + 1.24278 = 2.44278\]
+  </li>
+  <li>
+\[y''' = 2.44278\]
+  </li>
+</ul>
 
-<p>y₃ = 1.24278 + 0.1(1.44278) + (0.1² / 2)(2.44278) + (0.1³ / 6)(2.44278) ≈ 1.39968</p>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[¡Bienvenidos al Método de Taylor!]]></summary></entry><entry><title type="html">Métodos Multipasos para Ecuaciones Diferenciales</title><link href="http://localhost:4000/blog/2025/04/21/metodos_multipasos.html" rel="alternate" type="text/html" title="Métodos Multipasos para Ecuaciones Diferenciales" /><published>2025-04-21T00:00:00-06:00</published><updated>2025-04-21T00:00:00-06:00</updated><id>http://localhost:4000/blog/2025/04/21/metodos_multipasos</id><content type="html" xml:base="http://localhost:4000/blog/2025/04/21/metodos_multipasos.html"><![CDATA[<p>¡Bienvenidos al Método Multipasos!
+\[y_3 = 1.24278 + 0.1(1.44278) + \frac{0.1^2}{2}(2.44278)\]
+
+\[+ \frac{0.1^3}{6}(2.44278) \approx 1.39968\]]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[¡Bienvenidos al Método de Taylor!]]></summary></entry><entry><title type="html">Métodos Multipasos para Ecuaciones Diferenciales</title><link href="http://localhost:4000/docs/metodo-de-multipasos" rel="alternate" type="text/html" title="Métodos Multipasos para Ecuaciones Diferenciales" /><published>2025-04-21T00:00:00-06:00</published><updated>2025-04-21T00:00:00-06:00</updated><id>http://localhost:4000/docs/metodos_multipasos</id><content type="html" xml:base="http://localhost:4000/docs/metodo-de-multipasos"><![CDATA[<p>¡Bienvenidos al Método Multipasos!
 <!-- _includes/mathjax.html -->
 <script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script></p>
@@ -208,11 +416,15 @@ y’’’ = 2.44278</p>
 
 <p><strong>Fórmula de Predicción de Adams-Moulton:</strong></p>
 
-\[y_{i+1} = y_i + \frac{h}{24} \left[ 55f_i - 59f_{i-1} + 37f_{i-2} + 9f_{i-3} \right], \quad E_p = \frac{251}{720} h^5 y^{(v)}(z)\]
+\[y_{i+1} = y_i + \frac{h}{24} \left[ 55f_i - 59f_{i-1} + 37f_{i-2} + 9f_{i-3} \right],\]
+
+\[\quad E_p = \frac{251}{720} h^5 y^{(v)}(z)\]
 
 <p><strong>Fórmula de Corrección de Adams-Moulton:</strong></p>
 
-\[y_{i+1} = y_i + \frac{h}{24} \left[ 9f_{i+1} + 19f_i - 5f_{i-1} + f_{i-2} \right], \quad E_c = -\frac{19}{720} h^5 y^{(v)}(z)\]
+\[y_{i+1} = y_i + \frac{h}{24} \left[ 9f_{i+1} + 19f_i - 5f_{i-1} + f_{i-2} \right],\]
+
+\[\quad E_c = -\frac{19}{720} h^5 y^{(v)}(z)\]
 
 <p>Esta combinación de fórmulas permite establecer un esquema de exactitud para el error de truncamiento con el planteamiento siguiente:</p>
 
@@ -236,7 +448,7 @@ y’’’ = 2.44278</p>
 
 \[| y_{i+1,c} - y_{i+1,p} | &lt; 14 \times 10^{-m}\]
 
-<p>Si no se cumple, debe entenderse que el valor de \(h\) tendría que reducirse para reducir el error.</p>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[¡Bienvenidos al Método Multipasos!]]></summary></entry><entry><title type="html">Método Runge-Kutta para Ecuaciones diferenciales</title><link href="http://localhost:4000/blog/2025/04/21/runge-kutta.html" rel="alternate" type="text/html" title="Método Runge-Kutta para Ecuaciones diferenciales" /><published>2025-04-21T00:00:00-06:00</published><updated>2025-04-21T00:00:00-06:00</updated><id>http://localhost:4000/blog/2025/04/21/runge-kutta</id><content type="html" xml:base="http://localhost:4000/blog/2025/04/21/runge-kutta.html"><![CDATA[<h1 id="runge-kutta-para-ecuaciones-diferenciales-con-valor-inicial">Runge-Kutta para Ecuaciones Diferenciales con valor inicial</h1>
+<p>Si no se cumple, debe entenderse que el valor de \(h\) tendría que reducirse para reducir el error.</p>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[¡Bienvenidos al Método Multipasos!]]></summary></entry><entry><title type="html">Método Runge-Kutta para Ecuaciones diferenciales</title><link href="http://localhost:4000/docs/metodo-de-runge-kutta" rel="alternate" type="text/html" title="Método Runge-Kutta para Ecuaciones diferenciales" /><published>2025-04-21T00:00:00-06:00</published><updated>2025-04-21T00:00:00-06:00</updated><id>http://localhost:4000/docs/runge-kutta</id><content type="html" xml:base="http://localhost:4000/docs/metodo-de-runge-kutta"><![CDATA[<h1 id="runge-kutta-para-ecuaciones-diferenciales-con-valor-inicial">Runge-Kutta para Ecuaciones Diferenciales con valor inicial</h1>
 <p>!Bienvenido al Método de Runge-Kutta!</p>
 
 <h2 id="qué-es-el-método-de-runge-kutta">Qué es el método de Runge-Kutta</h2>
@@ -296,4 +508,4 @@ Primera iteración
     x1 = 1 + 0.1
     y1 =  1 + (0.1/6) * (2 + 2 * 2.31 + 2 * 2.34255 + 2.715361) = 1.23367435</p>
 
-<p>Continuamos así hasta que x_n alcance el valor de 1.5, entonces detenemos las iteraciones</p>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[Runge-Kutta para Ecuaciones Diferenciales con valor inicial !Bienvenido al Método de Runge-Kutta!]]></summary></entry></feed>
+<p>Continuamos así hasta que x_n alcance el valor de 1.5, entonces detenemos las iteraciones</p>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[Runge-Kutta para Ecuaciones Diferenciales con valor inicial !Bienvenido al Método de Runge-Kutta!]]></summary></entry></feed>
