@@ -10,8 +10,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Método Runge-Kutta para Ecuaciones diferenciales - UNIDAD 5</title>
-<meta name="description" content="Runge-Kutta para Ecuaciones Diferenciales con valor inicial !Bienvenido al Método de Runge-Kutta!">
+<!-- begin _includes/seo.html --><title>Método de Euler para ecuaciones diferenciales. - UNIDAD 5</title>
+<meta name="description" content="¡Bienvenidos al Método de Euler!">
 
 
   <meta name="author" content="Analisis Numerico">
@@ -23,26 +23,26 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="UNIDAD 5">
-<meta property="og:title" content="Método Runge-Kutta para Ecuaciones diferenciales">
-<meta property="og:url" content="http://localhost:4000/docs/metodo-de-runge-kutta">
+<meta property="og:title" content="Método de Euler para ecuaciones diferenciales.">
+<meta property="og:url" content="http://localhost:4000/docs/metodo-de-euler/">
 
 
-  <meta property="og:description" content="Runge-Kutta para Ecuaciones Diferenciales con valor inicial !Bienvenido al Método de Runge-Kutta!">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2025-04-21T00:00:00-06:00">
+  <meta property="og:description" content="¡Bienvenidos al Método de Euler!">
 
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/docs/metodo-de-runge-kutta">
+
+  <meta property="article:published_time" content="2025-04-28T00:00:00-06:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/docs/metodo-de-euler/">
 
 
 
@@ -150,13 +150,13 @@
           
           <ul>
             
-              <li><a href="/docs/metodo-de-euler">Metodo de Euler</a></li>
+              <li><a href="/docs/metodo-de-euler/" class="active">Metodo de Euler</a></li>
             
-              <li><a href="/docs/metodo-de-taylor">Metodo de Taylor</a></li>
+              <li><a href="/docs/metodo-de-taylor/">Metodo de Taylor</a></li>
             
-              <li><a href="/docs/metodo-de-runge-kutta" class="active">Metodo de Runge-Kutta</a></li>
+              <li><a href="/docs/metodo-de-runge-kutta/">Metodo de Runge-Kutta</a></li>
             
-              <li><a href="/docs/metodo-de-multipasos">Metodo de Multipasos</a></li>
+              <li><a href="/docs/metodo-de-multipasos/">Metodo de Multipasos</a></li>
             
           </ul>
           
@@ -233,16 +233,16 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Método Runge-Kutta para Ecuaciones diferenciales">
-    <meta itemprop="description" content="Runge-Kutta para Ecuaciones Diferenciales con valor inicial!Bienvenido al Método de Runge-Kutta!">
-    <meta itemprop="datePublished" content="2025-04-21T00:00:00-06:00">
+    <meta itemprop="headline" content="Método de Euler para ecuaciones diferenciales.">
+    <meta itemprop="description" content="¡Bienvenidos al Método de Euler!">
+    <meta itemprop="datePublished" content="2025-04-28T00:00:00-06:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/docs/metodo-de-runge-kutta" itemprop="url">Método Runge-Kutta para Ecuaciones diferenciales
+            <a href="http://localhost:4000/docs/metodo-de-euler/" itemprop="url">Método de Euler para ecuaciones diferenciales.
 </a>
           </h1>
           
@@ -256,72 +256,175 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#runge-kutta-para-ecuaciones-diferenciales-con-valor-inicial">Runge-Kutta para Ecuaciones Diferenciales con valor inicial</a><ul><li><a href="#qué-es-el-método-de-runge-kutta">Qué es el método de Runge-Kutta</a><ul><li><a href="#por-qué-usar-rk">¿Por qué usar RK?</a></li></ul></li><li><a href="#qué-es-el-paso-h">¿Qué es el paso h?</a></li><li><a href="#historia-de-runge-kutta">Historia de Runge-Kutta</a></li><li><a href="#runge-kutta-de-orden-cuatro">Runge-Kutta de orden cuatro</a></li><li><a href="#ejemplo">Ejemplo:</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#método-de-euler">Método de Euler</a></li><li><a href="#ejemplo-11">Ejemplo 1.1</a></li><li><a href="#euler-mejorado">Euler Mejorado</a></li><li><a href="#ejemplo-21">Ejemplo 2.1</a></li></ul>
             </nav>
           </aside>
         
-        <h1 id="runge-kutta-para-ecuaciones-diferenciales-con-valor-inicial">Runge-Kutta para Ecuaciones Diferenciales con valor inicial</h1>
-<p>!Bienvenido al Método de Runge-Kutta!</p>
+        <p>¡Bienvenidos al Método de Euler!
+<!-- _includes/mathjax.html -->
+<script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script></p>
 
-<h2 id="qué-es-el-método-de-runge-kutta">Qué es el método de Runge-Kutta</h2>
-<p>Es un método aproximado que permite encontrar soluciones cercanas para ecuaciones diferenciales, mediante distintas operaciones, que avanzan hacia la solución con un paso h. Este método es aplicable a aquellas Ecuaciones Diferenciales Ordinarias (EDO), diseñado para EDO’s de orden uno lineales, que tienen un valor inicial, realmente Runge-Kutta es una familia de métodos numéricos, siendo el de orden cuatro el más famoso, conocido por su eficiencia y por su precisión.</p>
+<h2 id="método-de-euler">Método de Euler</h2>
 
-<h3 id="por-qué-usar-rk">¿Por qué usar RK?</h3>
-<p>Porque es una familia de métodos que nos permiten calcular una solución aproximada sin calcular derivadas de orden elevada, lo que permite mejora de rendimiento y eficiencia computacional.</p>
+<p>El método de Euler es el más simple de los métodos numéricos de resolución de ecuaciones diferenciales. Se obtiene considerando el desarrollo de Taylor a primer orden en h:</p>
 
-<h2 id="qué-es-el-paso-h">¿Qué es el paso h?</h2>
-<p>Imagina que estás avanzando por un camino (función solución), y que buscando un objetivo (comportamiento) hacés uso de una brújula (ecuación diferencial) que te dice a dónde ir, si imaginas este camino como puntos en un mapa, digamos que cada que avanzamos un paso o punto en ese camino, h es el tamaño del paso que damos en esa dirección que marca la brújula, luego nos detenemos y usamos la brújula otra vez (cada paso), hasta que llegamos a un camino aproximado.</p>
+\[y(t_0 + h) ≈ y(t_0)+ hy'(t_0)\]
 
-<p>Definición del paso h.</p>
+<p>A partir de la ecuación diferencial \(y(t_0) = f(t_0, y_0)\), obtenemos</p>
 
-<h2 id="historia-de-runge-kutta">Historia de Runge-Kutta</h2>
+\[y_1 = y_0 + hf(t_0, y_0)\]
 
-<h2 id="runge-kutta-de-orden-cuatro">Runge-Kutta de orden cuatro</h2>
-<p>Es un método que se basa en el avance(iteraciones):
-Dada una EDO, de orden uno lineal:</p>
+<p>Análogamente, utilizando \(y_1\) como condición inicial, tenemos en el segundo paso</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dy/dx = f(x, y),   con y(x0) = y0
+\[y_2 = y_1 + hf(t_1, y_1)\]
 
+<p>y, en general, el algoritmo recursivo viene dado por</p>
 
-k1 = f(x_n, y_n)
-k2 = f(x_n + h/2, y_n + h/2 * k1)
-k3 = f(x_n + h/2, y_n + h/2 * k2)
-k4 = f(x_n + h,   y_n + h * k3)
-</code></pre></div></div>
+<p>\(y_0 = y(t_0)\) 
+\(y_{n+1} = y_n + hf(t_n, y_n),                   n = 1, 2,...\)</p>
 
-<p>Entonces:
-    y_{n+1} = y_n + (h/6) * (k1 + 2<em>k2 + 2</em>k3 + k4)
-Donde:
-    x0 = Valor inicial de x, de la condición inicial
-    y0 = Valor inicial de y, de la condición inicial
-    RK4 depende de un criterio de para estructural, como criterio de parada tenemos un valor xf, en la última iteración que deseamos encontrar de la EDO(el último punto del mapa que descubriremos)
-    xf = Valor de x, en la última iteración que deseamos encontrar
-    x_{n+1} = Para cada iteración será x_n+1 = x_i + h</p>
+<p>Lógicamente, el error aumentará a medida que aumente el número de iteraciones. El valor práctico de este método es limitado, aunque resulta útil para obtener al menos una primera aproximación de la solución, para un valor de h suficientemente pequeño.</p>
 
-<h2 id="ejemplo">Ejemplo:</h2>
-<p>Usa el método de Runge-Kutta con h = 0.1 para obtener una aproximación y(1.5), para la solución de dy/dx = 2xy.
-y(1) = 1</p>
+<h2 id="ejemplo-11">Ejemplo 1.1</h2>
+<p>Resolver:</p>
 
-<p>Datos: 
-    x0 = 1
-    y0 = 1
-    xf = 1.5
-    f(x, y) = 2xy</p>
+<p>\(\frac{dt}{dy} = t - y\),     \(y(0)=1\)</p>
 
-<p>RK4
-Primera iteración
-    k1 = f(1, 1) = 2 * 1 *1 = 2
-    k2 = f(1 + 0.1 / 2, 1 + 0.1 / 2 * 2) = 2.31
-    k3 = f(1 + 0.1 / 2, 1 + 0.1 / 2 * 2.31) = 2.34255
-    k4 = f(1 + 0.1, 1 + 0.1 * 2.34255) = 2.715361</p>
+<p>en el intervalo \(t∈[0,1]\) con \(h=0.5\).</p>
 
-<p>Con estos valores:
-    x1 = x0 + h
-    x1 = 1 + 0.1
-    y1 =  1 + (0.1/6) * (2 + 2 * 2.31 + 2 * 2.34255 + 2.715361) = 1.23367435</p>
+<p>Respuesta:</p>
 
-<p>Continuamos así hasta que x_n alcance el valor de 1.5, entonces detenemos las iteraciones</p>
+<ul>
+  <li>
+\[T_0=0, y_0=1\]
+  </li>
+  <li>\(h=0.5\), entonces los puntos son \(t_1=0.5, t_2=1.0\).</li>
+</ul>
 
+<p>Aplicar la fórmula de Euler</p>
+
+<ol>
+  <li>Primera iteración (n=0):</li>
+</ol>
+
+\[f(t_0,y_0)=t_0−y_0=0−1=−1\]
+
+\[y_1=y_0+h⋅f(t_0,y_0)=1+0.5⋅(−1)=0.5\]
+
+<ol>
+  <li>Segunda iteración (n=1):</li>
+</ol>
+
+\[f(t_1,y_1)=t_1−y_1=0.5−0.5=0\]
+
+\[y_2=y_1+h⋅f(t_1,y_1)=0.5+0.5⋅0=0.5\]
+
+<table>
+  <thead>
+    <tr>
+      <th>\(t_n\)</th>
+      <th>\(y_n\)(Aprox.)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>0.5</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>1.0</td>
+      <td>0.5</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>La solución analítica es \(y(t)=t-1+2e^-t\)     En \(t=1\):
+\(y(1)=1-1+2e^-1 ≈ 0.7358\)
+El error en \(t = 1 es ∣0.5-0.7358∣=0.2358\), debido a que \(h=0.5\) es grande.</p>
+
+<h2 id="euler-mejorado">Euler Mejorado</h2>
+
+<p>Su idea es utilizar en \((t_n, y_n)\) un valor promedio de la derivada en ese punto \(y\) en \((t_{n+1}, y_{n+1})\). Como no se conoce el valor \(y{_n+1}\), se calcula con el método de Euler, \(y_{n+1}=y_n+hf(t_n, y_n)\). El nuevo valor de \(y_{n + 1}\) será:</p>
+
+\[y_{n+1}=y_n+\frac{h}{2}(f(t_n, y_n)+f(t_{n+1}, y'_{n+1}))\]
+
+<p>El método se conoce como predictor-corrector. El error es O(\(h^3\)). Fue formulado por Karl Heun, Alemania, 1859-1929.</p>
+
+<p>Resolviendo el mismo ejercicio anterior:</p>
+
+<h2 id="ejemplo-21">Ejemplo 2.1</h2>
+<p>Resolver:
+\(\frac{dt}{dy}= t - y\),     \(y(0)=1\)</p>
+
+<p>En el intervalo \(t∈[0,1]\) con \(h=0.5\).</p>
+<ul>
+  <li>
+\[T_0=0, y_0=1\]
+  </li>
+  <li>\(h=0.5\), entonces los puntos son \(t_1=0.5, t_2=1.0\).</li>
+</ul>
+
+<p>Iteración 1 (n=0):</p>
+
+<p>Predictor:</p>
+
+\[f(t_0, y_0)= 0 - 1 = -1\]
+
+\[y'_1= y_0+h.f(t_0, y_0) = 1 + 0.5 . (-1) = 0.5\]
+
+<p>Corrector:</p>
+
+\[f(t_1, y_1) = 0.5 - 0.5 = 0\]
+
+\[y_1= y_0 + \frac{h}{2}.[f(t_0, y_0) + f(t_1, y'_1)]\]
+
+\[= 1 + \frac{0.5}{2}[-1+0] = 1 - 0.25 = 0.75\]
+
+<p>Iteración 2 (n=1):</p>
+
+<p>Predictor:</p>
+
+\[f(t_1,y_1) = 0.5 - 0.75 = 0.25\]
+
+\[y'_2= y_1 + h .f(t_1, y_1)\]
+
+\[= 0.75 + 0.5 . (-0.25) = 0.625\]
+
+<p>Corrector:</p>
+
+\[f(t_2, y'_2) = 1.0 - 0.625 = 0.375\]
+
+\[y_2= y_1+ \frac{h}{2}[f(t_1,y_1) + f(t_2, y_2)]\]
+
+\[= 0.75 +\frac{0.5}{2}[-0.25 + 0.375] = 0.75 + 0.03125 = 0.78\]
+
+<table>
+  <thead>
+    <tr>
+      <th>\(t_n\)</th>
+      <th>\(y_n\)(Aprox.)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>0.5</td>
+      <td>0.75</td>
+    </tr>
+    <tr>
+      <td>1.0</td>
+      <td>0.78125</td>
+    </tr>
+  </tbody>
+</table>
 
         
       </section>
@@ -333,7 +436,7 @@ Primera iteración
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-04-21T00:00:00-06:00">April 21, 2025</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-04-28T00:00:00-06:00">April 28, 2025</time></p>
 
       </footer>
 
@@ -342,12 +445,11 @@ Primera iteración
       
   <nav class="pagination">
     
-      <a href="/docs/metodo-de-multipasos" class="pagination--pager" title="Métodos Multipasos para Ecuaciones Diferenciales
+      <a href="/docs/metodo-de-runge-kutta/" class="pagination--pager" title="Método Runge-Kutta para Ecuaciones diferenciales
 ">Previous</a>
     
     
-      <a href="/docs/metodo-de-euler" class="pagination--pager" title="Método de Euler para ecuaciones diferenciales.
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 

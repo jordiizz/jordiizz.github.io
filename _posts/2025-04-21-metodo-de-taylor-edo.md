@@ -6,7 +6,7 @@ toc: true
 toc_sticky: true
 sidebar:
   nav: "docs"
-permalink: /docs/metodo-de-taylor
+permalink: /docs/metodo-de-taylor/
 
 ---
 

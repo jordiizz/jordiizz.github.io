@@ -6,7 +6,7 @@ toc: true
 toc_sticky: true
 sidebar:
   nav: "docs"
-permalink: /docs/metodo-de-runge-kutta
+permalink: /docs/metodo-de-runge-kutta/
 ---
 
 # Runge-Kutta para Ecuaciones Diferenciales con valor inicial

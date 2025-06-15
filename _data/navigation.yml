@@ -2,13 +2,13 @@ docs:
   - title: Teoría
     children:
       - title: "Metodo de Euler"
-        url: /docs/metodo-de-euler
+        url: /docs/metodo-de-euler/
       - title: "Metodo de Taylor"
-        url: /docs/metodo-de-taylor
+        url: /docs/metodo-de-taylor/
       - title: "Metodo de Runge-Kutta"
-        url: /docs/metodo-de-runge-kutta
+        url: /docs/metodo-de-runge-kutta/
       - title: "Metodo de Multipasos"
-        url: /docs/metodo-de-multipasos
+        url: /docs/metodo-de-multipasos/
 
   - title: CCódigo de Python
     children:  

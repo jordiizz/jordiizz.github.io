@@ -10,8 +10,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Método de Taylor para ecuaciones diferenciales. - UNIDAD 5</title>
-<meta name="description" content="¡Bienvenidos al Método de Taylor!">
+<!-- begin _includes/seo.html --><title>Método Runge-Kutta para Ecuaciones diferenciales - UNIDAD 5</title>
+<meta name="description" content="Runge-Kutta para Ecuaciones Diferenciales con valor inicial !Bienvenido al Método de Runge-Kutta!">
 
 
   <meta name="author" content="Analisis Numerico">
@@ -23,11 +23,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="UNIDAD 5">
-<meta property="og:title" content="Método de Taylor para ecuaciones diferenciales.">
-<meta property="og:url" content="http://localhost:4000/docs/metodo-de-taylor">
+<meta property="og:title" content="Método Runge-Kutta para Ecuaciones diferenciales">
+<meta property="og:url" content="http://localhost:4000/docs/metodo-de-runge-kutta/">
 
 
-  <meta property="og:description" content="¡Bienvenidos al Método de Taylor!">
+  <meta property="og:description" content="Runge-Kutta para Ecuaciones Diferenciales con valor inicial !Bienvenido al Método de Runge-Kutta!">
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/docs/metodo-de-taylor">
+<link rel="canonical" href="http://localhost:4000/docs/metodo-de-runge-kutta/">
 
 
 
@@ -150,13 +150,13 @@
           
           <ul>
             
-              <li><a href="/docs/metodo-de-euler">Metodo de Euler</a></li>
+              <li><a href="/docs/metodo-de-euler/">Metodo de Euler</a></li>
             
-              <li><a href="/docs/metodo-de-taylor" class="active">Metodo de Taylor</a></li>
+              <li><a href="/docs/metodo-de-taylor/">Metodo de Taylor</a></li>
             
-              <li><a href="/docs/metodo-de-runge-kutta">Metodo de Runge-Kutta</a></li>
+              <li><a href="/docs/metodo-de-runge-kutta/" class="active">Metodo de Runge-Kutta</a></li>
             
-              <li><a href="/docs/metodo-de-multipasos">Metodo de Multipasos</a></li>
+              <li><a href="/docs/metodo-de-multipasos/">Metodo de Multipasos</a></li>
             
           </ul>
           
@@ -233,8 +233,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Método de Taylor para ecuaciones diferenciales.">
-    <meta itemprop="description" content="¡Bienvenidos al Método de Taylor!">
+    <meta itemprop="headline" content="Método Runge-Kutta para Ecuaciones diferenciales">
+    <meta itemprop="description" content="Runge-Kutta para Ecuaciones Diferenciales con valor inicial!Bienvenido al Método de Runge-Kutta!">
     <meta itemprop="datePublished" content="2025-04-21T00:00:00-06:00">
     
 
@@ -242,7 +242,7 @@
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/docs/metodo-de-taylor" itemprop="url">Método de Taylor para ecuaciones diferenciales.
+            <a href="http://localhost:4000/docs/metodo-de-runge-kutta/" itemprop="url">Método Runge-Kutta para Ecuaciones diferenciales
 </a>
           </h1>
           
@@ -256,188 +256,71 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#ejemplo-11-método-de-taylor-de-orden-1-y-2">Ejemplo 1.1: Método de Taylor de orden 1 y 2</a><ul><li><a href="#orden-1">Orden 1</a></li><li><a href="#orden-2">Orden 2</a></li></ul></li><li><a href="#ejemplo-22-método-de-taylor-de-orden-3-3-iteraciones-h--01">Ejemplo 2.2: Método de Taylor de orden 3 (3 iteraciones, h = 0.1)</a><ul><li><a href="#derivadas">Derivadas</a></li><li><a href="#paso-0--1-x--0-a-x--01">Paso 0 → 1 (x = 0 a x = 0.1)</a></li><li><a href="#paso-1--2-x--01-a-x--02">Paso 1 → 2 (x = 0.1 a x = 0.2)</a></li><li><a href="#paso-2--3-x--02-a-x--03">Paso 2 → 3 (x = 0.2 a x = 0.3)</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#runge-kutta-para-ecuaciones-diferenciales-con-valor-inicial">Runge-Kutta para Ecuaciones Diferenciales con valor inicial</a><ul><li><a href="#qué-es-el-método-de-runge-kutta">Qué es el método de Runge-Kutta</a><ul><li><a href="#por-qué-usar-rk">¿Por qué usar RK?</a></li></ul></li><li><a href="#qué-es-el-paso-h">¿Qué es el paso h?</a></li><li><a href="#historia-de-runge-kutta">Historia de Runge-Kutta</a></li><li><a href="#runge-kutta-de-orden-cuatro">Runge-Kutta de orden cuatro</a></li><li><a href="#ejemplo">Ejemplo:</a></li></ul></li></ul>
             </nav>
           </aside>
         
-        <p>¡Bienvenidos al Método de Taylor!</p>
+        <h1 id="runge-kutta-para-ecuaciones-diferenciales-con-valor-inicial">Runge-Kutta para Ecuaciones Diferenciales con valor inicial</h1>
+<p>!Bienvenido al Método de Runge-Kutta!</p>
 
-<!-- _includes/mathjax.html -->
-<script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
+<h2 id="qué-es-el-método-de-runge-kutta">Qué es el método de Runge-Kutta</h2>
+<p>Es un método aproximado que permite encontrar soluciones cercanas para ecuaciones diferenciales, mediante distintas operaciones, que avanzan hacia la solución con un paso h. Este método es aplicable a aquellas Ecuaciones Diferenciales Ordinarias (EDO), diseñado para EDO’s de orden uno lineales, que tienen un valor inicial, realmente Runge-Kutta es una familia de métodos numéricos, siendo el de orden cuatro el más famoso, conocido por su eficiencia y por su precisión.</p>
 
-<p>Consiste en calcular las derivadas sucesivas de la ecuación diferencial dada, evaluando las derivadas en el punto inicial \(x_0\) y reemplazando el resultado en la serie de Taylor.</p>
+<h3 id="por-qué-usar-rk">¿Por qué usar RK?</h3>
+<p>Porque es una familia de métodos que nos permiten calcular una solución aproximada sin calcular derivadas de orden elevada, lo que permite mejora de rendimiento y eficiencia computacional.</p>
 
-<p>La solución por el método de Taylor viene dada por:</p>
+<h2 id="qué-es-el-paso-h">¿Qué es el paso h?</h2>
+<p>Imagina que estás avanzando por un camino (función solución), y que buscando un objetivo (comportamiento) hacés uso de una brújula (ecuación diferencial) que te dice a dónde ir, si imaginas este camino como puntos en un mapa, digamos que cada que avanzamos un paso o punto en ese camino, h es el tamaño del paso que damos en esa dirección que marca la brújula, luego nos detenemos y usamos la brújula otra vez (cada paso), hasta que llegamos a un camino aproximado.</p>
 
-\[y(x) = y(x_0) + (x - x_0)y^{(1)}(x_0) + \frac{(x - x_0)^2}{2!}y^{(2)}(x_0)\]
+<p>Definición del paso h.</p>
 
-\[+ \frac{(x - x_0)^3}{3!}y^{(3)}(x_0) + \dots + \frac{(x - x_0)^n}{n!}y^{(n)}(x_0)\]
+<h2 id="historia-de-runge-kutta">Historia de Runge-Kutta</h2>
 
-<p>En forma práctica, si queremos calcular la solución en pasos \(h\) (pasos de integración), usamos:</p>
+<h2 id="runge-kutta-de-orden-cuatro">Runge-Kutta de orden cuatro</h2>
+<p>Es un método que se basa en el avance(iteraciones):
+Dada una EDO, de orden uno lineal:</p>
 
-\[y(x_0 + h) = y(x_0) + h y'(x_0) + \frac{h^2}{2!}y''(x_0) + \frac{h^3}{3!}y'''(x_0)\]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dy/dx = f(x, y),   con y(x0) = y0
 
-\[+ \dots + \frac{h^n}{n!}y^{(n)}(x_0)\]
 
-<p>Donde:</p>
+k1 = f(x_n, y_n)
+k2 = f(x_n + h/2, y_n + h/2 * k1)
+k3 = f(x_n + h/2, y_n + h/2 * k2)
+k4 = f(x_n + h,   y_n + h * k3)
+</code></pre></div></div>
 
-<ul>
-  <li>\(h\): Cantidad que se aumentará en cada paso o iteración.</li>
-  <li>\(y^{(n)}(x_0)\): Derivadas según el orden que se decida. Cuanto más alto el orden, mayor será la precisión.</li>
-</ul>
+<p>Entonces:
+    y_{n+1} = y_n + (h/6) * (k1 + 2<em>k2 + 2</em>k3 + k4)
+Donde:
+    x0 = Valor inicial de x, de la condición inicial
+    y0 = Valor inicial de y, de la condición inicial
+    RK4 depende de un criterio de para estructural, como criterio de parada tenemos un valor xf, en la última iteración que deseamos encontrar de la EDO(el último punto del mapa que descubriremos)
+    xf = Valor de x, en la última iteración que deseamos encontrar
+    x_{n+1} = Para cada iteración será x_n+1 = x_i + h</p>
 
-<p>Los coeficientes pueden calcularse así:</p>
+<h2 id="ejemplo">Ejemplo:</h2>
+<p>Usa el método de Runge-Kutta con h = 0.1 para obtener una aproximación y(1.5), para la solución de dy/dx = 2xy.
+y(1) = 1</p>
 
-\[\begin{aligned}
-y(x_0) &amp;= y_0 \\
-y'(x_0) &amp;= f(x_0, y_0) = \frac{dy}{dx} \\
-y''(x_0) &amp;= \frac{\partial f}{\partial x} + \frac{\partial f}{\partial y} \cdot \frac{dy}{dx} \\
-y^{(n)}(x_0) &amp;= \frac{\partial y^{(n-1)}}{\partial x} + \frac{\partial y^{(n-1)}}{\partial y} \cdot \frac{dy}{dx}
-\end{aligned}\]
+<p>Datos: 
+    x0 = 1
+    y0 = 1
+    xf = 1.5
+    f(x, y) = 2xy</p>
 
-<hr />
+<p>RK4
+Primera iteración
+    k1 = f(1, 1) = 2 * 1 *1 = 2
+    k2 = f(1 + 0.1 / 2, 1 + 0.1 / 2 * 2) = 2.31
+    k3 = f(1 + 0.1 / 2, 1 + 0.1 / 2 * 2.31) = 2.34255
+    k4 = f(1 + 0.1, 1 + 0.1 * 2.34255) = 2.715361</p>
 
-<h2 id="ejemplo-11-método-de-taylor-de-orden-1-y-2">Ejemplo 1.1: Método de Taylor de orden 1 y 2</h2>
+<p>Con estos valores:
+    x1 = x0 + h
+    x1 = 1 + 0.1
+    y1 =  1 + (0.1/6) * (2 + 2 * 2.31 + 2 * 2.34255 + 2.715361) = 1.23367435</p>
 
-<p>Dada la EDO:</p>
-
-\[y' = y - x^2 + 1\]
-
-<h3 id="orden-1">Orden 1</h3>
-
-<p>Aplicando la serie de Taylor:</p>
-
-\[y_{n+1} = y_n + h y'_n = y_n + h f(x, y)\]
-
-<p>Sustituyendo \(f(x, y)\):</p>
-
-\[y_{n+1} = y_n + h (y_n - x^2 + 1)\]
-
-<h3 id="orden-2">Orden 2</h3>
-
-<p>El método de Taylor de orden 2 es:</p>
-
-\[y_{n+1} = y_n + h y'_n + \frac{h^2}{2!} y''_n\]
-
-<p>Se tiene:</p>
-
-\[f(x, y) = y' = y - x^2 + 1\]
-
-<p>Derivadas parciales:</p>
-
-\[\frac{\partial f}{\partial x} = -2x, \quad \frac{\partial f}{\partial y} = 1\]
-
-<p>Entonces:</p>
-
-\[y'' = -2x + (y - x^2 + 1) = y - x^2 - 2x + 1\]
-
-<p>Y el método queda como:</p>
-
-\[y_{n+1} = y_n + h \cdot (y_n - x^2 + 1) + \frac{h^2}{2}(y_n - x^2 - 2x + 1)\]
-
-<hr />
-
-<h2 id="ejemplo-22-método-de-taylor-de-orden-3-3-iteraciones-h--01">Ejemplo 2.2: Método de Taylor de orden 3 (3 iteraciones, h = 0.1)</h2>
-
-<p>Dada:</p>
-
-\[y' = x + y, \quad y(0) = 1\]
-
-<p>La serie de Taylor es:</p>
-
-\[y_{n+1} = y_n + h y'_n + \frac{h^2}{2!} y''_n + \frac{h^3}{3!} y'''_n\]
-
-<h3 id="derivadas">Derivadas</h3>
-
-<ul>
-  <li>
-\[y' = x + y\]
-  </li>
-  <li>
-\[\frac{\partial f}{\partial x} = 1\]
-  </li>
-  <li>
-\[\frac{\partial f}{\partial y} = 1\]
-  </li>
-</ul>
-
-<p>Entonces:</p>
-
-\[y'' = \frac{\partial f}{\partial x} + \frac{\partial f}{\partial y} \cdot y' = 1 + (x + y)\]
-
-<p>Y como \(y''' = \frac{d}{dx}(y'') \approx 1 + (x + y)\) nuevamente (simplificando para este caso), tenemos:</p>
-
-\[y'' = 1 + x + y, \quad y''' = 1 + x + y\]
-
-<hr />
-
-<h3 id="paso-0--1-x--0-a-x--01">Paso 0 → 1 (x = 0 a x = 0.1)</h3>
-
-<ul>
-  <li>
-\[x_0 = 0, y_0 = 1\]
-  </li>
-  <li>
-\[y' = 1\]
-  </li>
-  <li>
-\[y'' = 2\]
-  </li>
-  <li>
-\[y''' = 2\]
-  </li>
-</ul>
-
-\[y_1 = 1 + 0.1(1) + \frac{0.1^2}{2}(2) + \frac{0.1^3}{6}(2)\]
-
-\[= 1 + 0.1 + 0.01 + 0.000333 \approx 1.11033\]
-
-<hr />
-
-<h3 id="paso-1--2-x--01-a-x--02">Paso 1 → 2 (x = 0.1 a x = 0.2)</h3>
-
-<ul>
-  <li>
-\[x_1 = 0.1, y_1 = 1.11033\]
-  </li>
-  <li>
-\[y' = 0.1 + 1.11033 = 1.21033\]
-  </li>
-  <li>
-\[y'' = 1 + 0.1 + 1.11033 = 2.21033\]
-  </li>
-  <li>
-\[y''' = 2.21033\]
-  </li>
-</ul>
-
-\[y_2 = 1.11033 + 0.1(1.21033) + \frac{0.1^2}{2}(2.21033)\]
-
-\[+ \frac{0.1^3}{6}(2.21033) \approx 1.24278\]
-
-<hr />
-
-<h3 id="paso-2--3-x--02-a-x--03">Paso 2 → 3 (x = 0.2 a x = 0.3)</h3>
-
-<ul>
-  <li>
-\[x_2 = 0.2, y_2 = 1.24278\]
-  </li>
-  <li>
-\[y' = 0.2 + 1.24278 = 1.44278\]
-  </li>
-  <li>
-\[y'' = 1 + 0.2 + 1.24278 = 2.44278\]
-  </li>
-  <li>
-\[y''' = 2.44278\]
-  </li>
-</ul>
-
-\[y_3 = 1.24278 + 0.1(1.44278) + \frac{0.1^2}{2}(2.44278)\]
-
-\[+ \frac{0.1^3}{6}(2.44278) \approx 1.39968\]
+<p>Continuamos así hasta que x_n alcance el valor de 1.5, entonces detenemos las iteraciones</p>
 
 
         
@@ -459,10 +342,11 @@ y^{(n)}(x_0) &amp;= \frac{\partial y^{(n-1)}}{\partial x} + \frac{\partial y^{(n
       
   <nav class="pagination">
     
-      <a href="#" class="pagination--pager disabled">Previous</a>
+      <a href="/docs/metodo-de-multipasos/" class="pagination--pager" title="Métodos Multipasos para Ecuaciones Diferenciales
+">Previous</a>
     
     
-      <a href="/docs/metodo-de-multipasos" class="pagination--pager" title="Métodos Multipasos para Ecuaciones Diferenciales
+      <a href="/docs/metodo-de-euler/" class="pagination--pager" title="Método de Euler para ecuaciones diferenciales.
 ">Next</a>
     
   </nav>

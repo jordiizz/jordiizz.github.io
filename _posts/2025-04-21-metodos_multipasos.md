@@ -6,7 +6,7 @@ toc: true
 toc_sticky: true
 sidebar:
   nav: "docs"
-permalink: /docs/metodo-de-multipasos
+permalink: /docs/metodo-de-multipasos/
 ---
 
 ¡Bienvenidos al Método Multipasos!
