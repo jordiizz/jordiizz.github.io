@@ -22,4 +22,10 @@ var store = [{
         "tags": [],
         "url": "/docs/metodo-de-euler/",
         "teaser": null
+      },{
+        "title": "Videos del Método de Taylor para ecuaciones diferenciales.",
+        "excerpt":"Ejercicio 1     Ejercicio 2     Ejercicio 3     Explicación del código de Python     ","categories": [],
+        "tags": [],
+        "url": "/docs/video-de-taylor/",
+        "teaser": null
       }]

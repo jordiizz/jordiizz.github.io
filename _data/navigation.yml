@@ -26,7 +26,7 @@ docs:
       - title: "Vídeos sobre Euler"
         url: /docs/quick-start-guide/
       - title: "Vídeos sobre Taylor"
-        url: /docs/structure/
+        url: /docs/video-de-taylor/
       - title: "Vídeos sobre Runge-Kutta"
         url: /docs/installation/
       - title: "Videos sobre Multipasos"
