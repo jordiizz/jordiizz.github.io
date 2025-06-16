@@ -1,0 +1,26 @@
+.copy-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 3px 10px;
+    background: #f6f8fa; /* Fondo claro */
+    color: #0366d6; /* Color azul GitHub */
+    border: 1px solid #e1e4e8; /* Borde sutil */
+    border-radius: 4px;
+    font-family: 'SF Mono', 'Roboto Mono', monospace; /* Fuente tipo código */
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .copy-button:hover {
+    background: #0366d6; /* Azul al hover */
+    color: white;
+    border-color: #0366d6;
+  }
+  
+  .copy-button.copied {
+    background: #28a745; /* Verde al copiar */
+    color: white;
+    border-color: #28a745;
+  }

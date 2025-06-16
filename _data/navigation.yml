@@ -13,13 +13,13 @@ docs:
   - title: CCódigo de Python
     children:  
       - title: "Código de Euler"
-        url: /docs/quick-start-guide/
+        url: /docs/codigo-python-euler/
       - title: "Código de Taylor"
-        url: /docs/structure/
+        url: /docs/codigo-python-taylor/
       - title: "Código de Runge-Kutta"
-        url: /docs/installation/
+        url: /docs/codigo-python-runge-kutta/
       - title: "Código de Multipasos"
-        url: /docs/upgrading/
+        url: /docs/codigo-python-multipasos/
 
   - title: Vídeos
     children:

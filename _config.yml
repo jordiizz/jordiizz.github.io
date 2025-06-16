@@ -58,6 +58,8 @@ defaults:
       author_profile: false
       sidebar:
         nav: "docs_sidebar"
+
+
   
 
 # Exclude from processing.

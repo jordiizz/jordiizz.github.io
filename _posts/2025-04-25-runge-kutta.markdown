@@ -9,8 +9,10 @@ sidebar:
 permalink: /docs/metodo-de-runge-kutta/
 ---
 
-# Runge-Kutta para Ecuaciones Diferenciales con valor inicial
 !Bienvenido al Método de Runge-Kutta!
+
+# Runge-Kutta para Ecuaciones Diferenciales con valor inicial
+
 
 ## Qué es el método de Runge-Kutta
 Es un método aproximado que permite encontrar soluciones cercanas para ecuaciones diferenciales, mediante distintas operaciones, que avanzan hacia la solución con un paso h. Este método es aplicable a aquellas Ecuaciones Diferenciales Ordinarias (EDO), diseñado para EDO's de orden uno lineales, que tienen un valor inicial, realmente Runge-Kutta es una familia de métodos numéricos, siendo el de orden cuatro el más famoso, conocido por su eficiencia y por su precisión.
