@@ -12,9 +12,33 @@ var store = [{
         "teaser": null
       },{
         "title": "Método Runge-Kutta para Ecuaciones diferenciales",
-        "excerpt":"!Bienvenido al Método de Runge-Kutta! Runge-Kutta para Ecuaciones Diferenciales con valor inicial Qué es el método de Runge-Kutta Es un método aproximado que permite encontrar soluciones cercanas para ecuaciones diferenciales, mediante distintas operaciones, que avanzan hacia la solución con un paso h. Este método es aplicable a aquellas Ecuaciones Diferenciales...","categories": [],
+        "excerpt":"¡Bienvenido al Método de Runge-Kutta! Introducción Runge-kutta es una familia de métodos que permite encontrar soluciones cercanas para ecuaciones diferenciales, mediante distintas operaciones, que avanzan hacia la solución con un paso h. Este método es aplicable a aquellas Ecuaciones Diferenciales Ordinarias (EDO), diseñado para EDO’s de orden uno lineales, que...","categories": [],
         "tags": [],
         "url": "/docs/metodo-de-runge-kutta/",
+        "teaser": null
+      },{
+        "title": "Historia Runge-Kutta",
+        "excerpt":"Historia del Método de Runge-Kutta La familia de métodos de Runge-Kutta, que es ampliamente utilizada hoy en día para la solución numérica de ecuaciones diferenciales ordinarias (EDO), tiene su origen en el trabajo de dos matemáticos alemanes: Carl Runge y Martin Wilhelm Kutta. Su desarrollo permite obtener soluciones aproximadas con...","categories": [],
+        "tags": [],
+        "url": "/docs/runge-kutta/historia/",
+        "teaser": null
+      },{
+        "title": "RK4 ",
+        "excerpt":"Fórmulas del método RK4 Dado un paso ( h ), el valor de ( y ) en el siguiente punto se calcula así: \\[\\begin{aligned} k_1 &amp;= f(x_n, y_n) \\\\ k_2 &amp;= f\\left(x_n + \\frac{h}{2},\\ y_n + \\frac{h}{2}k_1\\right) \\\\ k_3 &amp;= f\\left(x_n + \\frac{h}{2},\\ y_n + \\frac{h}{2}k_2\\right) \\\\ k_4 &amp;= f(x_n...","categories": [],
+        "tags": [],
+        "url": "/docs/runge-kutta/rk4/",
+        "teaser": null
+      },{
+        "title": "RK2",
+        "excerpt":"Fórmulas del método RK2 Dado un paso ( h ), el valor de ( y ) en el siguiente punto se calcula así: \\[\\begin{aligned} k_1 &amp;= f(x_n, y_n) \\\\\\\\ k_2 &amp;= f\\left(x_n + h,\\ y_n + h \\cdot k_1\\right) \\\\\\\\ y_{n+1} &amp;= y_n + \\frac{h}{2}(k_1 + k_2) \\end{aligned}\\] También existe...","categories": [],
+        "tags": [],
+        "url": "/docs/runge-kutta/rk2/",
+        "teaser": null
+      },{
+        "title": "RK3",
+        "excerpt":"Fórmulas del método RK3 Dado un paso ( h ), el valor de ( y ) en el siguiente punto se calcula con: \\[\\begin{aligned} k_1 &amp;= f(x_n, y_n) \\\\\\\\ k_2 &amp;= f\\left(x_n + \\frac{h}{2},\\ y_n + \\frac{h}{2} \\cdot k_1\\right) \\\\\\\\ k_3 &amp;= f\\left(x_n + h,\\ y_n - h \\cdot k_1...","categories": [],
+        "tags": [],
+        "url": "/docs/runge-kutta/rk3/",
         "teaser": null
       },{
         "title": "Método de Euler para ecuaciones diferenciales.",
