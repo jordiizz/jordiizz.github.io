@@ -11,7 +11,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Código de Python - Método de Runge-Kutta - UNIDAD 5</title>
-<meta name="description" content="Copiar">
+<meta name="description" content="Sintáxis del Código">
 
 
   <meta name="author" content="Analisis Numerico">
@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://localhost:4000/docs/codigo-python-runge-kutta/">
 
 
-  <meta property="og:description" content="Copiar">
+  <meta property="og:description" content="Sintáxis del Código">
 
 
 
@@ -144,79 +144,79 @@
       
         <li>
           
-            <span class="nav__sub-title">Teoría</span>
+            <span class="nav__sub-title">Método de Euler</span>
           
 
           
           <ul>
             
-              <li><a href="/docs/metodo-de-euler/">Metodo de Euler</a></li>
-            
-              <li><a href="/docs/metodo-de-taylor/">Metodo de Taylor</a></li>
-            
-              <li><a href="/docs/metodo-de-runge-kutta/">Metodo de Runge-Kutta</a></li>
-            
-              <li><a href="/docs/metodo-de-multipasos/">Metodo de Multipasos</a></li>
-            
-          </ul>
-          
-        </li>
-      
-        <li>
-          
-            <span class="nav__sub-title">CCódigo de Python</span>
-          
-
-          
-          <ul>
+              <li><a href="/docs/metodo-de-euler/">Teoría del Método de Euler</a></li>
             
               <li><a href="/docs/codigo-python-euler/">Código de Euler</a></li>
             
-              <li><a href="/docs/codigo-python-taylor/">Código de Taylor</a></li>
-            
-              <li><a href="/docs/codigo-python-runge-kutta/" class="active">Código de Runge-Kutta</a></li>
-            
-              <li><a href="/docs/codigo-python-multipasos/">Código de Multipasos</a></li>
-            
-          </ul>
-          
-        </li>
-      
-        <li>
-          
-            <span class="nav__sub-title">Vídeos</span>
-          
-
-          
-          <ul>
-            
-              <li><a href="/docs/quick-start-guide/">Vídeos sobre Euler</a></li>
-            
-              <li><a href="/docs/video-de-taylor/">Vídeos sobre Taylor</a></li>
-            
-              <li><a href="/docs/installation/">Vídeos sobre Runge-Kutta</a></li>
-            
-              <li><a href="/docs/upgrading/">Videos sobre Multipasos</a></li>
-            
-          </ul>
-          
-        </li>
-      
-        <li>
-          
-            <span class="nav__sub-title">Ejercicios</span>
-          
-
-          
-          <ul>
+              <li><a href="/docs/video-de-euler/">Vídeos sobre Euler</a></li>
             
               <li><a href="/docs/quick-start-guide/">Ejercicios usando Euler</a></li>
             
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">Método de Taylor</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/docs/metodo-de-taylor/">Metodo de Taylor</a></li>
+            
+              <li><a href="/docs/codigo-python-taylor/">Código de Taylor</a></li>
+            
+              <li><a href="/docs/video-de-taylor/">Vídeos sobre Taylor</a></li>
+            
               <li><a href="/docs/structure/">Ejercicios usando Taylor</a></li>
             
-              <li><a href="/docs/installation/">Ejercicios usando Runge-Kutta</a></li>
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">Método de Multipasos</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/docs/metodo-de-multipasos/">Teoría del Método de Multipasos</a></li>
+            
+              <li><a href="/docs/codigo-python-multipasos/">Código de Multipasos</a></li>
+            
+              <li><a href="/docs/video-de-multipasos/">Videos sobre Multipasos</a></li>
             
               <li><a href="/docs/upgrading/">Ejercicios usando Multipasos</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">Método de Runge-Kutta</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/docs/metodo-de-runge-kutta/">Teoría del Método de Runge-Kutta</a></li>
+            
+              <li><a href="/docs/codigo-python-runge-kutta/" class="active">Código de Runge-Kutta</a></li>
+            
+              <li><a href="/docs/video-de-runge-kutta/">Vídeos sobre Runge-Kutta</a></li>
+            
+              <li><a href="/docs/installation/">Ejercicios usando Runge-Kutta</a></li>
             
           </ul>
           
@@ -234,7 +234,7 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Código de Python - Método de Runge-Kutta">
-    <meta itemprop="description" content="  Copiar">
+    <meta itemprop="description" content="Sintáxis del Código">
     <meta itemprop="datePublished" content="2025-06-15T00:00:00-06:00">
     
 
@@ -256,11 +256,13 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              
+              <ul class="toc__menu"><li><a href="#sintáxis-del-código">Sintáxis del Código</a></li><li><a href="#código-ejecutable-con-jupyter-notebook-y-google-colab">Código Ejecutable con Jupyter Notebook y Google Colab</a></li></ul>
             </nav>
           </aside>
         
-        <div class="code-block" style="position: relative;">
+        <h2 id="sintáxis-del-código">Sintáxis del Código</h2>
+
+<div class="code-block" style="position: relative;">
   <p><button class="copy-button">Copiar</button></p>
 
   <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
@@ -322,6 +324,9 @@
 
 <script src="/assets/js/copy-code.js" defer=""></script>
 
+<h2 id="código-ejecutable-con-jupyter-notebook-y-google-colab">Código Ejecutable con Jupyter Notebook y Google Colab</h2>
+
+<p><a href="https://colab.research.google.com/drive/1P9V9St3v2wxEciLTkC-CB2YTo_c3GZIW?usp=sharing" title="Código de Runge-Kutta">Codigo de Runge-Kutta Ejecutable con Google Colab</a></p>
 
         
       </section>
@@ -346,7 +351,8 @@
 ">Previous</a>
     
     
-      <a href="#" class="pagination--pager disabled">Next</a>
+      <a href="/docs/video-de-euler/" class="pagination--pager" title="Videos del Método de Euler y Euler Mejorado para ecuaciones diferenciales.
+">Next</a>
     
   </nav>
 

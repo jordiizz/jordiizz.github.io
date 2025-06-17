@@ -9,6 +9,8 @@ sidebar:
 permalink: /docs/codigo-python-euler/
 ---
 
+## Sintáxis del Código
+
 <div class="code-block" markdown="1" style="position: relative;">
   <button class="copy-button">Copiar</button>
 
@@ -75,3 +77,7 @@ plt.show()
 </div>
 
 <script src="{{ '/assets/js/copy-code.js' | relative_url }}" defer></script>
+
+## Código Ejecutable con Jupyter Notebook y Google Colab
+
+[Codigo de Euler Ejecutable con Google Colab](https://colab.research.google.com/drive/1fgTehTfjw8w-j5unNUjR0vV3iMkcGUC_?usp=sharing "Código de Euler")

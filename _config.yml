@@ -44,6 +44,8 @@ author:
   avatar           : "/images/icon.png"
   bio              : "Unidad 5: Ecuaciones diferenciales"
 
+
+
 collections:
   docs:
     output: true

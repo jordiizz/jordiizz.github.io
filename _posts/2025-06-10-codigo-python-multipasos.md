@@ -9,6 +9,8 @@ sidebar:
 permalink: /docs/codigo-python-multipasos/
 ---
 
+## Sintáxis del Código
+
 <div class="code-block" markdown="1" style="position: relative;">
   <button class="copy-button">Copiar</button>
 
@@ -89,3 +91,8 @@ graficar_resultado(resultado_4)
 </div>
 
 <script src="{{ '/assets/js/copy-code.js' | relative_url }}" defer></script>
+
+
+## Código Ejecutable con Jupyter Notebook y Google Colab
+
+[Codigo de Multipasos Ejecutable con Google Colab](https://colab.research.google.com/drive/1rXre3e-of0vlA6H5-TRi8iJaogNNtBiO?usp=sharing "Código de Multipasos")

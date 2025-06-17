@@ -1,4 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-15T20:16:30-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">UNIDAD 5</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>Analisis Numerico</name></author><entry><title type="html">Código de Python - Método de Euler y Euler Mejorado</title><link href="http://localhost:4000/docs/codigo-python-euler/" rel="alternate" type="text/html" title="Código de Python - Método de Euler y Euler Mejorado" /><published>2025-06-15T00:00:00-06:00</published><updated>2025-06-15T00:00:00-06:00</updated><id>http://localhost:4000/docs/codigo-python-euler</id><content type="html" xml:base="http://localhost:4000/docs/codigo-python-euler/"><![CDATA[<div class="code-block" style="position: relative;">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-16T22:27:01-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">UNIDAD 5</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>Analisis Numerico</name></author><entry><title type="html">Videos del Método de Euler y Euler Mejorado para ecuaciones diferenciales.</title><link href="http://localhost:4000/docs/video-de-euler/" rel="alternate" type="text/html" title="Videos del Método de Euler y Euler Mejorado para ecuaciones diferenciales." /><published>2025-06-16T00:00:00-06:00</published><updated>2025-06-16T00:00:00-06:00</updated><id>http://localhost:4000/docs/video-de-euler</id><content type="html" xml:base="http://localhost:4000/docs/video-de-euler/"><![CDATA[<h2 id="ejercicio-1">Ejercicio 1</h2>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/7AJCJOZfh_4?si=3Vu_tSpl162H5w4P" frameborder="0" allowfullscreen=""></iframe>
+
+<h2 id="ejercicio-2">Ejercicio 2</h2>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/gXmu51LBixE?si=yKs1_yBIOyOWz6Gc" frameborder="0" allowfullscreen=""></iframe>
+
+<h2 id="ejercicio-3">Ejercicio 3</h2>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/s_SF4B_joBc?si=OaGkptuQSbMx1TCD" frameborder="0" allowfullscreen=""></iframe>
+
+<h2 id="explicación-del-código-de-python">Explicación del código de Python</h2>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/X_TsbXtOwjU?si=o1gY7go937K5dj8D" frameborder="0" allowfullscreen=""></iframe>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[Ejercicio 1]]></summary></entry><entry><title type="html">Videos del Método de Multipasos para ecuaciones diferenciales.</title><link href="http://localhost:4000/docs/video-de-multipasos/" rel="alternate" type="text/html" title="Videos del Método de Multipasos para ecuaciones diferenciales." /><published>2025-06-16T00:00:00-06:00</published><updated>2025-06-16T00:00:00-06:00</updated><id>http://localhost:4000/docs/video-de-multipasos</id><content type="html" xml:base="http://localhost:4000/docs/video-de-multipasos/"><![CDATA[<h2 id="ejercicio-1">Ejercicio 1</h2>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/ZP_uz2ZYcMM?si=arrMnaValWTu3jrh" frameborder="0" allowfullscreen=""></iframe>
+
+<h2 id="ejercicio-2">Ejercicio 2</h2>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/JXUE3qbIuRc?si=-LcdPOhr1hqrRseO" frameborder="0" allowfullscreen=""></iframe>
+
+<h2 id="ejercicio-3">Ejercicio 3</h2>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/wNRpbzlfA38?si=iz-W8zIzEhrZ3YYy" frameborder="0" allowfullscreen=""></iframe>
+
+<h2 id="explicación-del-código-de-python">Explicación del código de Python</h2>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/q8EtWjVjiko?si=-Gq1st1govumAnbj" frameborder="0" allowfullscreen=""></iframe>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[Ejercicio 1]]></summary></entry><entry><title type="html">Videos del Método de Runge-Kutta para ecuaciones diferenciales.</title><link href="http://localhost:4000/docs/video-de-runge-kutta/" rel="alternate" type="text/html" title="Videos del Método de Runge-Kutta para ecuaciones diferenciales." /><published>2025-06-16T00:00:00-06:00</published><updated>2025-06-16T00:00:00-06:00</updated><id>http://localhost:4000/docs/video-de-runge-kutta</id><content type="html" xml:base="http://localhost:4000/docs/video-de-runge-kutta/"><![CDATA[<h2 id="ejercicio">Ejercicio</h2>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/eNaw41W6yto?si=OI97B9ROfqvmbX7p" frameborder="0" allowfullscreen=""></iframe>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[Ejercicio]]></summary></entry><entry><title type="html">Código de Python - Método de Euler y Euler Mejorado</title><link href="http://localhost:4000/docs/codigo-python-euler/" rel="alternate" type="text/html" title="Código de Python - Método de Euler y Euler Mejorado" /><published>2025-06-15T00:00:00-06:00</published><updated>2025-06-15T00:00:00-06:00</updated><id>http://localhost:4000/docs/codigo-python-euler</id><content type="html" xml:base="http://localhost:4000/docs/codigo-python-euler/"><![CDATA[<h2 id="sintáxis-del-código">Sintáxis del Código</h2>
+
+<div class="code-block" style="position: relative;">
   <p><button class="copy-button">Copiar</button></p>
 
   <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
@@ -62,7 +94,13 @@
 
 </div>
 
-<script src="/assets/js/copy-code.js" defer=""></script>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[Copiar]]></summary></entry><entry><title type="html">Código de Python - Método de Runge-Kutta</title><link href="http://localhost:4000/docs/codigo-python-runge-kutta/" rel="alternate" type="text/html" title="Código de Python - Método de Runge-Kutta" /><published>2025-06-15T00:00:00-06:00</published><updated>2025-06-15T00:00:00-06:00</updated><id>http://localhost:4000/docs/codigo-python-runge-kutta</id><content type="html" xml:base="http://localhost:4000/docs/codigo-python-runge-kutta/"><![CDATA[<div class="code-block" style="position: relative;">
+<script src="/assets/js/copy-code.js" defer=""></script>
+
+<h2 id="código-ejecutable-con-jupyter-notebook-y-google-colab">Código Ejecutable con Jupyter Notebook y Google Colab</h2>
+
+<p><a href="https://colab.research.google.com/drive/1fgTehTfjw8w-j5unNUjR0vV3iMkcGUC_?usp=sharing" title="Código de Euler">Codigo de Euler Ejecutable con Google Colab</a></p>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[Sintáxis del Código]]></summary></entry><entry><title type="html">Código de Python - Método de Runge-Kutta</title><link href="http://localhost:4000/docs/codigo-python-runge-kutta/" rel="alternate" type="text/html" title="Código de Python - Método de Runge-Kutta" /><published>2025-06-15T00:00:00-06:00</published><updated>2025-06-15T00:00:00-06:00</updated><id>http://localhost:4000/docs/codigo-python-runge-kutta</id><content type="html" xml:base="http://localhost:4000/docs/codigo-python-runge-kutta/"><![CDATA[<h2 id="sintáxis-del-código">Sintáxis del Código</h2>
+
+<div class="code-block" style="position: relative;">
   <p><button class="copy-button">Copiar</button></p>
 
   <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
@@ -122,7 +160,13 @@
 
 </div>
 
-<script src="/assets/js/copy-code.js" defer=""></script>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[Copiar]]></summary></entry><entry><title type="html">Código de Python - Método de Multipasos</title><link href="http://localhost:4000/docs/codigo-python-multipasos/" rel="alternate" type="text/html" title="Código de Python - Método de Multipasos" /><published>2025-06-10T00:00:00-06:00</published><updated>2025-06-10T00:00:00-06:00</updated><id>http://localhost:4000/docs/codigo-python-multipasos</id><content type="html" xml:base="http://localhost:4000/docs/codigo-python-multipasos/"><![CDATA[<div class="code-block" style="position: relative;">
+<script src="/assets/js/copy-code.js" defer=""></script>
+
+<h2 id="código-ejecutable-con-jupyter-notebook-y-google-colab">Código Ejecutable con Jupyter Notebook y Google Colab</h2>
+
+<p><a href="https://colab.research.google.com/drive/1P9V9St3v2wxEciLTkC-CB2YTo_c3GZIW?usp=sharing" title="Código de Runge-Kutta">Codigo de Runge-Kutta Ejecutable con Google Colab</a></p>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[Sintáxis del Código]]></summary></entry><entry><title type="html">Código de Python - Método de Multipasos</title><link href="http://localhost:4000/docs/codigo-python-multipasos/" rel="alternate" type="text/html" title="Código de Python - Método de Multipasos" /><published>2025-06-10T00:00:00-06:00</published><updated>2025-06-10T00:00:00-06:00</updated><id>http://localhost:4000/docs/codigo-python-multipasos</id><content type="html" xml:base="http://localhost:4000/docs/codigo-python-multipasos/"><![CDATA[<h2 id="sintáxis-del-código">Sintáxis del Código</h2>
+
+<div class="code-block" style="position: relative;">
   <p><button class="copy-button">Copiar</button></p>
 
   <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
@@ -200,7 +244,13 @@
 
 </div>
 
-<script src="/assets/js/copy-code.js" defer=""></script>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[Copiar]]></summary></entry><entry><title type="html">Código de Python - Método de Taylor</title><link href="http://localhost:4000/docs/codigo-python-taylor/" rel="alternate" type="text/html" title="Código de Python - Método de Taylor" /><published>2025-06-05T00:00:00-06:00</published><updated>2025-06-05T00:00:00-06:00</updated><id>http://localhost:4000/docs/codigo-python-taylor</id><content type="html" xml:base="http://localhost:4000/docs/codigo-python-taylor/"><![CDATA[<div class="code-block" style="position: relative;">
+<script src="/assets/js/copy-code.js" defer=""></script>
+
+<h2 id="código-ejecutable-con-jupyter-notebook-y-google-colab">Código Ejecutable con Jupyter Notebook y Google Colab</h2>
+
+<p><a href="https://colab.research.google.com/drive/1rXre3e-of0vlA6H5-TRi8iJaogNNtBiO?usp=sharing" title="Código de Multipasos">Codigo de Multipasos Ejecutable con Google Colab</a></p>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[Sintáxis del Código]]></summary></entry><entry><title type="html">Código de Python - Método de Taylor</title><link href="http://localhost:4000/docs/codigo-python-taylor/" rel="alternate" type="text/html" title="Código de Python - Método de Taylor" /><published>2025-06-05T00:00:00-06:00</published><updated>2025-06-05T00:00:00-06:00</updated><id>http://localhost:4000/docs/codigo-python-taylor</id><content type="html" xml:base="http://localhost:4000/docs/codigo-python-taylor/"><![CDATA[<h2 id="sintáxis-del-código">Sintáxis del Código</h2>
+
+<div class="code-block" style="position: relative;">
   <p><button class="copy-button">Copiar</button></p>
 
   <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
@@ -295,7 +345,11 @@
 </code></pre></div>  </div>
 </div>
 
-<script src="/assets/js/copy-code.js" defer=""></script>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[Copiar]]></summary></entry><entry><title type="html">Videos del Método de Taylor para ecuaciones diferenciales.</title><link href="http://localhost:4000/docs/video-de-taylor/" rel="alternate" type="text/html" title="Videos del Método de Taylor para ecuaciones diferenciales." /><published>2025-05-30T00:00:00-06:00</published><updated>2025-05-30T00:00:00-06:00</updated><id>http://localhost:4000/docs/video-de-taylor</id><content type="html" xml:base="http://localhost:4000/docs/video-de-taylor/"><![CDATA[<h2 id="ejercicio-1">Ejercicio 1</h2>
+<script src="/assets/js/copy-code.js" defer=""></script>
+
+<h2 id="código-ejecutable-con-jupyter-notebook-y-google-colab">Código Ejecutable con Jupyter Notebook y Google Colab</h2>
+
+<p><a href="https://colab.research.google.com/drive/1ZniBPoj1DP4Pm2mWmolrLk_1E7kK_ag0?usp=sharing" title="Código de Taylor">Codigo de Taylor Ejecutable con Google Colab</a></p>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[Sintáxis del Código]]></summary></entry><entry><title type="html">Videos del Método de Taylor para ecuaciones diferenciales.</title><link href="http://localhost:4000/docs/video-de-taylor/" rel="alternate" type="text/html" title="Videos del Método de Taylor para ecuaciones diferenciales." /><published>2025-05-30T00:00:00-06:00</published><updated>2025-05-30T00:00:00-06:00</updated><id>http://localhost:4000/docs/video-de-taylor</id><content type="html" xml:base="http://localhost:4000/docs/video-de-taylor/"><![CDATA[<h2 id="ejercicio-1">Ejercicio 1</h2>
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/qpiHzHZEE-E?si=7skEND5qRi2gxldM" frameborder="0" allowfullscreen=""></iframe>
 
@@ -650,174 +704,4 @@ y^{(n)}(x_0) &amp;= \frac{\partial y^{(n-1)}}{\partial x} + \frac{\partial y^{(n
 
 \[y_3 = 1.24278 + 0.1(1.44278) + \frac{0.1^2}{2}(2.44278)\]
 
-\[+ \frac{0.1^3}{6}(2.44278) \approx 1.39968\]]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[¡Bienvenidos al Método de Taylor!]]></summary></entry><entry><title type="html">Métodos Multipasos para Ecuaciones Diferenciales</title><link href="http://localhost:4000/docs/metodo-de-multipasos/" rel="alternate" type="text/html" title="Métodos Multipasos para Ecuaciones Diferenciales" /><published>2025-04-21T00:00:00-06:00</published><updated>2025-04-21T00:00:00-06:00</updated><id>http://localhost:4000/docs/metodos_multipasos</id><content type="html" xml:base="http://localhost:4000/docs/metodo-de-multipasos/"><![CDATA[<p>¡Bienvenidos al Método Multipasos!
-<!-- _includes/mathjax.html -->
-<script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script></p>
-
-<h2 id="método-multipasos">Método Multipasos</h2>
-
-<p>Los métodos de un paso como Runge-Kutta calculan cada punto de la solución de una E.D.O. a una distancia \(h\) utilizando la información del punto anterior. Los métodos de pasos múltiples son fórmulas que utilizan varios puntos calculados y disponibles para calcular la solución en un nuevo punto.</p>
-
-<h3 id="fórmulas-de-pasos-múltiples-de-predicción">Fórmulas de pasos múltiples de predicción</h3>
-
-<p>Estas fórmulas se usan para calcular la solución en un punto mediante un polinomio de interpolación colocado en varios puntos anteriores conocidos espaciados a una distancia \(h\).</p>
-
-<p>En el siguiente gráfico se supondrán conocidos los puntos \(y_{i-k}, \dots, y_{i-3}, y_{i-2}, y_{i-1}, y_i\) mientras que se desea calcular el punto \(y_{i+1}\).</p>
-
-<p><img src="/images/multipasos_1.png" alt="Gráfico" /></p>
-
-<p><strong>Obtención de la fórmula de pasos múltiples:</strong></p>
-
-<p>Dada la E.D.O.</p>
-
-\[y'(x) = \frac{dy}{dx} = f(x,y), \quad y(x_0) = y_0\]
-
-<p>Reescribir como</p>
-
-\[dy = f(x,y)\,dx = y'(x)\,dx\]
-
-<p>Integrando desde un punto conocido \(y(x_{i-k})\) hasta un nuevo punto \(y(x_{i+1})\):</p>
-
-<p>Para obtener una fórmula aproximada se usa el polinomio de diferencias finitas regresivas incluyendo al punto \(i\) y los puntos anteriores.</p>
-
-<p>Sustituyendo el polinomio y cambiando los límites y el diferencial:</p>
-
-<p>Se obtiene la siguiente expresión con la que se pueden generar fórmulas de pasos múltiples denominadas <strong>fórmulas de predicción</strong>.</p>
-
-<blockquote>
-  <p>La fórmula tiene dos parámetros para elegir: \(n\), \(k\)</p>
-</blockquote>
-
-<p><strong>Observaciones importantes:</strong></p>
-
-<ul>
-  <li>Las fórmulas de predicción requieren tener puntos disponibles antes de su aplicación. Estos puntos deben ser calculados con mucha precisión. El método adecuado para esto es el método de Runge-Kutta.</li>
-  <li>La integración extiende el polinomio de interpolación hasta el punto \(i+1\) que no pertenece al dominio del polinomio. Por lo tanto, se ha realizado una extrapolación, que en general no produce resultados confiables.</li>
-  <li>La ventaja de estas fórmulas es que requieren menos cálculos en cada paso pues usan puntos ya calculados. Esto fue importante en la época en la que no se disponía de dispositivos computacionales automatizados. Una aplicación de interés es usar el método para proyectar el valor de una función y su derivada fuera del intervalo que contiene a los puntos conocidos.</li>
-</ul>
-
-<h3 id="fórmulas-de-pasos-múltiples-de-corrección">Fórmulas de pasos múltiples de corrección</h3>
-
-<p>Estas fórmulas son el complemento a las fórmulas de predicción. En las fórmulas de pasos múltiples de corrección se coloca el polinomio de interpolación incluyendo el punto \(i+1\) calculado como una primera estimación con la fórmula de predicción. El nuevo resultado corrige el resultado anterior y produce una mejor aproximación.</p>
-
-<p>Dada la ecuación diferencial ordinaria de primer orden:</p>
-
-\[y'(x) = \frac{dy}{dx} = f(x,y)\]
-
-<p>Reescribirla como</p>
-
-\[dy = f(x,y)\,dx = y'(x)\,dx\]
-
-<p>Integrando desde un punto arbitrario \(y(x_{i-k})\) hasta el punto desconocido \(y(x_{i+1})\):</p>
-
-<p>Para obtener una fórmula aproximada de corrección se usa el polinomio de diferencias finitas regresivas incluyendo al punto \(i+1\) y puntos anteriores.</p>
-
-<p>Sustituyendo \(y'(x)\) por el polinomio y cambiando los límites y el diferencial:</p>
-
-<p>Esta expresión se usa para generar fórmulas de pasos múltiples de corrección.</p>
-
-<blockquote>
-  <p>La fórmula tiene dos parámetros para elegir: \(n\), \(k\)</p>
-</blockquote>
-
-<h3 id="métodos-de-predicción--corrección">Métodos de Predicción – Corrección</h3>
-
-<p>La combinación de una fórmula de pasos múltiples de predicción con una fórmula de pasos múltiples de corrección constituye un método de <strong>Predicción – Corrección</strong>. Uno de estos métodos que ha sido estudiado se denomina <strong>fórmula de Adams – Moulton</strong>. Se la obtiene con los parámetros \(n = 3, k = 0\) en las fórmulas establecidas anteriormente. El desarrollo detallado permite también conocer el error de truncamiento correspondiente.</p>
-
-<p><strong>Fórmula de Predicción de Adams-Moulton:</strong></p>
-
-\[y_{i+1} = y_i + \frac{h}{24} \left[ 55f_i - 59f_{i-1} + 37f_{i-2} + 9f_{i-3} \right],\]
-
-\[\quad E_p = \frac{251}{720} h^5 y^{(v)}(z)\]
-
-<p><strong>Fórmula de Corrección de Adams-Moulton:</strong></p>
-
-\[y_{i+1} = y_i + \frac{h}{24} \left[ 9f_{i+1} + 19f_i - 5f_{i-1} + f_{i-2} \right],\]
-
-\[\quad E_c = -\frac{19}{720} h^5 y^{(v)}(z)\]
-
-<p>Esta combinación de fórmulas permite establecer un esquema de exactitud para el error de truncamiento con el planteamiento siguiente:</p>
-
-<p>Sean:</p>
-
-<ul>
-  <li>\(y_{i+1}\): valor exacto, desconocido</li>
-  <li>\(y_{i+1,p}\): valor calculado con la fórmula de predicción de Adams-Moulton</li>
-  <li>\(y_{i+1,c}\): valor calculado con la fórmula de corrección de Adams-Moulton</li>
-</ul>
-
-<p>Suponer que los valores de las derivadas en el error son aproximadamente iguales.</p>
-
-<p>Considerando la siguiente disposición de los valores calculados y el valor exacto:</p>
-
-<p><img src="/images/multipasos_2.png" alt="Disposición Pasos Múltiples de Predicción" /></p>
-
-\[| y_{i+1,c} - y_{i+1,p} | \approx 14\,E_c\]
-
-<p>Para aplicar este criterio, suponer que se desea que el error en el resultado final de \(y_{i+1}\) calculado con la fórmula de corrección no exceda a \(E_c &lt; 10^{-m}\), entonces deberá cumplirse:</p>
-
-\[| y_{i+1,c} - y_{i+1,p} | &lt; 14 \times 10^{-m}\]
-
-<p>Si no se cumple, debe entenderse que el valor de \(h\) tendría que reducirse para reducir el error.</p>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[¡Bienvenidos al Método Multipasos!]]></summary></entry><entry><title type="html">Método Runge-Kutta para Ecuaciones diferenciales</title><link href="http://localhost:4000/docs/metodo-de-runge-kutta/" rel="alternate" type="text/html" title="Método Runge-Kutta para Ecuaciones diferenciales" /><published>2025-04-21T00:00:00-06:00</published><updated>2025-04-21T00:00:00-06:00</updated><id>http://localhost:4000/docs/runge-kutta</id><content type="html" xml:base="http://localhost:4000/docs/metodo-de-runge-kutta/"><![CDATA[<p>!Bienvenido al Método de Runge-Kutta!</p>
-
-<h1 id="runge-kutta-para-ecuaciones-diferenciales-con-valor-inicial">Runge-Kutta para Ecuaciones Diferenciales con valor inicial</h1>
-
-<h2 id="qué-es-el-método-de-runge-kutta">Qué es el método de Runge-Kutta</h2>
-<p>Es un método aproximado que permite encontrar soluciones cercanas para ecuaciones diferenciales, mediante distintas operaciones, que avanzan hacia la solución con un paso h. Este método es aplicable a aquellas Ecuaciones Diferenciales Ordinarias (EDO), diseñado para EDO’s de orden uno lineales, que tienen un valor inicial, realmente Runge-Kutta es una familia de métodos numéricos, siendo el de orden cuatro el más famoso, conocido por su eficiencia y por su precisión.</p>
-
-<h3 id="por-qué-usar-rk">¿Por qué usar RK?</h3>
-<p>Porque es una familia de métodos que nos permiten calcular una solución aproximada sin calcular derivadas de orden elevada, lo que permite mejora de rendimiento y eficiencia computacional.</p>
-
-<h2 id="qué-es-el-paso-h">¿Qué es el paso h?</h2>
-<p>Imagina que estás avanzando por un camino (función solución), y que buscando un objetivo (comportamiento) hacés uso de una brújula (ecuación diferencial) que te dice a dónde ir, si imaginas este camino como puntos en un mapa, digamos que cada que avanzamos un paso o punto en ese camino, h es el tamaño del paso que damos en esa dirección que marca la brújula, luego nos detenemos y usamos la brújula otra vez (cada paso), hasta que llegamos a un camino aproximado.</p>
-
-<p>Definición del paso h.</p>
-
-<h2 id="historia-de-runge-kutta">Historia de Runge-Kutta</h2>
-
-<h2 id="runge-kutta-de-orden-cuatro">Runge-Kutta de orden cuatro</h2>
-<p>Es un método que se basa en el avance(iteraciones):
-Dada una EDO, de orden uno lineal:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dy/dx = f(x, y),   con y(x0) = y0
-
-
-k1 = f(x_n, y_n)
-k2 = f(x_n + h/2, y_n + h/2 * k1)
-k3 = f(x_n + h/2, y_n + h/2 * k2)
-k4 = f(x_n + h,   y_n + h * k3)
-</code></pre></div></div>
-
-<p>Entonces:
-    y_{n+1} = y_n + (h/6) * (k1 + 2<em>k2 + 2</em>k3 + k4)
-Donde:
-    x0 = Valor inicial de x, de la condición inicial
-    y0 = Valor inicial de y, de la condición inicial
-    RK4 depende de un criterio de para estructural, como criterio de parada tenemos un valor xf, en la última iteración que deseamos encontrar de la EDO(el último punto del mapa que descubriremos)
-    xf = Valor de x, en la última iteración que deseamos encontrar
-    x_{n+1} = Para cada iteración será x_n+1 = x_i + h</p>
-
-<h2 id="ejemplo">Ejemplo:</h2>
-<p>Usa el método de Runge-Kutta con h = 0.1 para obtener una aproximación y(1.5), para la solución de dy/dx = 2xy.
-y(1) = 1</p>
-
-<p>Datos: 
-    x0 = 1
-    y0 = 1
-    xf = 1.5
-    f(x, y) = 2xy</p>
-
-<p>RK4
-Primera iteración
-    k1 = f(1, 1) = 2 * 1 *1 = 2
-    k2 = f(1 + 0.1 / 2, 1 + 0.1 / 2 * 2) = 2.31
-    k3 = f(1 + 0.1 / 2, 1 + 0.1 / 2 * 2.31) = 2.34255
-    k4 = f(1 + 0.1, 1 + 0.1 * 2.34255) = 2.715361</p>
-
-<p>Con estos valores:
-    x1 = x0 + h
-    x1 = 1 + 0.1
-    y1 =  1 + (0.1/6) * (2 + 2 * 2.31 + 2 * 2.34255 + 2.715361) = 1.23367435</p>
-
-<p>Continuamos así hasta que x_n alcance el valor de 1.5, entonces detenemos las iteraciones</p>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[!Bienvenido al Método de Runge-Kutta!]]></summary></entry></feed>
+\[+ \frac{0.1^3}{6}(2.44278) \approx 1.39968\]]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[¡Bienvenidos al Método de Taylor!]]></summary></entry></feed>

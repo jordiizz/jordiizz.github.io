@@ -1,0 +1,17 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+{% if page.featured %}
+  {% assign posts = site.posts | where_exp: "post", "page.featured contains post.url" %}
+{% else %}
+  {% assign posts = site.posts | limit: 4 %}  
+{% endif %}
+
+<div class="entries-grid">
+  {% for post in posts %}
+    {% include archive-single.html type="grid" %}
+  {% endfor %}
+</div>

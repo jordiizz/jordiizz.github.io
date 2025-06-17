@@ -9,6 +9,8 @@ sidebar:
 permalink: /docs/codigo-python-runge-kutta/
 ---
 
+## Sintáxis del Código
+
 <div class="code-block" markdown="1" style="position: relative;">
   <button class="copy-button">Copiar</button>
 
@@ -71,3 +73,7 @@ class RungeKutta:
 </div>
 
 <script src="{{ '/assets/js/copy-code.js' | relative_url }}" defer></script>
+
+## Código Ejecutable con Jupyter Notebook y Google Colab
+
+[Codigo de Runge-Kutta Ejecutable con Google Colab](https://colab.research.google.com/drive/1P9V9St3v2wxEciLTkC-CB2YTo_c3GZIW?usp=sharing "Código de Runge-Kutta")

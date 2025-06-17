@@ -9,6 +9,8 @@ sidebar:
 permalink: /docs/codigo-python-taylor/
 ---
 
+## Sintáxis del Código
+
 <div class="code-block" markdown="1" style="position: relative;">
   <button class="copy-button">Copiar</button>
 
@@ -106,4 +108,8 @@ if __name__ == "__main__":
 </div>
 
 <script src="{{ '/assets/js/copy-code.js' | relative_url }}" defer></script>
+
+## Código Ejecutable con Jupyter Notebook y Google Colab
+
+[Codigo de Taylor Ejecutable con Google Colab](https://colab.research.google.com/drive/1ZniBPoj1DP4Pm2mWmolrLk_1E7kK_ag0?usp=sharing "Código de Taylor")
 

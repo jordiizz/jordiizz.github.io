@@ -10,8 +10,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Método de Euler para ecuaciones diferenciales. - UNIDAD 5</title>
-<meta name="description" content="¡Bienvenidos al Método de Euler!">
+<!-- begin _includes/seo.html --><title>RK4  - UNIDAD 5</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
 
 
   <meta name="author" content="Analisis Numerico">
@@ -23,26 +23,26 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="UNIDAD 5">
-<meta property="og:title" content="Método de Euler para ecuaciones diferenciales.">
-<meta property="og:url" content="http://localhost:4000/docs/metodo-de-euler/">
+<meta property="og:title" content="RK4">
+<meta property="og:url" content="http://localhost:4000/docs/runge-kutta/rk4/">
 
 
-  <meta property="og:description" content="¡Bienvenidos al Método de Euler!">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2025-04-28T00:00:00-06:00">
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
 
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/docs/metodo-de-euler/">
+
+  <meta property="article:published_time" content="2025-04-25T00:00:00-06:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/docs/runge-kutta/rk4/">
 
 
 
@@ -150,7 +150,7 @@
           
           <ul>
             
-              <li><a href="/docs/metodo-de-euler/" class="active">Teoría del Método de Euler</a></li>
+              <li><a href="/docs/metodo-de-euler/">Teoría del Método de Euler</a></li>
             
               <li><a href="/docs/codigo-python-euler/">Código de Euler</a></li>
             
@@ -233,16 +233,16 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Método de Euler para ecuaciones diferenciales.">
-    <meta itemprop="description" content="¡Bienvenidos al Método de Euler!">
-    <meta itemprop="datePublished" content="2025-04-28T00:00:00-06:00">
+    <meta itemprop="headline" content="RK4">
+    
+    <meta itemprop="datePublished" content="2025-04-25T00:00:00-06:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/docs/metodo-de-euler/" itemprop="url">Método de Euler para ecuaciones diferenciales.
+            <a href="http://localhost:4000/docs/runge-kutta/rk4/" itemprop="url">RK4
 </a>
           </h1>
           
@@ -256,175 +256,38 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#método-de-euler">Método de Euler</a></li><li><a href="#ejemplo-11">Ejemplo 1.1</a></li><li><a href="#euler-mejorado">Euler Mejorado</a></li><li><a href="#ejemplo-21">Ejemplo 2.1</a></li></ul>
+              <ul class="toc__menu"><li><a href="#fórmulas-del-método-rk4">Fórmulas del método RK4</a></li></ul>
             </nav>
           </aside>
         
-        <p>¡Bienvenidos al Método de Euler!
-<!-- _includes/mathjax.html -->
+        <!-- _includes/mathjax.html -->
 <script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script></p>
+</script>
 
-<h2 id="método-de-euler">Método de Euler</h2>
+<h2 id="fórmulas-del-método-rk4">Fórmulas del método RK4</h2>
 
-<p>El método de Euler es el más simple de los métodos numéricos de resolución de ecuaciones diferenciales. Se obtiene considerando el desarrollo de Taylor a primer orden en h:</p>
+<p>Dado un paso ( h ), el valor de ( y ) en el siguiente punto se calcula así:</p>
 
-\[y(t_0 + h) ≈ y(t_0)+ hy'(t_0)\]
+\[\begin{aligned}
+k_1 &amp;= f(x_n, y_n) \\
 
-<p>A partir de la ecuación diferencial \(y(t_0) = f(t_0, y_0)\), obtenemos</p>
+k_2 &amp;= f\left(x_n + \frac{h}{2},\ y_n + \frac{h}{2}k_1\right) \\
 
-\[y_1 = y_0 + hf(t_0, y_0)\]
+k_3 &amp;= f\left(x_n + \frac{h}{2},\ y_n + \frac{h}{2}k_2\right) \\
 
-<p>Análogamente, utilizando \(y_1\) como condición inicial, tenemos en el segundo paso</p>
+k_4 &amp;= f(x_n + h,\ y_n + hk_3) \\
+y_{n+1} &amp;= y_n + \frac{h}{6}(k_1 + 2k_2 + 2k_3 + k_4)
+\end{aligned}\]
 
-\[y_2 = y_1 + hf(t_1, y_1)\]
+<p>Donde:</p>
 
-<p>y, en general, el algoritmo recursivo viene dado por</p>
+<p>( x_n ): punto actual<br />
+ ( y_n ): valor aproximado de la solución en ( x_n )<br />
+ ( h ): tamaño del paso<br />
+ ( k_1 ), ( k_2 ), ( k_3 ), ( k_4 ): estimaciones de la pendiente (derivada) en diferentes puntos dentro del intervalo.</p>
 
-<p>\(y_0 = y(t_0)\) 
-\(y_{n+1} = y_n + hf(t_n, y_n),                   n = 1, 2,...\)</p>
+<hr />
 
-<p>Lógicamente, el error aumentará a medida que aumente el número de iteraciones. El valor práctico de este método es limitado, aunque resulta útil para obtener al menos una primera aproximación de la solución, para un valor de h suficientemente pequeño.</p>
-
-<h2 id="ejemplo-11">Ejemplo 1.1</h2>
-<p>Resolver:</p>
-
-<p>\(\frac{dt}{dy} = t - y\),     \(y(0)=1\)</p>
-
-<p>en el intervalo \(t∈[0,1]\) con \(h=0.5\).</p>
-
-<p>Respuesta:</p>
-
-<ul>
-  <li>
-\[T_0=0, y_0=1\]
-  </li>
-  <li>\(h=0.5\), entonces los puntos son \(t_1=0.5, t_2=1.0\).</li>
-</ul>
-
-<p>Aplicar la fórmula de Euler</p>
-
-<ol>
-  <li>Primera iteración (n=0):</li>
-</ol>
-
-\[f(t_0,y_0)=t_0−y_0=0−1=−1\]
-
-\[y_1=y_0+h⋅f(t_0,y_0)=1+0.5⋅(−1)=0.5\]
-
-<ol>
-  <li>Segunda iteración (n=1):</li>
-</ol>
-
-\[f(t_1,y_1)=t_1−y_1=0.5−0.5=0\]
-
-\[y_2=y_1+h⋅f(t_1,y_1)=0.5+0.5⋅0=0.5\]
-
-<table>
-  <thead>
-    <tr>
-      <th>\(t_n\)</th>
-      <th>\(y_n\)(Aprox.)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0.0</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <td>0.5</td>
-      <td>0.5</td>
-    </tr>
-    <tr>
-      <td>1.0</td>
-      <td>0.5</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>La solución analítica es \(y(t)=t-1+2e^-t\)     En \(t=1\):
-\(y(1)=1-1+2e^-1 ≈ 0.7358\)
-El error en \(t = 1 es ∣0.5-0.7358∣=0.2358\), debido a que \(h=0.5\) es grande.</p>
-
-<h2 id="euler-mejorado">Euler Mejorado</h2>
-
-<p>Su idea es utilizar en \((t_n, y_n)\) un valor promedio de la derivada en ese punto \(y\) en \((t_{n+1}, y_{n+1})\). Como no se conoce el valor \(y{_n+1}\), se calcula con el método de Euler, \(y_{n+1}=y_n+hf(t_n, y_n)\). El nuevo valor de \(y_{n + 1}\) será:</p>
-
-\[y_{n+1}=y_n+\frac{h}{2}(f(t_n, y_n)+f(t_{n+1}, y'_{n+1}))\]
-
-<p>El método se conoce como predictor-corrector. El error es O(\(h^3\)). Fue formulado por Karl Heun, Alemania, 1859-1929.</p>
-
-<p>Resolviendo el mismo ejercicio anterior:</p>
-
-<h2 id="ejemplo-21">Ejemplo 2.1</h2>
-<p>Resolver:
-\(\frac{dt}{dy}= t - y\),     \(y(0)=1\)</p>
-
-<p>En el intervalo \(t∈[0,1]\) con \(h=0.5\).</p>
-<ul>
-  <li>
-\[T_0=0, y_0=1\]
-  </li>
-  <li>\(h=0.5\), entonces los puntos son \(t_1=0.5, t_2=1.0\).</li>
-</ul>
-
-<p>Iteración 1 (n=0):</p>
-
-<p>Predictor:</p>
-
-\[f(t_0, y_0)= 0 - 1 = -1\]
-
-\[y'_1= y_0+h.f(t_0, y_0) = 1 + 0.5 . (-1) = 0.5\]
-
-<p>Corrector:</p>
-
-\[f(t_1, y_1) = 0.5 - 0.5 = 0\]
-
-\[y_1= y_0 + \frac{h}{2}.[f(t_0, y_0) + f(t_1, y'_1)]\]
-
-\[= 1 + \frac{0.5}{2}[-1+0] = 1 - 0.25 = 0.75\]
-
-<p>Iteración 2 (n=1):</p>
-
-<p>Predictor:</p>
-
-\[f(t_1,y_1) = 0.5 - 0.75 = 0.25\]
-
-\[y'_2= y_1 + h .f(t_1, y_1)\]
-
-\[= 0.75 + 0.5 . (-0.25) = 0.625\]
-
-<p>Corrector:</p>
-
-\[f(t_2, y'_2) = 1.0 - 0.625 = 0.375\]
-
-\[y_2= y_1+ \frac{h}{2}[f(t_1,y_1) + f(t_2, y_2)]\]
-
-\[= 0.75 +\frac{0.5}{2}[-0.25 + 0.375] = 0.75 + 0.03125 = 0.78\]
-
-<table>
-  <thead>
-    <tr>
-      <th>\(t_n\)</th>
-      <th>\(y_n\)(Aprox.)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0.0</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <td>0.5</td>
-      <td>0.75</td>
-    </tr>
-    <tr>
-      <td>1.0</td>
-      <td>0.78125</td>
-    </tr>
-  </tbody>
-</table>
 
         
       </section>
@@ -436,24 +299,13 @@ El error en \(t = 1 es ∣0.5-0.7358∣=0.2358\), debido a que \(h=0.5\) es gran
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-04-28T00:00:00-06:00">April 28, 2025</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-04-25T00:00:00-06:00">April 25, 2025</time></p>
 
       </footer>
 
       
 
       
-  <nav class="pagination">
-    
-      <a href="/docs/metodo-de-runge-kutta/" class="pagination--pager" title="Método Runge-Kutta para Ecuaciones diferenciales
-">Previous</a>
-    
-    
-      <a href="/docs/video-de-taylor/" class="pagination--pager" title="Videos del Método de Taylor para ecuaciones diferenciales.
-">Next</a>
-    
-  </nav>
-
     </div>
 
     
