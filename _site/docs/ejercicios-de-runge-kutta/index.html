@@ -10,8 +10,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Videos del Método de Runge-Kutta para ecuaciones diferenciales. - UNIDAD 5</title>
-<meta name="description" content="Ejercicio">
+<!-- begin _includes/seo.html --><title>Ejercicio con Método de Runge–Kutta de orden 4 (h = 0.1) - UNIDAD 5</title>
+<meta name="description" content="">
 
 
   <meta name="author" content="Analisis Numerico">
@@ -23,11 +23,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="UNIDAD 5">
-<meta property="og:title" content="Videos del Método de Runge-Kutta para ecuaciones diferenciales.">
-<meta property="og:url" content="http://localhost:4000/docs/video-de-runge-kutta/">
+<meta property="og:title" content="Ejercicio con Método de Runge–Kutta de orden 4 (h = 0.1)">
+<meta property="og:url" content="http://localhost:4000/docs/ejercicios-de-runge-kutta/">
 
 
-  <meta property="og:description" content="Ejercicio">
+  <meta property="og:description" content="">
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/docs/video-de-runge-kutta/">
+<link rel="canonical" href="http://localhost:4000/docs/ejercicios-de-runge-kutta/">
 
 
 
@@ -214,9 +214,9 @@
             
               <li><a href="/docs/codigo-python-runge-kutta/">Código de Runge-Kutta</a></li>
             
-              <li><a href="/docs/video-de-runge-kutta/" class="active">Vídeos sobre Runge-Kutta</a></li>
+              <li><a href="/docs/video-de-runge-kutta/">Vídeos sobre Runge-Kutta</a></li>
             
-              <li><a href="/docs/ejercicios-de-runge-kutta/">Ejercicios usando Runge-Kutta</a></li>
+              <li><a href="/docs/ejercicios-de-runge-kutta/" class="active">Ejercicios usando Runge-Kutta</a></li>
             
           </ul>
           
@@ -233,8 +233,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Videos del Método de Runge-Kutta para ecuaciones diferenciales.">
-    <meta itemprop="description" content="Ejercicio">
+    <meta itemprop="headline" content="Ejercicio con Método de Runge–Kutta de orden 4 (h = 0.1)">
+    <meta itemprop="description" content="">
     <meta itemprop="datePublished" content="2025-06-16T00:00:00-06:00">
     
 
@@ -242,7 +242,7 @@
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/docs/video-de-runge-kutta/" itemprop="url">Videos del Método de Runge-Kutta para ecuaciones diferenciales.
+            <a href="http://localhost:4000/docs/ejercicios-de-runge-kutta/" itemprop="url">Ejercicio con Método de Runge–Kutta de orden 4 (h = 0.1)
 </a>
           </h1>
           
@@ -256,13 +256,77 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#ejercicio">Ejercicio</a></li></ul>
+              <ul class="toc__menu"><li><a href="#ejercicio-19-rungekutta-de-orden-4-3-iteraciones-h--01">Ejercicio 19: Runge–Kutta de orden 4 (3 iteraciones, (h = 0.1))</a><ul><li><a href="#paso-0--1-x--0-a-01">Paso 0 → 1 ((x = 0) a (0.1))</a></li><li><a href="#paso-1--2-x--01-a-02">Paso 1 → 2 ((x = 0.1) a (0.2))</a></li><li><a href="#paso-2--3-x--02-a-03">Paso 2 → 3 ((x = 0.2) a (0.3))</a></li></ul></li><li><a href="#pdf-con-más-ejercicios-resueltos">PDF con más ejercicios resueltos</a></li></ul>
             </nav>
           </aside>
         
-        <h2 id="ejercicio">Ejercicio</h2>
+        <!-- _includes/mathjax.html -->
+<script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/eNaw41W6yto?si=OI97B9ROfqvmbX7p" frameborder="0" allowfullscreen=""></iframe>
+<h2 id="ejercicio-19-rungekutta-de-orden-4-3-iteraciones-h--01">Ejercicio 19: Runge–Kutta de orden 4 (3 iteraciones, (h = 0.1))</h2>
+
+<p>Dada la EDO:</p>
+
+\[y' = y\,\tan(x), \quad y(0)=1\]
+
+<p>El esquema clásico de RK4 es</p>
+
+\[\begin{aligned}
+k_1 &amp;= f(x_n, y_n), \\
+k_2 &amp;= f\!\left(x_n + \tfrac{h}{2},\; y_n + \tfrac{h}{2}k_1\right),\\
+k_3 &amp;= f\!\left(x_n + \tfrac{h}{2},\; y_n + \tfrac{h}{2}k_2\right),\\
+k_4 &amp;= f\!\left(x_n + h,\; y_n + h k_3\right),\\[6pt]
+y_{n+1} &amp;= y_n + \tfrac{h}{6}\bigl(k_1 + 2k_2 + 2k_3 + k_4\bigr),
+\end{aligned}
+\qquad f(x,y)=y\tan x.\]
+
+<hr />
+
+<h3 id="paso-0--1-x--0-a-01">Paso 0 → 1 ((x = 0) a (0.1))</h3>
+
+\[\begin{aligned}
+x_0 &amp;= 0, &amp;\quad y_0 &amp;= 1,\\
+k_1 &amp;= 0.000000,\\
+k_2 &amp;= 0.050042,\\
+k_3 &amp;= 0.050167,\\
+k_4 &amp;= 0.100838,\\[6pt]
+y_1 &amp;= y_0 + \tfrac{h}{6}\bigl(k_1 + 2k_2 + 2k_3 + k_4\bigr)=1.005021.
+\end{aligned}\]
+
+<hr />
+
+<h3 id="paso-1--2-x--01-a-02">Paso 1 → 2 ((x = 0.1) a (0.2))</h3>
+
+\[\begin{aligned}
+x_1 &amp;= 0.1, &amp;\quad y_1 &amp;= 1.005021,\\
+k_1 &amp;= 0.100838,\\
+k_2 &amp;= 0.152656,\\
+k_3 &amp;= 0.153048,\\
+k_4 &amp;= 0.206830,\\[6pt]
+y_2 &amp;= y_1 + \tfrac{h}{6}\bigl(k_1 + 2k_2 + 2k_3 + k_4\bigr)=1.020339.
+\end{aligned}\]
+
+<hr />
+
+<h3 id="paso-2--3-x--02-a-03">Paso 2 → 3 ((x = 0.2) a (0.3))</h3>
+
+\[\begin{aligned}
+x_2 &amp;= 0.2, &amp;\quad y_2 &amp;= 1.020339,\\
+k_1 &amp;= 0.206833,\\
+k_2 &amp;= 0.263176,\\
+k_3 &amp;= 0.263895,\\
+k_4 &amp;= 0.323791,\\[6pt]
+y_3 &amp;= y_2 + \tfrac{h}{6}\bigl(k_1 + 2k_2 + 2k_3 + k_4\bigr)=1.046752.
+\end{aligned}\]
+
+<hr />
+
+\[y(0.3) \approx 1.046752\]
+
+<h2 id="pdf-con-más-ejercicios-resueltos">PDF con más ejercicios resueltos</h2>
+
+<p><a href="/docs/Ejercicios Runge-Kutta.pdf">Descargar Guía de Ejercicios</a></p>
 
         
       </section>
@@ -283,11 +347,12 @@
       
   <nav class="pagination">
     
-      <a href="/docs/video-de-multipasos/" class="pagination--pager" title="Videos del Método de Multipasos para ecuaciones diferenciales.
+      <a href="/docs/ejercicios-de-multipasos/" class="pagination--pager" title="Ejercicio con Método de Multipasos (Adams–Bashforth de 4 pasos (h = 0.2))
 ">Previous</a>
     
     
-      <a href="#" class="pagination--pager disabled">Next</a>
+      <a href="/docs/ejercicios-de-taylor/" class="pagination--pager" title="Ejercicio con método de Taylor de orden 2
+">Next</a>
     
   </nav>
 

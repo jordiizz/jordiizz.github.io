@@ -156,7 +156,7 @@
             
               <li><a href="/docs/video-de-euler/">Vídeos sobre Euler</a></li>
             
-              <li><a href="/docs/quick-start-guide/">Ejercicios usando Euler</a></li>
+              <li><a href="/docs/ejercicios-de-euler/">Ejercicios usando Euler</a></li>
             
           </ul>
           
@@ -176,7 +176,7 @@
             
               <li><a href="/docs/video-de-taylor/">Vídeos sobre Taylor</a></li>
             
-              <li><a href="/docs/structure/">Ejercicios usando Taylor</a></li>
+              <li><a href="/docs/ejercicios-de-taylor/">Ejercicios usando Taylor</a></li>
             
           </ul>
           
@@ -196,7 +196,7 @@
             
               <li><a href="/docs/video-de-multipasos/">Videos sobre Multipasos</a></li>
             
-              <li><a href="/docs/upgrading/">Ejercicios usando Multipasos</a></li>
+              <li><a href="/docs/ejercicios-de-multipasos/">Ejercicios usando Multipasos</a></li>
             
           </ul>
           
@@ -216,7 +216,7 @@
             
               <li><a href="/docs/video-de-runge-kutta/">Vídeos sobre Runge-Kutta</a></li>
             
-              <li><a href="/docs/installation/">Ejercicios usando Runge-Kutta</a></li>
+              <li><a href="/docs/ejercicios-de-runge-kutta/">Ejercicios usando Runge-Kutta</a></li>
             
           </ul>
           
@@ -266,58 +266,88 @@
   <p><button class="copy-button">Copiar</button></p>
 
   <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">rich.table</span> <span class="kn">import</span> <span class="n">Table</span>
+<span class="kn">from</span> <span class="nn">rich.console</span> <span class="kn">import</span> <span class="n">Console</span>
 
-<span class="k">class</span> <span class="nc">RungeKutta</span><span class="p">:</span>
+<span class="k">def</span> <span class="nf">rk1</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
+    <span class="n">k1</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">y_i</span> <span class="o">+</span> <span class="n">k1</span>
 
-    <span class="k">def</span> <span class="nf">rk1</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">main_function</span><span class="p">):</span>
-        <span class="n">k1</span> <span class="o">=</span> <span class="n">step</span> <span class="o">*</span> <span class="n">main_function</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">y_i</span> <span class="o">+</span> <span class="n">k1</span>
+<span class="k">def</span> <span class="nf">rk2</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
+    <span class="n">k1</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">)</span>
+    <span class="n">k2</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="n">h</span><span class="p">,</span> <span class="n">y_i</span> <span class="o">+</span> <span class="n">k1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">y_i</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">k1</span> <span class="o">+</span> <span class="n">k2</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">rk3</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
+    <span class="n">k1</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">)</span>
+    <span class="n">k2</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="n">h</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">y_i</span> <span class="o">+</span> <span class="n">k1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">k3</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="n">h</span><span class="p">,</span> <span class="n">y_i</span> <span class="o">-</span> <span class="n">k1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">k2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">y_i</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">k1</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">k2</span> <span class="o">+</span> <span class="n">k3</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">rk4</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
+    <span class="n">k1</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">)</span>
+    <span class="n">k2</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="n">h</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">y_i</span> <span class="o">+</span> <span class="n">k1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">k3</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="n">h</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">y_i</span> <span class="o">+</span> <span class="n">k2</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">k4</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="n">h</span><span class="p">,</span> <span class="n">y_i</span> <span class="o">+</span> <span class="n">k3</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">y_i</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">k1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">k2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">k3</span> <span class="o">+</span> <span class="n">k4</span><span class="p">)</span>
+
+<span class="n">rks</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="n">rk1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="n">rk2</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="n">rk3</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="n">rk4</span><span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">runge_kutta_method</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">order</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">rks</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s">"Orden inválido: </span><span class="si">{</span><span class="n">order</span><span class="si">}</span><span class="s">. Solo se admite 1, 2, 3 o 4."</span><span class="p">)</span>
     
-    <span class="k">def</span> <span class="nf">rk2</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">main_function</span><span class="p">):</span>
-        <span class="n">k1</span> <span class="o">=</span> <span class="n">step</span> <span class="o">*</span> <span class="n">main_function</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">)</span>
-        <span class="n">k2</span> <span class="o">=</span> <span class="n">step</span> <span class="o">*</span> <span class="n">main_function</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="n">step</span><span class="p">,</span> <span class="n">y_i</span> <span class="o">+</span> <span class="n">k1</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">y_i</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">k1</span> <span class="o">+</span> <span class="n">k2</span><span class="p">)</span>
+    <span class="n">xs</span> <span class="o">=</span> <span class="p">[</span><span class="n">x0</span><span class="p">]</span>
+    <span class="n">ys</span> <span class="o">=</span> <span class="p">[</span><span class="n">y0</span><span class="p">]</span>
     
-    <span class="k">def</span> <span class="nf">rk3</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">main_function</span><span class="p">):</span>
-        <span class="n">k1</span> <span class="o">=</span> <span class="n">step</span> <span class="o">*</span> <span class="n">main_function</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">)</span>
-        <span class="n">k2</span> <span class="o">=</span> <span class="n">step</span> <span class="o">*</span> <span class="n">main_function</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="n">step</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">y_i</span> <span class="o">+</span> <span class="n">k1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
-        <span class="n">k3</span> <span class="o">=</span> <span class="n">step</span> <span class="o">*</span> <span class="n">main_function</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="n">step</span><span class="p">,</span> <span class="n">y_i</span> <span class="o">-</span> <span class="n">k1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">k2</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">y_i</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">6</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">k1</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">k2</span> <span class="o">+</span> <span class="n">k3</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">steps</span><span class="p">):</span>
+        <span class="n">y1</span> <span class="o">=</span> <span class="n">rks</span><span class="p">[</span><span class="n">order</span><span class="p">](</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+        <span class="n">x1</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">h</span>
+        <span class="n">xs</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
+        <span class="n">ys</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">y1</span><span class="p">)</span>
+        <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span>
+        
+    <span class="k">return</span> <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span>
 
-    <span class="k">def</span> <span class="nf">rk4</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">main_function</span><span class="p">):</span>
-        <span class="n">k1</span> <span class="o">=</span> <span class="n">step</span> <span class="o">*</span> <span class="n">main_function</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span><span class="n">y_i</span><span class="p">)</span> 
-        <span class="n">k2</span> <span class="o">=</span> <span class="n">step</span> <span class="o">*</span> <span class="n">main_function</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="p">(</span><span class="n">step</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="n">y_i</span> <span class="o">+</span> <span class="p">(</span><span class="n">k1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span>
-        <span class="n">k3</span> <span class="o">=</span> <span class="n">step</span> <span class="o">*</span> <span class="n">main_function</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="p">(</span><span class="n">step</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="n">y_i</span> <span class="o">+</span> <span class="p">(</span><span class="n">k2</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span>
-        <span class="n">k4</span> <span class="o">=</span> <span class="n">step</span> <span class="o">*</span> <span class="n">main_function</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="n">step</span><span class="p">,</span> <span class="n">y_i</span> <span class="o">+</span> <span class="n">k3</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">y_i</span> <span class="o">+</span> <span class="p">((</span><span class="n">k1</span> <span class="o">+</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span><span class="n">k2</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">k3</span><span class="p">)</span> <span class="o">+</span> <span class="n">k4</span><span class="p">)</span> <span class="o">/</span> <span class="mi">6</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">graficar</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">titulo</span><span class="o">=</span><span class="s">"Método de Runge-Kutta"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">"blue"</span><span class="p">):</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">'o'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">'-'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="n">titulo</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"x"</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"y"</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="c1">#plt.savefig("rk_output.png")
+</span>    <span class="c1">#print("[+] Gráfica guardada en: rk_output.png")
+</span>
+<span class="k">def</span> <span class="nf">tabla_resultados</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">metodo</span><span class="o">=</span><span class="s">"RK"</span><span class="p">):</span>
+    <span class="n">console</span> <span class="o">=</span> <span class="n">Console</span><span class="p">()</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s">"Método de </span><span class="si">{</span><span class="n">metodo</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
 
-    <span class="n">rks</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="mi">1</span><span class="p">:</span><span class="n">rk1</span><span class="p">,</span>
-        <span class="mi">2</span><span class="p">:</span><span class="n">rk2</span><span class="p">,</span>
-        <span class="mi">3</span><span class="p">:</span><span class="n">rk3</span><span class="p">,</span>
-        <span class="mi">4</span><span class="p">:</span><span class="n">rk4</span>
-    <span class="p">}</span>
-     
-    <span class="k">def</span> <span class="nf">calc_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_zero</span><span class="p">,</span> <span class="n">x_final</span><span class="p">,</span> <span class="n">n_intervals</span><span class="p">):</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">x_final</span> <span class="o">-</span> <span class="n">x_zero</span><span class="p">)</span> <span class="o">/</span> <span class="n">n_intervals</span>
+    <span class="n">table</span><span class="p">.</span><span class="n">add_column</span><span class="p">(</span><span class="s">"i"</span><span class="p">,</span> <span class="n">justify</span><span class="o">=</span><span class="s">"center"</span><span class="p">)</span>
+    <span class="n">table</span><span class="p">.</span><span class="n">add_column</span><span class="p">(</span><span class="s">"Xn"</span><span class="p">,</span> <span class="n">justify</span><span class="o">=</span><span class="s">"center"</span><span class="p">)</span>
+    <span class="n">table</span><span class="p">.</span><span class="n">add_column</span><span class="p">(</span><span class="s">"Yn"</span><span class="p">,</span> <span class="n">justify</span><span class="o">=</span><span class="s">"center"</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s">"green"</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">runge_kutta</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">main_function</span><span class="p">,</span> <span class="n">x_zero</span><span class="p">,</span> <span class="n">y_zero</span><span class="p">,</span> <span class="n">x_final</span><span class="p">,</span> <span class="n">n_intervals</span><span class="p">,</span><span class="n">step</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xs</span><span class="p">)):</span>
+        <span class="n">table</span><span class="p">.</span><span class="n">add_row</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s">"</span><span class="p">,</span> <span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">xs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="p">.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s">"</span><span class="p">,</span> <span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">ys</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="p">.</span><span class="mi">5</span><span class="n">f</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
 
-        <span class="s">"""_summary_
-        Args:
-            main_function (lambda): be defined as a lambda with x,y params
-            step (float): step, amount to move foward
-        """</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">step</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span> <span class="n">step</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">calc_step</span><span class="p">(</span><span class="n">x_zero</span><span class="p">,</span> <span class="n">x_final</span><span class="p">,</span> <span class="n">n_intervals</span><span class="p">)</span>
-            <span class="n">y_i</span> <span class="o">=</span> <span class="n">y_zero</span>
-            <span class="n">x_i</span> <span class="o">=</span> <span class="n">x_zero</span>
-            <span class="k">while</span><span class="p">(</span><span class="n">x_i</span> <span class="o">&lt;</span> <span class="n">x_final</span><span class="p">):</span> <span class="c1">#Probaremos con la condicional y con n_intervals siendo igual al numero de intervalos = numero de pasos
-</span>                <span class="n">y_i</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">rks</span><span class="p">[</span><span class="n">order</span><span class="p">](</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">main_function</span><span class="p">)</span>
-                <span class="n">x_i</span> <span class="o">+=</span> <span class="n">step</span>
-            <span class="k">return</span> <span class="n">y_i</span>
-        <span class="k">except</span><span class="p">:</span>
-            <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Order Outta Range Max = 4, Current = </span><span class="si">{</span><span class="n">order</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+    <span class="n">console</span><span class="p">.</span><span class="k">print</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">demo_runge_kutta</span><span class="p">():</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+
+    <span class="n">x0</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">y0</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="mf">0.1</span>
+    <span class="n">steps</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">order</span> <span class="o">=</span> <span class="mi">2</span>  
+
+    <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span> <span class="o">=</span> <span class="n">runge_kutta_method</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">order</span><span class="p">)</span>
+    <span class="n">tabla_resultados</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">metodo</span><span class="o">=</span><span class="sa">f</span><span class="s">"Runge-Kutta Orden </span><span class="si">{</span><span class="n">order</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+    <span class="n">graficar</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">titulo</span><span class="o">=</span><span class="sa">f</span><span class="s">"Runge-Kutta Orden </span><span class="si">{</span><span class="n">order</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">demo_runge_kutta</span><span class="p">()</span>
 </code></pre></div>  </div>
 
 </div>
@@ -351,7 +381,7 @@
 ">Previous</a>
     
     
-      <a href="/docs/video-de-euler/" class="pagination--pager" title="Videos del Método de Euler y Euler Mejorado para ecuaciones diferenciales.
+      <a href="/docs/ejercicios-de-euler/" class="pagination--pager" title="Ejercicio con Método de Euler (h = 0.1)
 ">Next</a>
     
   </nav>

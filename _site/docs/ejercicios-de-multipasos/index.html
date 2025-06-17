@@ -10,8 +10,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Videos del Método de Runge-Kutta para ecuaciones diferenciales. - UNIDAD 5</title>
-<meta name="description" content="Ejercicio">
+<!-- begin _includes/seo.html --><title>Ejercicio con Método de Multipasos (Adams–Bashforth de 4 pasos (h = 0.2)) - UNIDAD 5</title>
+<meta name="description" content="">
 
 
   <meta name="author" content="Analisis Numerico">
@@ -23,11 +23,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="UNIDAD 5">
-<meta property="og:title" content="Videos del Método de Runge-Kutta para ecuaciones diferenciales.">
-<meta property="og:url" content="http://localhost:4000/docs/video-de-runge-kutta/">
+<meta property="og:title" content="Ejercicio con Método de Multipasos (Adams–Bashforth de 4 pasos (h = 0.2))">
+<meta property="og:url" content="http://localhost:4000/docs/ejercicios-de-multipasos/">
 
 
-  <meta property="og:description" content="Ejercicio">
+  <meta property="og:description" content="">
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/docs/video-de-runge-kutta/">
+<link rel="canonical" href="http://localhost:4000/docs/ejercicios-de-multipasos/">
 
 
 
@@ -196,7 +196,7 @@
             
               <li><a href="/docs/video-de-multipasos/">Videos sobre Multipasos</a></li>
             
-              <li><a href="/docs/ejercicios-de-multipasos/">Ejercicios usando Multipasos</a></li>
+              <li><a href="/docs/ejercicios-de-multipasos/" class="active">Ejercicios usando Multipasos</a></li>
             
           </ul>
           
@@ -214,7 +214,7 @@
             
               <li><a href="/docs/codigo-python-runge-kutta/">Código de Runge-Kutta</a></li>
             
-              <li><a href="/docs/video-de-runge-kutta/" class="active">Vídeos sobre Runge-Kutta</a></li>
+              <li><a href="/docs/video-de-runge-kutta/">Vídeos sobre Runge-Kutta</a></li>
             
               <li><a href="/docs/ejercicios-de-runge-kutta/">Ejercicios usando Runge-Kutta</a></li>
             
@@ -233,8 +233,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Videos del Método de Runge-Kutta para ecuaciones diferenciales.">
-    <meta itemprop="description" content="Ejercicio">
+    <meta itemprop="headline" content="Ejercicio con Método de Multipasos (Adams–Bashforth de 4 pasos (h = 0.2))">
+    <meta itemprop="description" content="">
     <meta itemprop="datePublished" content="2025-06-16T00:00:00-06:00">
     
 
@@ -242,7 +242,7 @@
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/docs/video-de-runge-kutta/" itemprop="url">Videos del Método de Runge-Kutta para ecuaciones diferenciales.
+            <a href="http://localhost:4000/docs/ejercicios-de-multipasos/" itemprop="url">Ejercicio con Método de Multipasos (Adams–Bashforth de 4 pasos (h = 0.2))
 </a>
           </h1>
           
@@ -256,13 +256,87 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#ejercicio">Ejercicio</a></li></ul>
+              <ul class="toc__menu"><li><a href="#ejercicio-30-adamsbashforth-de-4-pasos-h--02">Ejercicio 30: Adams–Bashforth de 4 pasos (h = 0.2)</a><ul><li><a href="#cálculo-de-f_n--fx_n-y_n--y_n---x_n2--1">Cálculo de (f_n = f(x_n, y_n) = y_n - x_n^2 + 1)</a></li><li><a href="#paso-ab4-x--06-to-08">Paso AB‑4 ((x = 0.6 \;\to\; 0.8))</a></li></ul></li><li><a href="#pdf-con-más-ejercicios-resueltos">PDF con más ejercicios resueltos</a></li></ul>
             </nav>
           </aside>
         
-        <h2 id="ejercicio">Ejercicio</h2>
+        <!-- _includes/mathjax.html -->
+<script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/eNaw41W6yto?si=OI97B9ROfqvmbX7p" frameborder="0" allowfullscreen=""></iframe>
+<h2 id="ejercicio-30-adamsbashforth-de-4-pasos-h--02">Ejercicio 30: Adams–Bashforth de 4 pasos (h = 0.2)</h2>
+
+<p>Dada la EDO:</p>
+
+\[y' = y - x^2 + 1, \qquad y(0)=0.5\]
+
+<p>Nuestro objetivo es aproximar (y(0.8)) empleando el método explícito de Adams–Bashforth de <strong>cuatro pasos</strong> (AB‑4) con paso (h = 0.2).</p>
+
+<p>Para iniciar el esquema multipasos se requieren cuatro valores previos, que se obtuvieron aquí con Runge–Kutta de orden 4:</p>
+
+\[\begin{aligned}
+y(0.0) &amp;= 0.500000,\\
+y(0.2) &amp;= 0.829293,\\
+y(0.4) &amp;= 1.214076,\\
+y(0.6) &amp;= 1.648922.
+\end{aligned}\]
+
+<hr />
+
+<h3 id="cálculo-de-f_n--fx_n-y_n--y_n---x_n2--1">Cálculo de (f_n = f(x_n, y_n) = y_n - x_n^2 + 1)</h3>
+
+\[\begin{aligned}
+f_0 &amp;= 0.500000 - 0^2 + 1 = 1.500000,\\
+f_1 &amp;= 0.829293 - 0.2^2 + 1 = 1.789293,\\
+f_2 &amp;= 1.214076 - 0.4^2 + 1 = 2.054076,\\
+f_3 &amp;= 1.648922 - 0.6^2 + 1 = 2.288922.
+\end{aligned}\]
+
+<hr />
+
+<h3 id="paso-ab4-x--06-to-08">Paso AB‑4 ((x = 0.6 \;\to\; 0.8))</h3>
+
+<p>La fórmula del método es</p>
+
+\[\boxed{\;
+y_{n+1}
+  = y_n
+  + \frac{h}{24}
+    \bigl(55 f_n
+          - 59 f_{n-1}
+          + 37 f_{n-2}
+          - 9 f_{n-3}\bigr)
+\;}\]
+
+<p>Aplicando con (n = 3):</p>
+
+\[\begin{aligned}
+y_4 &amp;= y_3
+      + \tfrac{0.2}{24}
+        \bigl(
+          55\,f_3
+          - 59\,f_2
+          + 37\,f_1
+          - 9\,f_0
+        \bigr) \\[6pt]
+    &amp;= 1.648922
+      + \tfrac{0.2}{24}
+        \bigl(
+          55(2.288922)
+          - 59(2.054076)
+          + 37(1.789293)
+          - 9(1.500000)
+        \bigr) \\[6pt]
+    &amp;= 1.648922
+      + 0.2/24 \,(11.422&amp;\text{…}) \\
+    &amp;\approx 2.127289.
+\end{aligned}\]
+
+\[y(0.8) \;\approx\; 2.127289\]
+
+<h2 id="pdf-con-más-ejercicios-resueltos">PDF con más ejercicios resueltos</h2>
+
+<p><a href="/docs/Ejercicios Multipasos.pdf">Descargar Guía de Ejercicios</a></p>
 
         
       </section>
@@ -283,11 +357,12 @@
       
   <nav class="pagination">
     
-      <a href="/docs/video-de-multipasos/" class="pagination--pager" title="Videos del Método de Multipasos para ecuaciones diferenciales.
+      <a href="/docs/ejercicios-de-euler/" class="pagination--pager" title="Ejercicio con Método de Euler (h = 0.1)
 ">Previous</a>
     
     
-      <a href="#" class="pagination--pager disabled">Next</a>
+      <a href="/docs/ejercicios-de-runge-kutta/" class="pagination--pager" title="Ejercicio con Método de Runge–Kutta de orden 4 (h = 0.1)
+">Next</a>
     
   </nav>
 

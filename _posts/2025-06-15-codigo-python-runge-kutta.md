@@ -16,58 +16,88 @@ permalink: /docs/codigo-python-runge-kutta/
 
 ```python
 import numpy as np
+import matplotlib.pyplot as plt
+from rich.table import Table
+from rich.console import Console
 
-class RungeKutta:
+def rk1(x_i, y_i, h, f):
+    k1 = h * f(x_i, y_i)
+    return y_i + k1
 
-    def rk1(x_i, y_i, step, main_function):
-        k1 = step * main_function(x_i, y_i)
-        return y_i + k1
+def rk2(x_i, y_i, h, f):
+    k1 = h * f(x_i, y_i)
+    k2 = h * f(x_i + h, y_i + k1)
+    return y_i + 0.5 * (k1 + k2)
+
+def rk3(x_i, y_i, h, f):
+    k1 = h * f(x_i, y_i)
+    k2 = h * f(x_i + h/2, y_i + k1/2)
+    k3 = h * f(x_i + h, y_i - k1 + 2*k2)
+    return y_i + (1/6) * (k1 + 4*k2 + k3)
+
+def rk4(x_i, y_i, h, f):
+    k1 = h * f(x_i, y_i)
+    k2 = h * f(x_i + h/2, y_i + k1/2)
+    k3 = h * f(x_i + h/2, y_i + k2/2)
+    k4 = h * f(x_i + h, y_i + k3)
+    return y_i + (1/6) * (k1 + 2*k2 + 2*k3 + k4)
+
+rks = {1: rk1, 2: rk2, 3: rk3, 4: rk4}
+
+def runge_kutta_method(f, x0, y0, h, steps, order=4):
+    if order not in rks:
+        raise ValueError(f"Orden inválido: {order}. Solo se admite 1, 2, 3 o 4.")
     
-    def rk2(x_i, y_i, step, main_function):
-        k1 = step * main_function(x_i, y_i)
-        k2 = step * main_function(x_i + step, y_i + k1)
-        return y_i + 0.5 * (k1 + k2)
+    xs = [x0]
+    ys = [y0]
     
-    def rk3(x_i, y_i, step, main_function):
-        k1 = step * main_function(x_i, y_i)
-        k2 = step * main_function(x_i + step / 2, y_i + k1 / 2)
-        k3 = step * main_function(x_i + step, y_i - k1 + 2 * k2)
-        return y_i + (1 / 6) * (k1 + 4 * k2 + k3)
+    for _ in range(steps):
+        y1 = rks[order](x0, y0, h, f)
+        x1 = x0 + h
+        xs.append(x1)
+        ys.append(y1)
+        x0, y0 = x1, y1
+        
+    return xs, ys
 
-    def rk4(x_i, y_i, step, main_function):
-        k1 = step * main_function(x_i,y_i) 
-        k2 = step * main_function(x_i + (step / 2), y_i + (k1 / 2))
-        k3 = step * main_function(x_i + (step / 2), y_i + (k2 / 2))
-        k4 = step * main_function(x_i + step, y_i + k3)
-        return y_i + ((k1 + (2 *k2) + (2 * k3) + k4) / 6)
+def graficar(xs, ys, titulo="Método de Runge-Kutta", color="blue"):
+    plt.plot(xs, ys, marker='o', linestyle='-', color=color)
+    plt.title(titulo)
+    plt.xlabel("x")
+    plt.ylabel("y")
+    plt.grid(True)
+    plt.show()
+    #plt.savefig("rk_output.png")
+    #print("[+] Gráfica guardada en: rk_output.png")
 
-    rks = {
-        1:rk1,
-        2:rk2,
-        3:rk3,
-        4:rk4
-    }
-     
-    def calc_step(self, x_zero, x_final, n_intervals):
-        return (x_final - x_zero) / n_intervals
+def tabla_resultados(xs, ys, metodo="RK"):
+    console = Console()
+    table = Table(title=f"Método de {metodo}")
 
-    def runge_kutta(self, main_function, x_zero, y_zero, x_final, n_intervals,step=None, order=4):
+    table.add_column("i", justify="center")
+    table.add_column("Xn", justify="center")
+    table.add_column("Yn", justify="center", style="green")
 
-        """_summary_
-        Args:
-            main_function (lambda): be defined as a lambda with x,y params
-            step (float): step, amount to move foward
-        """
-        try:
-            if step is None: step = self.calc_step(x_zero, x_final, n_intervals)
-            y_i = y_zero
-            x_i = x_zero
-            while(x_i < x_final): #Probaremos con la condicional y con n_intervals siendo igual al numero de intervalos = numero de pasos
-                y_i = self.rks[order](x_i, y_i, step, main_function)
-                x_i += step
-            return y_i
-        except:
-            print(f'Order Outta Range Max = 4, Current = {order}')
+    for i in range(len(xs)):
+        table.add_row(f"{i}", f"{xs[i]:.2f}", f"{ys[i]:.5f}")
+
+    console.print(table)
+
+def demo_runge_kutta():
+    f = lambda x, y: x + y
+
+    x0 = 0
+    y0 = 1
+    h = 0.1
+    steps = 20
+    order = 2  
+
+    xs, ys = runge_kutta_method(f, x0, y0, h, steps, order)
+    tabla_resultados(xs, ys, metodo=f"Runge-Kutta Orden {order}")
+    graficar(xs, ys, titulo=f"Runge-Kutta Orden {order}")
+
+if __name__ == "__main__":
+    demo_runge_kutta()
 ```
 
 </div>

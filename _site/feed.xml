@@ -1,4 +1,267 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-16T22:29:37-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">UNIDAD 5</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>Analisis Numerico</name></author><entry><title type="html">Videos del Método de Euler y Euler Mejorado para ecuaciones diferenciales.</title><link href="http://localhost:4000/docs/video-de-euler/" rel="alternate" type="text/html" title="Videos del Método de Euler y Euler Mejorado para ecuaciones diferenciales." /><published>2025-06-16T00:00:00-06:00</published><updated>2025-06-16T00:00:00-06:00</updated><id>http://localhost:4000/docs/video-de-euler</id><content type="html" xml:base="http://localhost:4000/docs/video-de-euler/"><![CDATA[<h2 id="ejercicio-1">Ejercicio 1</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-16T23:52:45-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">UNIDAD 5</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>Analisis Numerico</name></author><entry><title type="html">Ejercicio con Método de Euler (h = 0.1)</title><link href="http://localhost:4000/docs/ejercicios-de-euler/" rel="alternate" type="text/html" title="Ejercicio con Método de Euler (h = 0.1)" /><published>2025-06-16T00:00:00-06:00</published><updated>2025-06-16T00:00:00-06:00</updated><id>http://localhost:4000/docs/ejercicios-de-euler</id><content type="html" xml:base="http://localhost:4000/docs/ejercicios-de-euler/"><![CDATA[<!-- _includes/mathjax.html -->
+<script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<h2 id="ejercicio-9-método-de-euler-3-iteraciones-h--01">Ejercicio 9: Método de Euler (3 iteraciones, (h = 0.1))</h2>
+
+<p>Dada la EDO:</p>
+
+\[y' = x + y, \quad y(0) = 1\]
+
+<p>El método de Euler de primer orden utiliza la fórmula</p>
+
+\[y_{n+1} = y_n + h\,f(x_n, y_n),\]
+
+<p>donde</p>
+
+\[f(x,y) = x + y.\]
+
+<hr />
+
+<h3 id="paso-0--1-x--0-a-x--01">Paso 0 → 1 ((x = 0) a (x = 0.1))</h3>
+
+\[\begin{aligned}
+x_0 &amp;= 0, \\
+y_0 &amp;= 1, \\
+f_0 &amp;= 0 + 1 = 1, \\
+y_1 &amp;= y_0 + h\,f_0 = 1 + 0.1(1) = 1.1.
+\end{aligned}\]
+
+<hr />
+
+<h3 id="paso-1--2-x--01-a-x--02">Paso 1 → 2 ((x = 0.1) a (x = 0.2))</h3>
+
+\[\begin{aligned}
+x_1 &amp;= 0.1, \\
+y_1 &amp;= 1.1, \\
+f_1 &amp;= 0.1 + 1.1 = 1.2, \\
+y_2 &amp;= y_1 + h\,f_1 = 1.1 + 0.1(1.2) = 1.22.
+\end{aligned}\]
+
+<hr />
+
+<h3 id="paso-2--3-x--02-a-x--03">Paso 2 → 3 ((x = 0.2) a (x = 0.3))</h3>
+
+\[\begin{aligned}
+x_2 &amp;= 0.2, \\
+y_2 &amp;= 1.22, \\
+f_2 &amp;= 0.2 + 1.22 = 1.42, \\
+y_3 &amp;= y_2 + h\,f_2 = 1.22 + 0.1(1.42) = 1.362.
+\end{aligned}\]
+
+<hr />
+
+\[y(0.3) \approx 1.362\]
+
+<h2 id="pdf-con-más-ejercicios-resueltos">PDF con más ejercicios resueltos</h2>
+
+<p><a href="/docs/Ejercicios Euler.pdf">Descargar Guía de Ejercicios</a></p>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Ejercicio con Método de Multipasos (Adams–Bashforth de 4 pasos (h = 0.2))</title><link href="http://localhost:4000/docs/ejercicios-de-multipasos/" rel="alternate" type="text/html" title="Ejercicio con Método de Multipasos (Adams–Bashforth de 4 pasos (h = 0.2))" /><published>2025-06-16T00:00:00-06:00</published><updated>2025-06-16T00:00:00-06:00</updated><id>http://localhost:4000/docs/ejercicios-de-multipasos</id><content type="html" xml:base="http://localhost:4000/docs/ejercicios-de-multipasos/"><![CDATA[<!-- _includes/mathjax.html -->
+<script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<h2 id="ejercicio-30-adamsbashforth-de-4-pasos-h--02">Ejercicio 30: Adams–Bashforth de 4 pasos (h = 0.2)</h2>
+
+<p>Dada la EDO:</p>
+
+\[y' = y - x^2 + 1, \qquad y(0)=0.5\]
+
+<p>Nuestro objetivo es aproximar (y(0.8)) empleando el método explícito de Adams–Bashforth de <strong>cuatro pasos</strong> (AB‑4) con paso (h = 0.2).</p>
+
+<p>Para iniciar el esquema multipasos se requieren cuatro valores previos, que se obtuvieron aquí con Runge–Kutta de orden 4:</p>
+
+\[\begin{aligned}
+y(0.0) &amp;= 0.500000,\\
+y(0.2) &amp;= 0.829293,\\
+y(0.4) &amp;= 1.214076,\\
+y(0.6) &amp;= 1.648922.
+\end{aligned}\]
+
+<hr />
+
+<h3 id="cálculo-de-f_n--fx_n-y_n--y_n---x_n2--1">Cálculo de (f_n = f(x_n, y_n) = y_n - x_n^2 + 1)</h3>
+
+\[\begin{aligned}
+f_0 &amp;= 0.500000 - 0^2 + 1 = 1.500000,\\
+f_1 &amp;= 0.829293 - 0.2^2 + 1 = 1.789293,\\
+f_2 &amp;= 1.214076 - 0.4^2 + 1 = 2.054076,\\
+f_3 &amp;= 1.648922 - 0.6^2 + 1 = 2.288922.
+\end{aligned}\]
+
+<hr />
+
+<h3 id="paso-ab4-x--06-to-08">Paso AB‑4 ((x = 0.6 \;\to\; 0.8))</h3>
+
+<p>La fórmula del método es</p>
+
+\[\boxed{\;
+y_{n+1}
+  = y_n
+  + \frac{h}{24}
+    \bigl(55 f_n
+          - 59 f_{n-1}
+          + 37 f_{n-2}
+          - 9 f_{n-3}\bigr)
+\;}\]
+
+<p>Aplicando con (n = 3):</p>
+
+\[\begin{aligned}
+y_4 &amp;= y_3
+      + \tfrac{0.2}{24}
+        \bigl(
+          55\,f_3
+          - 59\,f_2
+          + 37\,f_1
+          - 9\,f_0
+        \bigr) \\[6pt]
+    &amp;= 1.648922
+      + \tfrac{0.2}{24}
+        \bigl(
+          55(2.288922)
+          - 59(2.054076)
+          + 37(1.789293)
+          - 9(1.500000)
+        \bigr) \\[6pt]
+    &amp;= 1.648922
+      + 0.2/24 \,(11.422&amp;\text{…}) \\
+    &amp;\approx 2.127289.
+\end{aligned}\]
+
+\[y(0.8) \;\approx\; 2.127289\]
+
+<h2 id="pdf-con-más-ejercicios-resueltos">PDF con más ejercicios resueltos</h2>
+
+<p><a href="/docs/Ejercicios Multipasos.pdf">Descargar Guía de Ejercicios</a></p>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Ejercicio con Método de Runge–Kutta de orden 4 (h = 0.1)</title><link href="http://localhost:4000/docs/ejercicios-de-runge-kutta/" rel="alternate" type="text/html" title="Ejercicio con Método de Runge–Kutta de orden 4 (h = 0.1)" /><published>2025-06-16T00:00:00-06:00</published><updated>2025-06-16T00:00:00-06:00</updated><id>http://localhost:4000/docs/ejercicios-de-runge-kutta</id><content type="html" xml:base="http://localhost:4000/docs/ejercicios-de-runge-kutta/"><![CDATA[<!-- _includes/mathjax.html -->
+<script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<h2 id="ejercicio-19-rungekutta-de-orden-4-3-iteraciones-h--01">Ejercicio 19: Runge–Kutta de orden 4 (3 iteraciones, (h = 0.1))</h2>
+
+<p>Dada la EDO:</p>
+
+\[y' = y\,\tan(x), \quad y(0)=1\]
+
+<p>El esquema clásico de RK4 es</p>
+
+\[\begin{aligned}
+k_1 &amp;= f(x_n, y_n), \\
+k_2 &amp;= f\!\left(x_n + \tfrac{h}{2},\; y_n + \tfrac{h}{2}k_1\right),\\
+k_3 &amp;= f\!\left(x_n + \tfrac{h}{2},\; y_n + \tfrac{h}{2}k_2\right),\\
+k_4 &amp;= f\!\left(x_n + h,\; y_n + h k_3\right),\\[6pt]
+y_{n+1} &amp;= y_n + \tfrac{h}{6}\bigl(k_1 + 2k_2 + 2k_3 + k_4\bigr),
+\end{aligned}
+\qquad f(x,y)=y\tan x.\]
+
+<hr />
+
+<h3 id="paso-0--1-x--0-a-01">Paso 0 → 1 ((x = 0) a (0.1))</h3>
+
+\[\begin{aligned}
+x_0 &amp;= 0, &amp;\quad y_0 &amp;= 1,\\
+k_1 &amp;= 0.000000,\\
+k_2 &amp;= 0.050042,\\
+k_3 &amp;= 0.050167,\\
+k_4 &amp;= 0.100838,\\[6pt]
+y_1 &amp;= y_0 + \tfrac{h}{6}\bigl(k_1 + 2k_2 + 2k_3 + k_4\bigr)=1.005021.
+\end{aligned}\]
+
+<hr />
+
+<h3 id="paso-1--2-x--01-a-02">Paso 1 → 2 ((x = 0.1) a (0.2))</h3>
+
+\[\begin{aligned}
+x_1 &amp;= 0.1, &amp;\quad y_1 &amp;= 1.005021,\\
+k_1 &amp;= 0.100838,\\
+k_2 &amp;= 0.152656,\\
+k_3 &amp;= 0.153048,\\
+k_4 &amp;= 0.206830,\\[6pt]
+y_2 &amp;= y_1 + \tfrac{h}{6}\bigl(k_1 + 2k_2 + 2k_3 + k_4\bigr)=1.020339.
+\end{aligned}\]
+
+<hr />
+
+<h3 id="paso-2--3-x--02-a-03">Paso 2 → 3 ((x = 0.2) a (0.3))</h3>
+
+\[\begin{aligned}
+x_2 &amp;= 0.2, &amp;\quad y_2 &amp;= 1.020339,\\
+k_1 &amp;= 0.206833,\\
+k_2 &amp;= 0.263176,\\
+k_3 &amp;= 0.263895,\\
+k_4 &amp;= 0.323791,\\[6pt]
+y_3 &amp;= y_2 + \tfrac{h}{6}\bigl(k_1 + 2k_2 + 2k_3 + k_4\bigr)=1.046752.
+\end{aligned}\]
+
+<hr />
+
+\[y(0.3) \approx 1.046752\]
+
+<h2 id="pdf-con-más-ejercicios-resueltos">PDF con más ejercicios resueltos</h2>
+
+<p><a href="/docs/Ejercicios Runge-Kutta.pdf">Descargar Guía de Ejercicios</a></p>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Ejercicio con método de Taylor de orden 2</title><link href="http://localhost:4000/docs/ejercicios-de-taylor/" rel="alternate" type="text/html" title="Ejercicio con método de Taylor de orden 2" /><published>2025-06-16T00:00:00-06:00</published><updated>2025-06-16T00:00:00-06:00</updated><id>http://localhost:4000/docs/ejercicios-de-taylor</id><content type="html" xml:base="http://localhost:4000/docs/ejercicios-de-taylor/"><![CDATA[<!-- _includes/mathjax.html -->
+<script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<h2 id="ejemplo-33-método-de-taylor-de-orden-2-2-iteraciones-h--01">Ejemplo 3.3: Método de Taylor de orden 2 (2 iteraciones, h = 0.1)</h2>
+
+<p>Dada la EDO:</p>
+
+\[y' = x^2 - y, \quad y(0) = 1\]
+
+<p>Aplicando la serie de Taylor:</p>
+
+\[y_{n+1} = y_n + h y'_n + \frac{h^2}{2!} y''_n\]
+
+<p>Se tiene:</p>
+
+\[f(x, y) = x^2 - y\]
+
+<p>Derivadas parciales:</p>
+
+\[f_x = 2x, \quad f_y = -1\]
+
+<p>Entonces:</p>
+
+\[y'' = f_x + f_y \cdot f = 2x - (x^2 - y) = 2x - x^2 + y\]
+
+<hr />
+
+<h3 id="paso-0--1-x--0-a-x--01">Paso 0 → 1 (x = 0 a x = 0.1)</h3>
+
+\[x_0 = 0\]
+
+\[y_0 = 1\]
+
+\[f_0 = 0^2 - 1 = -1\]
+
+\[y''_0 = 2(0) - 0^2 + 1 = 1\]
+
+\[y_1 = y_0 + h f_0 + \frac{h^2}{2} y''_0\]
+
+\[y_1 = 1 + 0.1(-1) + \frac{0.01}{2}(1) = 0.905\]
+
+<hr />
+
+<h3 id="paso-1--2-x--01-a-x--02">Paso 1 → 2 (x = 0.1 a x = 0.2)</h3>
+
+\[x_1 = 0.1\]
+
+\[y_1 = 0.905\]
+
+\[f_1 = 0.1^2 - 0.905 = -0.895\]
+
+\[y''_1 = 2(0.1) - 0.1^2 + 0.905 = 1.095\]
+
+\[y_2 = y_1 + h f_1 + \frac{h^2}{2} y''_1\]
+
+\[y_2 = 0.905 + 0.1(-0.895) + \frac{0.01}{2}(1.095) \approx 0.820975\]
+
+<hr />
+
+\[y(0.2) \approx 0.82098\]
+
+<h2 id="pdf-con-más-ejercicios-resueltos">PDF con más ejercicios resueltos</h2>
+
+<p><a href="/docs/Ejercicios Taylor.pdf">Descargar Guía de Ejercicios</a></p>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[Ejemplo 3.3: Método de Taylor de orden 2 (2 iteraciones, h = 0.1)]]></summary></entry><entry><title type="html">Videos del Método de Euler y Euler Mejorado para ecuaciones diferenciales.</title><link href="http://localhost:4000/docs/video-de-euler/" rel="alternate" type="text/html" title="Videos del Método de Euler y Euler Mejorado para ecuaciones diferenciales." /><published>2025-06-16T00:00:00-06:00</published><updated>2025-06-16T00:00:00-06:00</updated><id>http://localhost:4000/docs/video-de-euler</id><content type="html" xml:base="http://localhost:4000/docs/video-de-euler/"><![CDATA[<h2 id="ejercicio-1">Ejercicio 1</h2>
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/7AJCJOZfh_4?si=3Vu_tSpl162H5w4P" frameborder="0" allowfullscreen=""></iframe>
 
@@ -104,58 +367,88 @@
   <p><button class="copy-button">Copiar</button></p>
 
   <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">rich.table</span> <span class="kn">import</span> <span class="n">Table</span>
+<span class="kn">from</span> <span class="nn">rich.console</span> <span class="kn">import</span> <span class="n">Console</span>
 
-<span class="k">class</span> <span class="nc">RungeKutta</span><span class="p">:</span>
+<span class="k">def</span> <span class="nf">rk1</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
+    <span class="n">k1</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">y_i</span> <span class="o">+</span> <span class="n">k1</span>
 
-    <span class="k">def</span> <span class="nf">rk1</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">main_function</span><span class="p">):</span>
-        <span class="n">k1</span> <span class="o">=</span> <span class="n">step</span> <span class="o">*</span> <span class="n">main_function</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">y_i</span> <span class="o">+</span> <span class="n">k1</span>
+<span class="k">def</span> <span class="nf">rk2</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
+    <span class="n">k1</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">)</span>
+    <span class="n">k2</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="n">h</span><span class="p">,</span> <span class="n">y_i</span> <span class="o">+</span> <span class="n">k1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">y_i</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">k1</span> <span class="o">+</span> <span class="n">k2</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">rk3</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
+    <span class="n">k1</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">)</span>
+    <span class="n">k2</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="n">h</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">y_i</span> <span class="o">+</span> <span class="n">k1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">k3</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="n">h</span><span class="p">,</span> <span class="n">y_i</span> <span class="o">-</span> <span class="n">k1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">k2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">y_i</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">k1</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">k2</span> <span class="o">+</span> <span class="n">k3</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">rk4</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
+    <span class="n">k1</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">)</span>
+    <span class="n">k2</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="n">h</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">y_i</span> <span class="o">+</span> <span class="n">k1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">k3</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="n">h</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">y_i</span> <span class="o">+</span> <span class="n">k2</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">k4</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="n">h</span><span class="p">,</span> <span class="n">y_i</span> <span class="o">+</span> <span class="n">k3</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">y_i</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">k1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">k2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">k3</span> <span class="o">+</span> <span class="n">k4</span><span class="p">)</span>
+
+<span class="n">rks</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="n">rk1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="n">rk2</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="n">rk3</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="n">rk4</span><span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">runge_kutta_method</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">order</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">rks</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s">"Orden inválido: </span><span class="si">{</span><span class="n">order</span><span class="si">}</span><span class="s">. Solo se admite 1, 2, 3 o 4."</span><span class="p">)</span>
     
-    <span class="k">def</span> <span class="nf">rk2</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">main_function</span><span class="p">):</span>
-        <span class="n">k1</span> <span class="o">=</span> <span class="n">step</span> <span class="o">*</span> <span class="n">main_function</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">)</span>
-        <span class="n">k2</span> <span class="o">=</span> <span class="n">step</span> <span class="o">*</span> <span class="n">main_function</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="n">step</span><span class="p">,</span> <span class="n">y_i</span> <span class="o">+</span> <span class="n">k1</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">y_i</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">k1</span> <span class="o">+</span> <span class="n">k2</span><span class="p">)</span>
+    <span class="n">xs</span> <span class="o">=</span> <span class="p">[</span><span class="n">x0</span><span class="p">]</span>
+    <span class="n">ys</span> <span class="o">=</span> <span class="p">[</span><span class="n">y0</span><span class="p">]</span>
     
-    <span class="k">def</span> <span class="nf">rk3</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">main_function</span><span class="p">):</span>
-        <span class="n">k1</span> <span class="o">=</span> <span class="n">step</span> <span class="o">*</span> <span class="n">main_function</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">)</span>
-        <span class="n">k2</span> <span class="o">=</span> <span class="n">step</span> <span class="o">*</span> <span class="n">main_function</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="n">step</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">y_i</span> <span class="o">+</span> <span class="n">k1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
-        <span class="n">k3</span> <span class="o">=</span> <span class="n">step</span> <span class="o">*</span> <span class="n">main_function</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="n">step</span><span class="p">,</span> <span class="n">y_i</span> <span class="o">-</span> <span class="n">k1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">k2</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">y_i</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">6</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">k1</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">k2</span> <span class="o">+</span> <span class="n">k3</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">steps</span><span class="p">):</span>
+        <span class="n">y1</span> <span class="o">=</span> <span class="n">rks</span><span class="p">[</span><span class="n">order</span><span class="p">](</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+        <span class="n">x1</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">h</span>
+        <span class="n">xs</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
+        <span class="n">ys</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">y1</span><span class="p">)</span>
+        <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span>
+        
+    <span class="k">return</span> <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span>
 
-    <span class="k">def</span> <span class="nf">rk4</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">main_function</span><span class="p">):</span>
-        <span class="n">k1</span> <span class="o">=</span> <span class="n">step</span> <span class="o">*</span> <span class="n">main_function</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span><span class="n">y_i</span><span class="p">)</span> 
-        <span class="n">k2</span> <span class="o">=</span> <span class="n">step</span> <span class="o">*</span> <span class="n">main_function</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="p">(</span><span class="n">step</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="n">y_i</span> <span class="o">+</span> <span class="p">(</span><span class="n">k1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span>
-        <span class="n">k3</span> <span class="o">=</span> <span class="n">step</span> <span class="o">*</span> <span class="n">main_function</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="p">(</span><span class="n">step</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="n">y_i</span> <span class="o">+</span> <span class="p">(</span><span class="n">k2</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span>
-        <span class="n">k4</span> <span class="o">=</span> <span class="n">step</span> <span class="o">*</span> <span class="n">main_function</span><span class="p">(</span><span class="n">x_i</span> <span class="o">+</span> <span class="n">step</span><span class="p">,</span> <span class="n">y_i</span> <span class="o">+</span> <span class="n">k3</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">y_i</span> <span class="o">+</span> <span class="p">((</span><span class="n">k1</span> <span class="o">+</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span><span class="n">k2</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">k3</span><span class="p">)</span> <span class="o">+</span> <span class="n">k4</span><span class="p">)</span> <span class="o">/</span> <span class="mi">6</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">graficar</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">titulo</span><span class="o">=</span><span class="s">"Método de Runge-Kutta"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">"blue"</span><span class="p">):</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">'o'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">'-'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="n">titulo</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"x"</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"y"</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="c1">#plt.savefig("rk_output.png")
+</span>    <span class="c1">#print("[+] Gráfica guardada en: rk_output.png")
+</span>
+<span class="k">def</span> <span class="nf">tabla_resultados</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">metodo</span><span class="o">=</span><span class="s">"RK"</span><span class="p">):</span>
+    <span class="n">console</span> <span class="o">=</span> <span class="n">Console</span><span class="p">()</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s">"Método de </span><span class="si">{</span><span class="n">metodo</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
 
-    <span class="n">rks</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="mi">1</span><span class="p">:</span><span class="n">rk1</span><span class="p">,</span>
-        <span class="mi">2</span><span class="p">:</span><span class="n">rk2</span><span class="p">,</span>
-        <span class="mi">3</span><span class="p">:</span><span class="n">rk3</span><span class="p">,</span>
-        <span class="mi">4</span><span class="p">:</span><span class="n">rk4</span>
-    <span class="p">}</span>
-     
-    <span class="k">def</span> <span class="nf">calc_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_zero</span><span class="p">,</span> <span class="n">x_final</span><span class="p">,</span> <span class="n">n_intervals</span><span class="p">):</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">x_final</span> <span class="o">-</span> <span class="n">x_zero</span><span class="p">)</span> <span class="o">/</span> <span class="n">n_intervals</span>
+    <span class="n">table</span><span class="p">.</span><span class="n">add_column</span><span class="p">(</span><span class="s">"i"</span><span class="p">,</span> <span class="n">justify</span><span class="o">=</span><span class="s">"center"</span><span class="p">)</span>
+    <span class="n">table</span><span class="p">.</span><span class="n">add_column</span><span class="p">(</span><span class="s">"Xn"</span><span class="p">,</span> <span class="n">justify</span><span class="o">=</span><span class="s">"center"</span><span class="p">)</span>
+    <span class="n">table</span><span class="p">.</span><span class="n">add_column</span><span class="p">(</span><span class="s">"Yn"</span><span class="p">,</span> <span class="n">justify</span><span class="o">=</span><span class="s">"center"</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s">"green"</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">runge_kutta</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">main_function</span><span class="p">,</span> <span class="n">x_zero</span><span class="p">,</span> <span class="n">y_zero</span><span class="p">,</span> <span class="n">x_final</span><span class="p">,</span> <span class="n">n_intervals</span><span class="p">,</span><span class="n">step</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xs</span><span class="p">)):</span>
+        <span class="n">table</span><span class="p">.</span><span class="n">add_row</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s">"</span><span class="p">,</span> <span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">xs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="p">.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s">"</span><span class="p">,</span> <span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">ys</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="p">.</span><span class="mi">5</span><span class="n">f</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
 
-        <span class="s">"""_summary_
-        Args:
-            main_function (lambda): be defined as a lambda with x,y params
-            step (float): step, amount to move foward
-        """</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">step</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span> <span class="n">step</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">calc_step</span><span class="p">(</span><span class="n">x_zero</span><span class="p">,</span> <span class="n">x_final</span><span class="p">,</span> <span class="n">n_intervals</span><span class="p">)</span>
-            <span class="n">y_i</span> <span class="o">=</span> <span class="n">y_zero</span>
-            <span class="n">x_i</span> <span class="o">=</span> <span class="n">x_zero</span>
-            <span class="k">while</span><span class="p">(</span><span class="n">x_i</span> <span class="o">&lt;</span> <span class="n">x_final</span><span class="p">):</span> <span class="c1">#Probaremos con la condicional y con n_intervals siendo igual al numero de intervalos = numero de pasos
-</span>                <span class="n">y_i</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">rks</span><span class="p">[</span><span class="n">order</span><span class="p">](</span><span class="n">x_i</span><span class="p">,</span> <span class="n">y_i</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">main_function</span><span class="p">)</span>
-                <span class="n">x_i</span> <span class="o">+=</span> <span class="n">step</span>
-            <span class="k">return</span> <span class="n">y_i</span>
-        <span class="k">except</span><span class="p">:</span>
-            <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Order Outta Range Max = 4, Current = </span><span class="si">{</span><span class="n">order</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+    <span class="n">console</span><span class="p">.</span><span class="k">print</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">demo_runge_kutta</span><span class="p">():</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+
+    <span class="n">x0</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">y0</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="mf">0.1</span>
+    <span class="n">steps</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">order</span> <span class="o">=</span> <span class="mi">2</span>  
+
+    <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span> <span class="o">=</span> <span class="n">runge_kutta_method</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">order</span><span class="p">)</span>
+    <span class="n">tabla_resultados</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">metodo</span><span class="o">=</span><span class="sa">f</span><span class="s">"Runge-Kutta Orden </span><span class="si">{</span><span class="n">order</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+    <span class="n">graficar</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">titulo</span><span class="o">=</span><span class="sa">f</span><span class="s">"Runge-Kutta Orden </span><span class="si">{</span><span class="n">order</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">demo_runge_kutta</span><span class="p">()</span>
 </code></pre></div>  </div>
 
 </div>
@@ -248,348 +541,4 @@
 
 <h2 id="código-ejecutable-con-jupyter-notebook-y-google-colab">Código Ejecutable con Jupyter Notebook y Google Colab</h2>
 
-<p><a href="https://colab.research.google.com/drive/1rXre3e-of0vlA6H5-TRi8iJaogNNtBiO?usp=sharing" title="Código de Multipasos">Codigo de Multipasos Ejecutable con Google Colab</a></p>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[Sintáxis del Código]]></summary></entry><entry><title type="html">Código de Python - Método de Taylor</title><link href="http://localhost:4000/docs/codigo-python-taylor/" rel="alternate" type="text/html" title="Código de Python - Método de Taylor" /><published>2025-06-05T00:00:00-06:00</published><updated>2025-06-05T00:00:00-06:00</updated><id>http://localhost:4000/docs/codigo-python-taylor</id><content type="html" xml:base="http://localhost:4000/docs/codigo-python-taylor/"><![CDATA[<h2 id="sintáxis-del-código">Sintáxis del Código</h2>
-
-<div class="code-block" style="position: relative;">
-  <p><button class="copy-button">Copiar</button></p>
-
-  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
-</span>
-<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="n">sp</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-<span class="kn">from</span> <span class="nn">rich.table</span> <span class="kn">import</span> <span class="n">Table</span>
-<span class="kn">from</span> <span class="nn">rich.console</span> <span class="kn">import</span> <span class="n">Console</span>
-
-<span class="k">class</span> <span class="nc">TaylorMethod</span><span class="p">:</span>
-    
-    <span class="k">def</span> <span class="nf">calc_derivatives</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">function</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">order</span><span class="p">):</span>
-        
-        <span class="n">derivatives</span> <span class="o">=</span> <span class="p">[</span><span class="n">function</span><span class="p">]</span>
-        
-        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">order</span> <span class="o">-</span> <span class="mi">1</span> <span class="p">):</span>
-            <span class="n">derivative_function</span> <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="n">diff</span><span class="p">(</span><span class="n">derivatives</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">sp</span><span class="p">.</span><span class="n">diff</span><span class="p">(</span><span class="n">derivatives</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">y</span><span class="p">)</span> <span class="o">*</span> <span class="n">function</span> 
-            <span class="n">derivatives</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">derivative_function</span><span class="p">)</span>
-        
-        <span class="k">return</span> <span class="n">derivatives</span>
-    
-    <span class="k">def</span> <span class="nf">taylor_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">function_expresion</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">order</span><span class="p">):</span>
-        
-        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="n">symbols</span><span class="p">(</span><span class="s">'x y'</span><span class="p">)</span>
-        <span class="n">function</span> <span class="o">=</span> <span class="n">function_expresion</span>
-        
-        <span class="n">derivatives</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">calc_derivatives</span><span class="p">(</span><span class="n">function</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">order</span><span class="p">)</span>
-        
-        <span class="n">lambda_derivatives</span> <span class="o">=</span> <span class="p">[</span><span class="n">sp</span><span class="p">.</span><span class="n">lambdify</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">derivatives</span><span class="p">]</span>
-        
-        <span class="n">xs</span> <span class="o">=</span> <span class="p">[</span><span class="n">x0</span><span class="p">]</span>
-        <span class="n">ys</span> <span class="o">=</span> <span class="p">[</span><span class="n">y0</span><span class="p">]</span>
-        
-        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">steps</span><span class="p">):</span>
-            <span class="n">taylor_sum</span> <span class="o">=</span> <span class="mi">0</span>
-            <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">order</span><span class="p">):</span>
-                <span class="n">taylor_sum</span> <span class="o">+=</span> <span class="p">(</span><span class="n">h</span><span class="o">**</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">sp</span><span class="p">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="o">*</span> <span class="n">lambda_derivatives</span><span class="p">[</span><span class="n">n</span><span class="p">](</span><span class="n">x0</span><span class="p">,</span><span class="n">y0</span><span class="p">)</span>
-            
-            <span class="n">x1</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">h</span>
-            <span class="n">y1</span> <span class="o">=</span> <span class="n">y0</span> <span class="o">+</span> <span class="n">taylor_sum</span>
-            
-            <span class="n">xs</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
-            <span class="n">ys</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">y1</span><span class="p">)</span>
-            
-            <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span>
-            
-        <span class="k">return</span> <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span>
-
-    <span class="k">def</span> <span class="nf">graficar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">titulo</span><span class="o">=</span><span class="s">"Método de Taylor"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'blue'</span><span class="p">):</span>
-        <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">'o'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">'-'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
-        <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="n">titulo</span><span class="p">)</span>
-        <span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"x"</span><span class="p">)</span>
-        <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"y"</span><span class="p">)</span>
-        <span class="n">plt</span><span class="p">.</span><span class="n">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
-        <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="k">def</span> <span class="nf">demo_taylor_method</span><span class="p">():</span>
-    
-    <span class="n">metodo</span> <span class="o">=</span> <span class="n">TaylorMethod</span><span class="p">()</span>
-    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">sp</span><span class="p">.</span><span class="n">symbols</span><span class="p">(</span><span class="s">'x y'</span><span class="p">)</span>
-    <span class="n">f_expr</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
-
-    <span class="n">x0</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">y0</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="n">h</span> <span class="o">=</span> <span class="mf">0.1</span>
-    <span class="n">steps</span> <span class="o">=</span> <span class="mi">3</span>
-    <span class="n">order</span> <span class="o">=</span> <span class="mi">3</span>
-    <span class="n">x_values</span><span class="p">,</span> <span class="n">y_values</span> <span class="o">=</span> <span class="n">metodo</span><span class="p">.</span><span class="n">taylor_method</span><span class="p">(</span><span class="n">f_expr</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">order</span><span class="p">)</span>
-    
-    <span class="c1"># Generando tabla.
-</span>    
-    <span class="n">console</span> <span class="o">=</span> <span class="n">Console</span><span class="p">()</span>
-    <span class="n">table</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">"Metódo de Taylo para ED"</span><span class="p">)</span>
-    
-    <span class="n">table</span><span class="p">.</span><span class="n">add_column</span><span class="p">(</span><span class="s">"i"</span><span class="p">,</span> <span class="n">justify</span><span class="o">=</span><span class="s">"center"</span><span class="p">,</span> <span class="n">no_wrap</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-    <span class="n">table</span><span class="p">.</span><span class="n">add_column</span><span class="p">(</span><span class="s">"Xn"</span><span class="p">,</span> <span class="n">justify</span><span class="o">=</span><span class="s">"center"</span><span class="p">)</span>
-    <span class="n">table</span><span class="p">.</span><span class="n">add_column</span><span class="p">(</span><span class="s">"Yn"</span><span class="p">,</span> <span class="n">justify</span><span class="o">=</span><span class="s">"center"</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s">"green"</span><span class="p">)</span>
-    
-    
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x_values</span><span class="p">)):</span>
-        
-        <span class="n">table</span><span class="p">.</span><span class="n">add_row</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s">"</span><span class="p">,</span> <span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">x_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="p">.</span><span class="mi">1</span><span class="n">f</span><span class="si">}</span><span class="s">"</span><span class="p">,</span> <span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">y_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="p">.</span><span class="mi">5</span><span class="n">f</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
-        
-    <span class="n">console</span><span class="p">.</span><span class="k">print</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
-    
-    <span class="n">metodo</span><span class="p">.</span><span class="n">graficar</span><span class="p">(</span><span class="n">x_values</span><span class="p">,</span> <span class="n">y_values</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
-
-    <span class="n">demo_taylor_method</span><span class="p">()</span>
-
-</code></pre></div>  </div>
-</div>
-
-<script src="/assets/js/copy-code.js" defer=""></script>
-
-<h2 id="código-ejecutable-con-jupyter-notebook-y-google-colab">Código Ejecutable con Jupyter Notebook y Google Colab</h2>
-
-<p><a href="https://colab.research.google.com/drive/1ZniBPoj1DP4Pm2mWmolrLk_1E7kK_ag0?usp=sharing" title="Código de Taylor">Codigo de Taylor Ejecutable con Google Colab</a></p>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[Sintáxis del Código]]></summary></entry><entry><title type="html">Videos del Método de Taylor para ecuaciones diferenciales.</title><link href="http://localhost:4000/docs/video-de-taylor/" rel="alternate" type="text/html" title="Videos del Método de Taylor para ecuaciones diferenciales." /><published>2025-05-30T00:00:00-06:00</published><updated>2025-05-30T00:00:00-06:00</updated><id>http://localhost:4000/docs/video-de-taylor</id><content type="html" xml:base="http://localhost:4000/docs/video-de-taylor/"><![CDATA[<h2 id="ejercicio-1">Ejercicio 1</h2>
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/qpiHzHZEE-E?si=7skEND5qRi2gxldM" frameborder="0" allowfullscreen=""></iframe>
-
-<h2 id="ejercicio-2">Ejercicio 2</h2>
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/XJY5X7xc40Y?si=KG65KDL39CnRc6TW" frameborder="0" allowfullscreen=""></iframe>
-
-<h2 id="ejercicio-3">Ejercicio 3</h2>
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/oUqZjfpmh_U?si=HCvkWExTxHMORv7w" frameborder="0" allowfullscreen=""></iframe>
-
-<h2 id="explicación-del-código-de-python">Explicación del código de Python</h2>
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/8jUozs3nbFc?si=q46KBZjGsM0dbdKO" frameborder="0" allowfullscreen=""></iframe>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[Ejercicio 1]]></summary></entry><entry><title type="html">Método de Euler para ecuaciones diferenciales.</title><link href="http://localhost:4000/docs/metodo-de-euler/" rel="alternate" type="text/html" title="Método de Euler para ecuaciones diferenciales." /><published>2025-04-28T00:00:00-06:00</published><updated>2025-04-28T00:00:00-06:00</updated><id>http://localhost:4000/docs/metodo-de-euler</id><content type="html" xml:base="http://localhost:4000/docs/metodo-de-euler/"><![CDATA[<p>¡Bienvenidos al Método de Euler!
-<!-- _includes/mathjax.html -->
-<script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script></p>
-
-<h2 id="método-de-euler">Método de Euler</h2>
-
-<p>El método de Euler es el más simple de los métodos numéricos de resolución de ecuaciones diferenciales. Se obtiene considerando el desarrollo de Taylor a primer orden en h:</p>
-
-\[y(t_0 + h) ≈ y(t_0)+ hy'(t_0)\]
-
-<p>A partir de la ecuación diferencial \(y(t_0) = f(t_0, y_0)\), obtenemos</p>
-
-\[y_1 = y_0 + hf(t_0, y_0)\]
-
-<p>Análogamente, utilizando \(y_1\) como condición inicial, tenemos en el segundo paso</p>
-
-\[y_2 = y_1 + hf(t_1, y_1)\]
-
-<p>y, en general, el algoritmo recursivo viene dado por</p>
-
-<p>\(y_0 = y(t_0)\) 
-\(y_{n+1} = y_n + hf(t_n, y_n),                   n = 1, 2,...\)</p>
-
-<p>Lógicamente, el error aumentará a medida que aumente el número de iteraciones. El valor práctico de este método es limitado, aunque resulta útil para obtener al menos una primera aproximación de la solución, para un valor de h suficientemente pequeño.</p>
-
-<h2 id="ejemplo-11">Ejemplo 1.1</h2>
-<p>Resolver:</p>
-
-<p>\(\frac{dt}{dy} = t - y\),     \(y(0)=1\)</p>
-
-<p>en el intervalo \(t∈[0,1]\) con \(h=0.5\).</p>
-
-<p>Respuesta:</p>
-
-<ul>
-  <li>
-\[T_0=0, y_0=1\]
-  </li>
-  <li>\(h=0.5\), entonces los puntos son \(t_1=0.5, t_2=1.0\).</li>
-</ul>
-
-<p>Aplicar la fórmula de Euler</p>
-
-<ol>
-  <li>Primera iteración (n=0):</li>
-</ol>
-
-\[f(t_0,y_0)=t_0−y_0=0−1=−1\]
-
-\[y_1=y_0+h⋅f(t_0,y_0)=1+0.5⋅(−1)=0.5\]
-
-<ol>
-  <li>Segunda iteración (n=1):</li>
-</ol>
-
-\[f(t_1,y_1)=t_1−y_1=0.5−0.5=0\]
-
-\[y_2=y_1+h⋅f(t_1,y_1)=0.5+0.5⋅0=0.5\]
-
-<table>
-  <thead>
-    <tr>
-      <th>\(t_n\)</th>
-      <th>\(y_n\)(Aprox.)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0.0</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <td>0.5</td>
-      <td>0.5</td>
-    </tr>
-    <tr>
-      <td>1.0</td>
-      <td>0.5</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>La solución analítica es \(y(t)=t-1+2e^-t\)     En \(t=1\):
-\(y(1)=1-1+2e^-1 ≈ 0.7358\)
-El error en \(t = 1 es ∣0.5-0.7358∣=0.2358\), debido a que \(h=0.5\) es grande.</p>
-
-<h2 id="euler-mejorado">Euler Mejorado</h2>
-
-<p>Su idea es utilizar en \((t_n, y_n)\) un valor promedio de la derivada en ese punto \(y\) en \((t_{n+1}, y_{n+1})\). Como no se conoce el valor \(y{_n+1}\), se calcula con el método de Euler, \(y_{n+1}=y_n+hf(t_n, y_n)\). El nuevo valor de \(y_{n + 1}\) será:</p>
-
-\[y_{n+1}=y_n+\frac{h}{2}(f(t_n, y_n)+f(t_{n+1}, y'_{n+1}))\]
-
-<p>El método se conoce como predictor-corrector. El error es O(\(h^3\)). Fue formulado por Karl Heun, Alemania, 1859-1929.</p>
-
-<p>Resolviendo el mismo ejercicio anterior:</p>
-
-<h2 id="ejemplo-21">Ejemplo 2.1</h2>
-<p>Resolver:
-\(\frac{dt}{dy}= t - y\),     \(y(0)=1\)</p>
-
-<p>En el intervalo \(t∈[0,1]\) con \(h=0.5\).</p>
-<ul>
-  <li>
-\[T_0=0, y_0=1\]
-  </li>
-  <li>\(h=0.5\), entonces los puntos son \(t_1=0.5, t_2=1.0\).</li>
-</ul>
-
-<p>Iteración 1 (n=0):</p>
-
-<p>Predictor:</p>
-
-\[f(t_0, y_0)= 0 - 1 = -1\]
-
-\[y'_1= y_0+h.f(t_0, y_0) = 1 + 0.5 . (-1) = 0.5\]
-
-<p>Corrector:</p>
-
-\[f(t_1, y_1) = 0.5 - 0.5 = 0\]
-
-\[y_1= y_0 + \frac{h}{2}.[f(t_0, y_0) + f(t_1, y'_1)]\]
-
-\[= 1 + \frac{0.5}{2}[-1+0] = 1 - 0.25 = 0.75\]
-
-<p>Iteración 2 (n=1):</p>
-
-<p>Predictor:</p>
-
-\[f(t_1,y_1) = 0.5 - 0.75 = 0.25\]
-
-\[y'_2= y_1 + h .f(t_1, y_1)\]
-
-\[= 0.75 + 0.5 . (-0.25) = 0.625\]
-
-<p>Corrector:</p>
-
-\[f(t_2, y'_2) = 1.0 - 0.625 = 0.375\]
-
-\[y_2= y_1+ \frac{h}{2}[f(t_1,y_1) + f(t_2, y_2)]\]
-
-\[= 0.75 +\frac{0.5}{2}[-0.25 + 0.375] = 0.75 + 0.03125 = 0.78\]
-
-<table>
-  <thead>
-    <tr>
-      <th>\(t_n\)</th>
-      <th>\(y_n\)(Aprox.)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0.0</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <td>0.5</td>
-      <td>0.75</td>
-    </tr>
-    <tr>
-      <td>1.0</td>
-      <td>0.78125</td>
-    </tr>
-  </tbody>
-</table>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[¡Bienvenidos al Método de Euler!]]></summary></entry><entry><title type="html">Historia Runge-Kutta</title><link href="http://localhost:4000/docs/runge-kutta/historia/" rel="alternate" type="text/html" title="Historia Runge-Kutta" /><published>2025-04-25T00:00:00-06:00</published><updated>2025-04-25T00:00:00-06:00</updated><id>http://localhost:4000/docs/runge-kutta/historia-runge-kutta</id><content type="html" xml:base="http://localhost:4000/docs/runge-kutta/historia/"><![CDATA[<h2 id="historia-del-método-de-runge-kutta">Historia del Método de Runge-Kutta</h2>
-
-<p>La familia de métodos de Runge-Kutta, que es ampliamente utilizada hoy en día para la solución numérica de <strong>ecuaciones diferenciales ordinarias (EDO)</strong>, tiene su origen en el trabajo de dos matemáticos alemanes: <strong>Carl Runge</strong> y <strong>Martin Wilhelm Kutta</strong>. Su desarrollo permite obtener soluciones aproximadas con una aproximación real mayor que los métodos previos como el de Euler.</p>
-
-<h3 id="carl-runge-18561927">Carl Runge (1856–1927)</h3>
-
-<p>Carl Runge fue un matemático y físico alemán, nacido en Bremen. Estudió matemáticas y física en la Universidad de Múnich y más adelante fue profesor en la Universidad de Hannover y luego en la Universidad de Göttingen. Runge trabajó en diferentes áreas, como la espectroscopía y la matemática aplicada, pero es más conocido en el ámbito numérico por su trabajo en la <strong>interpolación</strong> y en la solución de ecuaciones diferenciales.</p>
-
-<p>En 1895, publicó un artículo donde introducía un método numérico de segundo orden para resolver EDOs, que mejoraba la precisión del método de Euler al tomar un promedio ponderado de las pendientes.</p>
-
-<h3 id="martin-wilhelm-kutta-18671944">Martin Wilhelm Kutta (1867–1944)</h3>
-
-<p>Martin Kutta fue un matemático alemán que estudió en Múnich y trabajó como asistente en la Universidad Técnica de Aquisgrán. Inspirado por el trabajo de Runge, en <strong>1901 publicó su artículo más influyente</strong>, donde extendió las ideas de Runge y propuso una familia generalizada de métodos de integración numérica.</p>
-
-<p>Entre ellos, desarrolló lo que hoy se conoce como el <strong>método de Runge-Kutta de cuarto orden (RK4)</strong>, que se convirtió en el más utilizado debido a su equilibrio entre simplicidad, eficiencia y precisión.</p>
-
-<h3 id="evolución-del-método">Evolución del Método</h3>
-
-<p>Aunque hoy agrupamos todos estos métodos bajo el nombre “Runge-Kutta”, los autores originales no lo hicieron así. La estandarización de esta familia de métodos se dio a lo largo del siglo XX, cuando comenzaron a clasificarse según su orden de precisión (RK2, RK3, RK4, etc.) y a aplicarse en problemas prácticos con la llegada de las computadoras.</p>
-
-<p>El método RK4, en particular, se volvió el estándar de facto en muchas aplicaciones científicas e ingenieriles, gracias a su buen rendimiento sin requerir derivadas de orden superior.</p>
-
-<h3 id="por-qué-fue-importante">¿Por qué fue importante?</h3>
-
-<p>En la época de Runge y Kutta, la mayoría de problemas en física, química e ingeniería estaban modelados mediante ecuaciones diferenciales, pero no todos podían resolverse de forma analítica. La necesidad de obtener <strong>soluciones aproximadas con alta precisión</strong> motivó el desarrollo de técnicas numéricas como Runge-Kutta.</p>
-
-<p>Este avance permitió a científicos y matemáticos:</p>
-
-<ul>
-  <li>Simular el comportamiento dinámico de sistemas complejos.</li>
-  <li>Realizar cálculos sin soluciones exactas.</li>
-  <li>Aplicar los métodos en contextos industriales, astronómicos y militares.</li>
-</ul>
-
-<p>Además, el método es <strong>autónomo del conocimiento de derivadas de orden superior</strong>, a diferencia del método de Taylor, lo que lo hace mucho más práctico para la programación y el cálculo computacional.</p>
-
-<hr />
-
-<h3 id="resumen">Resumen</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Año</th>
-      <th>Acontecimiento</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1895</td>
-      <td>Carl Runge publica su primer método de segundo orden</td>
-    </tr>
-    <tr>
-      <td>1901</td>
-      <td>Martin Kutta publica la familia general de métodos Runge-Kutta</td>
-    </tr>
-    <tr>
-      <td>1950s–1960s</td>
-      <td>El método RK4 se vuelve estándar en análisis numérico y simulaciones computacionales</td>
-    </tr>
-    <tr>
-      <td>Hoy</td>
-      <td>Los métodos de Runge-Kutta se aplican en múltiples campos: desde simulaciones físicas hasta biología computacional y machine learning</td>
-    </tr>
-  </tbody>
-</table>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[Historia del Método de Runge-Kutta]]></summary></entry></feed>
+<p><a href="https://colab.research.google.com/drive/1rXre3e-of0vlA6H5-TRi8iJaogNNtBiO?usp=sharing" title="Código de Multipasos">Codigo de Multipasos Ejecutable con Google Colab</a></p>]]></content><author><name>Analisis Numerico</name></author><summary type="html"><![CDATA[Sintáxis del Código]]></summary></entry></feed>

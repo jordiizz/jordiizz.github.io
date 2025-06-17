@@ -10,8 +10,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Videos del Método de Runge-Kutta para ecuaciones diferenciales. - UNIDAD 5</title>
-<meta name="description" content="Ejercicio">
+<!-- begin _includes/seo.html --><title>Ejercicio con método de Taylor de orden 2 - UNIDAD 5</title>
+<meta name="description" content="Ejemplo 3.3: Método de Taylor de orden 2 (2 iteraciones, h = 0.1)">
 
 
   <meta name="author" content="Analisis Numerico">
@@ -23,11 +23,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="UNIDAD 5">
-<meta property="og:title" content="Videos del Método de Runge-Kutta para ecuaciones diferenciales.">
-<meta property="og:url" content="http://localhost:4000/docs/video-de-runge-kutta/">
+<meta property="og:title" content="Ejercicio con método de Taylor de orden 2">
+<meta property="og:url" content="http://localhost:4000/docs/ejercicios-de-taylor/">
 
 
-  <meta property="og:description" content="Ejercicio">
+  <meta property="og:description" content="Ejemplo 3.3: Método de Taylor de orden 2 (2 iteraciones, h = 0.1)">
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/docs/video-de-runge-kutta/">
+<link rel="canonical" href="http://localhost:4000/docs/ejercicios-de-taylor/">
 
 
 
@@ -176,7 +176,7 @@
             
               <li><a href="/docs/video-de-taylor/">Vídeos sobre Taylor</a></li>
             
-              <li><a href="/docs/ejercicios-de-taylor/">Ejercicios usando Taylor</a></li>
+              <li><a href="/docs/ejercicios-de-taylor/" class="active">Ejercicios usando Taylor</a></li>
             
           </ul>
           
@@ -214,7 +214,7 @@
             
               <li><a href="/docs/codigo-python-runge-kutta/">Código de Runge-Kutta</a></li>
             
-              <li><a href="/docs/video-de-runge-kutta/" class="active">Vídeos sobre Runge-Kutta</a></li>
+              <li><a href="/docs/video-de-runge-kutta/">Vídeos sobre Runge-Kutta</a></li>
             
               <li><a href="/docs/ejercicios-de-runge-kutta/">Ejercicios usando Runge-Kutta</a></li>
             
@@ -233,8 +233,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Videos del Método de Runge-Kutta para ecuaciones diferenciales.">
-    <meta itemprop="description" content="Ejercicio">
+    <meta itemprop="headline" content="Ejercicio con método de Taylor de orden 2">
+    <meta itemprop="description" content="Ejemplo 3.3: Método de Taylor de orden 2 (2 iteraciones, h = 0.1)">
     <meta itemprop="datePublished" content="2025-06-16T00:00:00-06:00">
     
 
@@ -242,7 +242,7 @@
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/docs/video-de-runge-kutta/" itemprop="url">Videos del Método de Runge-Kutta para ecuaciones diferenciales.
+            <a href="http://localhost:4000/docs/ejercicios-de-taylor/" itemprop="url">Ejercicio con método de Taylor de orden 2
 </a>
           </h1>
           
@@ -256,13 +256,75 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#ejercicio">Ejercicio</a></li></ul>
+              <ul class="toc__menu"><li><a href="#ejemplo-33-método-de-taylor-de-orden-2-2-iteraciones-h--01">Ejemplo 3.3: Método de Taylor de orden 2 (2 iteraciones, h = 0.1)</a><ul><li><a href="#paso-0--1-x--0-a-x--01">Paso 0 → 1 (x = 0 a x = 0.1)</a></li><li><a href="#paso-1--2-x--01-a-x--02">Paso 1 → 2 (x = 0.1 a x = 0.2)</a></li></ul></li><li><a href="#pdf-con-más-ejercicios-resueltos">PDF con más ejercicios resueltos</a></li></ul>
             </nav>
           </aside>
         
-        <h2 id="ejercicio">Ejercicio</h2>
+        <!-- _includes/mathjax.html -->
+<script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/eNaw41W6yto?si=OI97B9ROfqvmbX7p" frameborder="0" allowfullscreen=""></iframe>
+<h2 id="ejemplo-33-método-de-taylor-de-orden-2-2-iteraciones-h--01">Ejemplo 3.3: Método de Taylor de orden 2 (2 iteraciones, h = 0.1)</h2>
+
+<p>Dada la EDO:</p>
+
+\[y' = x^2 - y, \quad y(0) = 1\]
+
+<p>Aplicando la serie de Taylor:</p>
+
+\[y_{n+1} = y_n + h y'_n + \frac{h^2}{2!} y''_n\]
+
+<p>Se tiene:</p>
+
+\[f(x, y) = x^2 - y\]
+
+<p>Derivadas parciales:</p>
+
+\[f_x = 2x, \quad f_y = -1\]
+
+<p>Entonces:</p>
+
+\[y'' = f_x + f_y \cdot f = 2x - (x^2 - y) = 2x - x^2 + y\]
+
+<hr />
+
+<h3 id="paso-0--1-x--0-a-x--01">Paso 0 → 1 (x = 0 a x = 0.1)</h3>
+
+\[x_0 = 0\]
+
+\[y_0 = 1\]
+
+\[f_0 = 0^2 - 1 = -1\]
+
+\[y''_0 = 2(0) - 0^2 + 1 = 1\]
+
+\[y_1 = y_0 + h f_0 + \frac{h^2}{2} y''_0\]
+
+\[y_1 = 1 + 0.1(-1) + \frac{0.01}{2}(1) = 0.905\]
+
+<hr />
+
+<h3 id="paso-1--2-x--01-a-x--02">Paso 1 → 2 (x = 0.1 a x = 0.2)</h3>
+
+\[x_1 = 0.1\]
+
+\[y_1 = 0.905\]
+
+\[f_1 = 0.1^2 - 0.905 = -0.895\]
+
+\[y''_1 = 2(0.1) - 0.1^2 + 0.905 = 1.095\]
+
+\[y_2 = y_1 + h f_1 + \frac{h^2}{2} y''_1\]
+
+\[y_2 = 0.905 + 0.1(-0.895) + \frac{0.01}{2}(1.095) \approx 0.820975\]
+
+<hr />
+
+\[y(0.2) \approx 0.82098\]
+
+<h2 id="pdf-con-más-ejercicios-resueltos">PDF con más ejercicios resueltos</h2>
+
+<p><a href="/docs/Ejercicios Taylor.pdf">Descargar Guía de Ejercicios</a></p>
 
         
       </section>
@@ -283,11 +345,12 @@
       
   <nav class="pagination">
     
-      <a href="/docs/video-de-multipasos/" class="pagination--pager" title="Videos del Método de Multipasos para ecuaciones diferenciales.
+      <a href="/docs/ejercicios-de-runge-kutta/" class="pagination--pager" title="Ejercicio con Método de Runge–Kutta de orden 4 (h = 0.1)
 ">Previous</a>
     
     
-      <a href="#" class="pagination--pager disabled">Next</a>
+      <a href="/docs/video-de-euler/" class="pagination--pager" title="Videos del Método de Euler y Euler Mejorado para ecuaciones diferenciales.
+">Next</a>
     
   </nav>
 

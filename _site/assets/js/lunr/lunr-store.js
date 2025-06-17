@@ -72,9 +72,33 @@ var store = [{
         "teaser": null
       },{
         "title": "Código de Python - Método de Runge-Kutta",
-        "excerpt":"Sintáxis del Código Copiar import numpy as np class RungeKutta: def rk1(x_i, y_i, step, main_function): k1 = step * main_function(x_i, y_i) return y_i + k1 def rk2(x_i, y_i, step, main_function): k1 = step * main_function(x_i, y_i) k2 = step * main_function(x_i + step, y_i + k1) return y_i + 0.5...","categories": [],
+        "excerpt":"Sintáxis del Código Copiar import numpy as np import matplotlib.pyplot as plt from rich.table import Table from rich.console import Console def rk1(x_i, y_i, h, f): k1 = h * f(x_i, y_i) return y_i + k1 def rk2(x_i, y_i, h, f): k1 = h * f(x_i, y_i) k2 = h *...","categories": [],
         "tags": [],
         "url": "/docs/codigo-python-runge-kutta/",
+        "teaser": null
+      },{
+        "title": "Ejercicio con Método de Euler (h = 0.1)",
+        "excerpt":"Ejercicio 9: Método de Euler (3 iteraciones, (h = 0.1)) Dada la EDO: \\[y' = x + y, \\quad y(0) = 1\\] El método de Euler de primer orden utiliza la fórmula \\[y_{n+1} = y_n + h\\,f(x_n, y_n),\\] donde \\[f(x,y) = x + y.\\] Paso 0 → 1 ((x =...","categories": [],
+        "tags": [],
+        "url": "/docs/ejercicios-de-euler/",
+        "teaser": null
+      },{
+        "title": "Ejercicio con Método de Multipasos (Adams–Bashforth de 4 pasos (h = 0.2))",
+        "excerpt":"Ejercicio 30: Adams–Bashforth de 4 pasos (h = 0.2) Dada la EDO: \\[y' = y - x^2 + 1, \\qquad y(0)=0.5\\] Nuestro objetivo es aproximar (y(0.8)) empleando el método explícito de Adams–Bashforth de cuatro pasos (AB‑4) con paso (h = 0.2). Para iniciar el esquema multipasos se requieren cuatro valores...","categories": [],
+        "tags": [],
+        "url": "/docs/ejercicios-de-multipasos/",
+        "teaser": null
+      },{
+        "title": "Ejercicio con Método de Runge–Kutta de orden 4 (h = 0.1)",
+        "excerpt":"Ejercicio 19: Runge–Kutta de orden 4 (3 iteraciones, (h = 0.1)) Dada la EDO: \\[y' = y\\,\\tan(x), \\quad y(0)=1\\] El esquema clásico de RK4 es \\[\\begin{aligned} k_1 &amp;= f(x_n, y_n), \\\\ k_2 &amp;= f\\!\\left(x_n + \\tfrac{h}{2},\\; y_n + \\tfrac{h}{2}k_1\\right),\\\\ k_3 &amp;= f\\!\\left(x_n + \\tfrac{h}{2},\\; y_n + \\tfrac{h}{2}k_2\\right),\\\\ k_4 &amp;= f\\!\\left(x_n...","categories": [],
+        "tags": [],
+        "url": "/docs/ejercicios-de-runge-kutta/",
+        "teaser": null
+      },{
+        "title": "Ejercicio con método de Taylor de orden 2",
+        "excerpt":"Ejemplo 3.3: Método de Taylor de orden 2 (2 iteraciones, h = 0.1) Dada la EDO: \\[y' = x^2 - y, \\quad y(0) = 1\\] Aplicando la serie de Taylor: \\[y_{n+1} = y_n + h y'_n + \\frac{h^2}{2!} y''_n\\] Se tiene: \\[f(x, y) = x^2 - y\\] Derivadas parciales: \\[f_x...","categories": [],
+        "tags": [],
+        "url": "/docs/ejercicios-de-taylor/",
         "teaser": null
       },{
         "title": "Videos del Método de Euler y Euler Mejorado para ecuaciones diferenciales.",

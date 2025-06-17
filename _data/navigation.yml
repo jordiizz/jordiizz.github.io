@@ -8,7 +8,7 @@ docs:
       - title: "Vídeos sobre Euler"
         url: /docs/video-de-euler/
       - title: "Ejercicios usando Euler"
-        url: /docs/quick-start-guide/
+        url: /docs/ejercicios-de-euler/
       
      
       
@@ -21,7 +21,7 @@ docs:
       - title: "Vídeos sobre Taylor"
         url: /docs/video-de-taylor/
       - title: "Ejercicios usando Taylor"
-        url: /docs/structure/
+        url: /docs/ejercicios-de-taylor/
       
      
   - title: Método de Multipasos
@@ -33,7 +33,7 @@ docs:
       - title: "Videos sobre Multipasos"
         url: /docs/video-de-multipasos/
       - title: "Ejercicios usando Multipasos"
-        url: /docs/upgrading/
+        url: /docs/ejercicios-de-multipasos/
 
   - title: Método de Runge-Kutta
     children:
@@ -44,6 +44,6 @@ docs:
       - title: "Vídeos sobre Runge-Kutta"
         url: /docs/video-de-runge-kutta/
       - title: "Ejercicios usando Runge-Kutta"
-        url: /docs/installation/
+        url: /docs/ejercicios-de-runge-kutta/
     
     
