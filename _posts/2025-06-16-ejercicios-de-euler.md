@@ -79,3 +79,5 @@ $$
 ## PDF con más ejercicios resueltos
 
 [Descargar Guía de Ejercicios](/docs/Ejercicios Euler.pdf)
+
+[Descargar Guía de Ejercicios Resueltos](/docs/Ejercicios Euler Resueltos.pdf)

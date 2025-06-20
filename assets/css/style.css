@@ -3,24 +3,24 @@
     right: 10px;
     top: 10px;
     padding: 3px 10px;
-    background: #f6f8fa; /* Fondo claro */
-    color: #0366d6; /* Color azul GitHub */
-    border: 1px solid #e1e4e8; /* Borde sutil */
+    background: #f6f8fa; 
+    color: #0366d6; 
+    border: 1px solid #e1e4e8; 
     border-radius: 4px;
-    font-family: 'SF Mono', 'Roboto Mono', monospace; /* Fuente tipo código */
-    font-size: 12px;
+    font-family: 'SF Mono', 'Roboto Mono', monospace; 
+    font-size: 12px
     cursor: pointer;
     transition: all 0.2s ease;
   }
   
   .copy-button:hover {
-    background: #0366d6; /* Azul al hover */
+    background: #0366d6; 
     color: white;
     border-color: #0366d6;
   }
   
   .copy-button.copied {
-    background: #28a745; /* Verde al copiar */
+    background: #28a745; 
     color: white;
     border-color: #28a745;
   }

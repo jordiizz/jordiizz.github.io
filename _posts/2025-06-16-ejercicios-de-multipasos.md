@@ -98,3 +98,5 @@ $$
 ## PDF con más ejercicios resueltos
 
 [Descargar Guía de Ejercicios](/docs/Ejercicios Multipasos.pdf)
+
+[Descargar Guía de Ejercicios Resueltos](/docs/Ejercicios Multipasos Resueltos.pdf)

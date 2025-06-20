@@ -86,3 +86,5 @@ $$
 ## PDF con más ejercicios resueltos
 
 [Descargar Guía de Ejercicios](/docs/Ejercicios Runge-Kutta.pdf)
+
+[Descargar Guía de Ejercicios Resueltos](/docs/Ejercicios Runge-Kutta Resueltos.pdf)

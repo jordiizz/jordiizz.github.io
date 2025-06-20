@@ -107,3 +107,5 @@ $$
 ## PDF con más ejercicios resueltos
 
 [Descargar Guía de Ejercicios](/docs/Ejercicios Taylor.pdf)
+
+[Descargar Guía de Ejercicios Resueltos](/docs/Ejercicios Taylor Resueltos.pdf)
